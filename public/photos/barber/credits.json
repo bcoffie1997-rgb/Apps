@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 7697642,
+    "pageUrl": "https://www.pexels.com/photo/a-barber-at-work-7697642/",
+    "desc": "Barber in a black apron trimming an older Black man's hair in a bright barbershop"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 1319462,
+    "pageUrl": "https://www.pexels.com/photo/man-cutting-hair-1319462/",
+    "desc": "Bearded barber using clippers to fade the back of a client's head"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 7518732,
+    "pageUrl": "https://www.pexels.com/photo/a-barber-cutting-a-client-s-beard-7518732/",
+    "desc": "Barber trimming a client's beard with clippers in a striped cape"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 7518728,
+    "pageUrl": "https://www.pexels.com/photo/the-interior-of-a-barber-shop-7518728/",
+    "desc": "Modern barbershop interior with leather barber chairs, wash station and barber pole"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 7697217,
+    "pageUrl": "https://www.pexels.com/photo/a-person-holding-clippers-7697217/",
+    "desc": "Close-up of a barber's hands holding hair clippers and a comb"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 7697441,
+    "pageUrl": "https://www.pexels.com/photo/barber-shaving-customer-with-a-razor-7697441/",
+    "desc": "Barber lining up a client's beard with a straight razor"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 7697224,
+    "pageUrl": "https://www.pexels.com/photo/a-barber-holding-a-hair-clipper-7697224/",
+    "desc": "Smiling barber cutting a smiling older client's hair with clippers"
+  }
+]

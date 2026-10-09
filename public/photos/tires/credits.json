@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 6870331,
+    "pageUrl": "https://www.pexels.com/photo/6870331/",
+    "desc": "Mechanic removing a wheel from an orange SUV raised on a lift in a tire service bay"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 6870311,
+    "pageUrl": "https://www.pexels.com/photo/6870311/",
+    "desc": "Mechanic placing a tire on a tire changing machine"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 6870330,
+    "pageUrl": "https://www.pexels.com/photo/6870330/",
+    "desc": "Mechanic crouching to tighten lug nuts with an impact wrench on a car wheel"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 6870322,
+    "pageUrl": "https://www.pexels.com/photo/6870322/",
+    "desc": "Smiling mechanic lifting a new tire next to a car on a lift"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 6870316,
+    "pageUrl": "https://www.pexels.com/photo/6870316/",
+    "desc": "Mechanic rolling a wheel across a service bay with cars on lifts behind him"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 6870318,
+    "pageUrl": "https://www.pexels.com/photo/6870318/",
+    "desc": "Mechanic kneeling with a pneumatic impact wrench at a car's tire"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 6870325,
+    "pageUrl": "https://www.pexels.com/photo/6870325/",
+    "desc": "Smiling mechanic carrying a tire next to an orange SUV in a tire shop"
+  }
+]

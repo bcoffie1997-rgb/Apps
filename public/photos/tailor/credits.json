@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 6765658,
+    "pageUrl": "https://www.pexels.com/photo/a-tailor-measuring-his-client-using-a-tape-measure-6765658/",
+    "desc": "Tailor measuring a client's arm for a custom suit in a tailoring studio"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 3814539,
+    "pageUrl": "https://www.pexels.com/photo/3814539/",
+    "desc": "Older tailor sewing a garment on an industrial sewing machine"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 8459366,
+    "pageUrl": "https://www.pexels.com/photo/a-bride-fitting-her-wedding-dress-in-a-fitting-room-8459366/",
+    "desc": "Two seamstresses adjusting the hem of a bride's lace wedding gown in a fitting room"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 1212179,
+    "pageUrl": "https://www.pexels.com/photo/selective-focus-photography-of-assorted-coloured-thread-spools-1212179/",
+    "desc": "Rows of colorful thread spools"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 6764954,
+    "pageUrl": "https://www.pexels.com/photo/a-bespoke-suit-jacket-on-a-tailor-dummy-6764954/",
+    "desc": "Black suit jacket on a tailor's dummy with a measuring tape draped over it"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 3984836,
+    "pageUrl": "https://www.pexels.com/photo/woman-using-sewing-machine-3984836/",
+    "desc": "Seamstress sewing at a white sewing machine with thread spools beside her"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 6766353,
+    "pageUrl": "https://www.pexels.com/photo/a-tailor-with-a-measuring-tape-6766353/",
+    "desc": "Bearded tailor with a measuring tape around his neck, arms crossed in his shop"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 6870313,
+    "pageUrl": "https://www.pexels.com/photo/6870313/",
+    "desc": "Mechanic in blue coveralls checking the engine bay of an orange SUV with the hood up, holding a diagnostic tablet in a repair shop"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 6870300,
+    "pageUrl": "https://www.pexels.com/photo/6870300/",
+    "desc": "Close-up of a mechanic's hands working on a brake rotor and caliper with the wheel removed"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 6870297,
+    "pageUrl": "https://www.pexels.com/photo/6870297/",
+    "desc": "Close-up of a car engine bay as a mechanic checks the oil dipstick"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 6870317,
+    "pageUrl": "https://www.pexels.com/photo/6870317/",
+    "desc": "Smiling mechanic using a diagnostic scanner tablet beside a car raised on a lift"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 6870328,
+    "pageUrl": "https://www.pexels.com/photo/6870328/",
+    "desc": "Mechanic inspecting the underside of a car raised on a lift with a work light"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 6870329,
+    "pageUrl": "https://www.pexels.com/photo/6870329/",
+    "desc": "Smiling mechanic holding two large wrenches in an auto repair shop"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 6870320,
+    "pageUrl": "https://www.pexels.com/photo/6870320/",
+    "desc": "Friendly mechanic giving a thumbs up and holding a folder next to an orange SUV in a clean service bay"
+  }
+]

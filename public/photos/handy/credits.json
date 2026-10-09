@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 6474488,
+    "pageUrl": "https://www.pexels.com/photo/6474488/",
+    "desc": "Handyman rolling gray paint onto a wall in a room under renovation"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 5691622,
+    "pageUrl": "https://www.pexels.com/photo/5691622/",
+    "desc": "Gloved hand smoothing drywall compound on a wall with a trowel"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 5691588,
+    "pageUrl": "https://www.pexels.com/photo/5691588/",
+    "desc": "Hands installing an electrical outlet on a dark gray wall"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 5194861,
+    "pageUrl": "https://www.pexels.com/photo/5194861/",
+    "desc": "Pile of wrenches, pliers and a hammer"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 2724749,
+    "pageUrl": "https://www.pexels.com/photo/2724749/",
+    "desc": "Bright remodeled kitchen with white cabinets, an island and pendant lights"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 1080721,
+    "pageUrl": "https://www.pexels.com/photo/1080721/",
+    "desc": "Remodeled white kitchen with a large quartz island, bar stools and a subway tile backsplash"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 6474481,
+    "pageUrl": "https://www.pexels.com/photo/6474481/",
+    "desc": "Contractor in a hard hat and plaid shirt holding plans in a room under renovation"
+  }
+]

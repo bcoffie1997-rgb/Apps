@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 6135686,
+    "pageUrl": "https://www.pexels.com/photo/a-person-applying-nail-polish-6135686/",
+    "desc": "Nail technician in gloves applying glossy red polish to a client's nails"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 4783335,
+    "pageUrl": "https://www.pexels.com/photo/manicurist-applying-red-nail-polish-on-client-4783335/",
+    "desc": "Top view of a manicure station with a client's red nails, polish bottles and nail lamp"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 34930139,
+    "pageUrl": "https://www.pexels.com/photo/colorful-nail-polish-selection-in-a-salon-setting-34930139/",
+    "desc": "Client choosing a shade from colorful nail polish swatch wheels"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 34930123,
+    "pageUrl": "https://www.pexels.com/photo/professional-pedicure-session-at-a-salon-34930123/",
+    "desc": "Nail technician giving a client a pedicure at a foot spa station"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 15491630,
+    "pageUrl": "https://www.pexels.com/photo/close-up-of-acrylic-nails-decorated-with-heart-shapes-15491630/",
+    "desc": "Close-up of almond acrylic nails with red heart nail art"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 36207029,
+    "pageUrl": "https://www.pexels.com/photo/36207029/",
+    "desc": "Hands showing nude chrome nails with gold leaf accents"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 15202934,
+    "pageUrl": "https://www.pexels.com/photo/beautician-working-by-table-15202934/",
+    "desc": "Nail technician doing a manicure at her station in front of a wall of polishes"
+  }
+]

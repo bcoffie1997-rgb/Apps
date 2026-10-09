@@ -17,38 +17,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for service",
     "rating": "5",
     "reviewCount": "1",
-    "services": [
-      {
-        "name": "AC Repair",
-        "price": "",
-        "desc": "Not cooling? We'll find out why."
-      },
-      {
-        "name": "AC Installation",
-        "price": "",
-        "desc": "New systems sized right for your home."
-      },
-      {
-        "name": "Maintenance",
-        "price": "",
-        "desc": "Tune-ups that prevent breakdowns."
-      },
-      {
-        "name": "Duct Cleaning",
-        "price": "",
-        "desc": "Cleaner air in every room."
-      },
-      {
-        "name": "Thermostats",
-        "price": "",
-        "desc": "Upgrades and replacements."
-      },
-      {
-        "name": "Service Calls",
-        "price": "",
-        "desc": "Homes and small businesses."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Keeping South Florida cool.",
     "about": "Lauderdale Air Conditioning Services is a ac repair in Lauderdale Lakes. Customers rate us 5 stars on Google from 1 reviews.",
     "hours": [],
@@ -61,7 +30,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderdale Lakes"
-    }
+    },
+    "industry": "ac"
   },
   {
     "slug": "essence-of-the-island-cuisine",
@@ -76,38 +46,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to order",
     "rating": "5",
     "reviewCount": "2",
-    "services": [
-      {
-        "name": "Daily Plates",
-        "price": "",
-        "desc": "Hot plates made fresh every day."
-      },
-      {
-        "name": "Jerk & Grilled",
-        "price": "",
-        "desc": "Seasoned and cooked just right."
-      },
-      {
-        "name": "Stews & Curries",
-        "price": "",
-        "desc": "Slow-cooked and full of flavor."
-      },
-      {
-        "name": "Rice, Peas & Sides",
-        "price": "",
-        "desc": "Plantains, salad and more."
-      },
-      {
-        "name": "Patties & Snacks",
-        "price": "",
-        "desc": "Grab-and-go favorites."
-      },
-      {
-        "name": "Family Trays",
-        "price": "",
-        "desc": "Feed the whole crew."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Food that tastes like home.",
     "about": "Essence of the Island Cuisine is a caribbean restaurant in Lauderhill. Customers rate us 5 stars on Google from 2 reviews.",
     "hours": [],
@@ -120,7 +59,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderhill"
-    }
+    },
+    "industry": "carib"
   },
   {
     "slug": "k-and-g-caribbean-flavors",
@@ -135,38 +75,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to order",
     "rating": "4.8",
     "reviewCount": "38",
-    "services": [
-      {
-        "name": "Daily Plates",
-        "price": "",
-        "desc": "Hot plates made fresh every day."
-      },
-      {
-        "name": "Jerk & Grilled",
-        "price": "",
-        "desc": "Seasoned and cooked just right."
-      },
-      {
-        "name": "Stews & Curries",
-        "price": "",
-        "desc": "Slow-cooked and full of flavor."
-      },
-      {
-        "name": "Rice, Peas & Sides",
-        "price": "",
-        "desc": "Plantains, salad and more."
-      },
-      {
-        "name": "Patties & Snacks",
-        "price": "",
-        "desc": "Grab-and-go favorites."
-      },
-      {
-        "name": "Family Trays",
-        "price": "",
-        "desc": "Feed the whole crew."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Food that tastes like home.",
     "about": "K&G Caribbean Flavors is a caribbean restaurant in Lauderhill. Customers rate us 4.8 stars on Google from 38 reviews.",
     "hours": [],
@@ -179,7 +88,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderhill"
-    }
+    },
+    "industry": "carib"
   },
   {
     "slug": "ledith-alterations",
@@ -194,38 +104,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call now",
     "rating": "5",
     "reviewCount": "7",
-    "services": [
-      {
-        "name": "Hemming",
-        "price": "",
-        "desc": "Pants, skirts and dresses taken to the right length."
-      },
-      {
-        "name": "Take In / Let Out",
-        "price": "",
-        "desc": "Fits like it was made for you."
-      },
-      {
-        "name": "Dresses & Formalwear",
-        "price": "",
-        "desc": "Wedding, prom and special events."
-      },
-      {
-        "name": "Suits & Jackets",
-        "price": "",
-        "desc": "Sleeves, shoulders and trousers."
-      },
-      {
-        "name": "Zippers & Buttons",
-        "price": "",
-        "desc": "Fixed so you can wear it again."
-      },
-      {
-        "name": "Repairs",
-        "price": "",
-        "desc": "Rips, tears and worn spots mended."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood tailor.",
     "about": "L'EDITH Alterations is a tailor & alterations in Margate. Customers rate us 5 stars on Google from 7 reviews. We come to you.",
     "hours": [],
@@ -238,7 +117,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Margate"
-    }
+    },
+    "industry": "tailor"
   },
   {
     "slug": "micci-sajous-custom-tailor",
@@ -253,38 +133,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call now",
     "rating": "5",
     "reviewCount": "9",
-    "services": [
-      {
-        "name": "Hemming",
-        "price": "",
-        "desc": "Pants, skirts and dresses taken to the right length."
-      },
-      {
-        "name": "Take In / Let Out",
-        "price": "",
-        "desc": "Fits like it was made for you."
-      },
-      {
-        "name": "Dresses & Formalwear",
-        "price": "",
-        "desc": "Wedding, prom and special events."
-      },
-      {
-        "name": "Suits & Jackets",
-        "price": "",
-        "desc": "Sleeves, shoulders and trousers."
-      },
-      {
-        "name": "Zippers & Buttons",
-        "price": "",
-        "desc": "Fixed so you can wear it again."
-      },
-      {
-        "name": "Repairs",
-        "price": "",
-        "desc": "Rips, tears and worn spots mended."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood tailor.",
     "about": "Micci Sajous Custom Tailor is a tailor & alterations in Margate. Customers rate us 5 stars on Google from 9 reviews.",
     "hours": [],
@@ -297,7 +146,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Margate"
-    }
+    },
+    "industry": "tailor"
   },
   {
     "slug": "diagman-mechanic",
@@ -312,38 +162,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "",
     "reviewCount": "",
-    "services": [
-      {
-        "name": "Diagnostics",
-        "price": "",
-        "desc": "Check engine light? We find the problem."
-      },
-      {
-        "name": "Brakes",
-        "price": "",
-        "desc": "Pads, rotors and brake service."
-      },
-      {
-        "name": "Oil Change",
-        "price": "",
-        "desc": "Keep your engine running smooth."
-      },
-      {
-        "name": "A/C Repair",
-        "price": "",
-        "desc": "Stay cool in the Florida heat."
-      },
-      {
-        "name": "Suspension & Steering",
-        "price": "",
-        "desc": "Ride smooth and handle right."
-      },
-      {
-        "name": "General Repair",
-        "price": "",
-        "desc": "From small fixes to big jobs."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Straight answers. Fair prices.",
     "about": "DIAGMAN Mechanic is a auto repair in North Lauderdale.",
     "hours": [],
@@ -355,7 +174,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "North Lauderdale"
-    }
+    },
+    "industry": "auto"
   },
   {
     "slug": "glam-salon",
@@ -370,38 +190,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "5",
     "reviewCount": "11",
-    "services": [
-      {
-        "name": "Cut & Style",
-        "price": "",
-        "desc": "Wash, cut and finish."
-      },
-      {
-        "name": "Color",
-        "price": "",
-        "desc": "Single process, highlights and touch-ups."
-      },
-      {
-        "name": "Blowout",
-        "price": "",
-        "desc": "Smooth, bouncy and ready to go."
-      },
-      {
-        "name": "Treatments",
-        "price": "",
-        "desc": "Deep conditioning for healthy hair."
-      },
-      {
-        "name": "Updos & Events",
-        "price": "",
-        "desc": "Styles for weddings and special days."
-      },
-      {
-        "name": "Wash & Set",
-        "price": "",
-        "desc": "Fresh, classic styling."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Hair you'll love.",
     "about": "Glam Salon is a hair salon in North Lauderdale. Customers rate us 5 stars on Google from 11 reviews.",
     "hours": [],
@@ -414,7 +203,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "North Lauderdale"
-    }
+    },
+    "industry": "salon"
   },
   {
     "slug": "gracefully-beauty-salon",
@@ -429,38 +219,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "5",
     "reviewCount": "6",
-    "services": [
-      {
-        "name": "Cut & Style",
-        "price": "",
-        "desc": "Wash, cut and finish."
-      },
-      {
-        "name": "Color",
-        "price": "",
-        "desc": "Single process, highlights and touch-ups."
-      },
-      {
-        "name": "Blowout",
-        "price": "",
-        "desc": "Smooth, bouncy and ready to go."
-      },
-      {
-        "name": "Treatments",
-        "price": "",
-        "desc": "Deep conditioning for healthy hair."
-      },
-      {
-        "name": "Updos & Events",
-        "price": "",
-        "desc": "Styles for weddings and special days."
-      },
-      {
-        "name": "Wash & Set",
-        "price": "",
-        "desc": "Fresh, classic styling."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Hair you'll love.",
     "about": "Gracefully Beauty Salon is a hair salon in North Lauderdale. Customers rate us 5 stars on Google from 6 reviews.",
     "hours": [],
@@ -473,7 +232,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "North Lauderdale"
-    }
+    },
+    "industry": "salon"
   },
   {
     "slug": "velez-motor-werks",
@@ -488,38 +248,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "5",
     "reviewCount": "13",
-    "services": [
-      {
-        "name": "Diagnostics",
-        "price": "",
-        "desc": "Check engine light? We find the problem."
-      },
-      {
-        "name": "Brakes",
-        "price": "",
-        "desc": "Pads, rotors and brake service."
-      },
-      {
-        "name": "Oil Change",
-        "price": "",
-        "desc": "Keep your engine running smooth."
-      },
-      {
-        "name": "A/C Repair",
-        "price": "",
-        "desc": "Stay cool in the Florida heat."
-      },
-      {
-        "name": "Suspension & Steering",
-        "price": "",
-        "desc": "Ride smooth and handle right."
-      },
-      {
-        "name": "General Repair",
-        "price": "",
-        "desc": "From small fixes to big jobs."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Straight answers. Fair prices.",
     "about": "Velez Motor Werks is a auto repair in North Lauderdale. Customers rate us 5 stars on Google from 13 reviews.",
     "hours": [],
@@ -532,7 +261,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "North Lauderdale"
-    }
+    },
+    "industry": "auto"
   },
   {
     "slug": "citywide-lawn-service-llc",
@@ -547,38 +277,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "4",
     "reviewCount": "32",
-    "services": [
-      {
-        "name": "Lawn Mowing",
-        "price": "",
-        "desc": "Weekly or every other week."
-      },
-      {
-        "name": "Edging & Trimming",
-        "price": "",
-        "desc": "Clean lines, neat yard."
-      },
-      {
-        "name": "Hedges & Shrubs",
-        "price": "",
-        "desc": "Shaped and healthy."
-      },
-      {
-        "name": "Mulch & Flower Beds",
-        "price": "",
-        "desc": "Fresh, finished look."
-      },
-      {
-        "name": "Yard Cleanup",
-        "price": "",
-        "desc": "Leaves, debris and overgrowth."
-      },
-      {
-        "name": "Tree Trimming",
-        "price": "",
-        "desc": "Safer, healthier trees."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Curb appeal, handled.",
     "about": "Citywide Lawn Service is a lawn & landscaping in Oakland Park. Customers rate us 4 stars on Google from 32 reviews. We come to you.",
     "hours": [],
@@ -591,7 +290,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "lawn"
   },
   {
     "slug": "djero-barber-shop-inc",
@@ -606,38 +306,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "5",
     "reviewCount": "380",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "Djero Barber Shop is a barbershop in Oakland Park. Customers rate us 5 stars on Google from 380 reviews.",
     "hours": [],
@@ -650,7 +319,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "dr-green-lawn-service",
@@ -665,38 +335,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "4.8",
     "reviewCount": "4",
-    "services": [
-      {
-        "name": "Lawn Mowing",
-        "price": "",
-        "desc": "Weekly or every other week."
-      },
-      {
-        "name": "Edging & Trimming",
-        "price": "",
-        "desc": "Clean lines, neat yard."
-      },
-      {
-        "name": "Hedges & Shrubs",
-        "price": "",
-        "desc": "Shaped and healthy."
-      },
-      {
-        "name": "Mulch & Flower Beds",
-        "price": "",
-        "desc": "Fresh, finished look."
-      },
-      {
-        "name": "Yard Cleanup",
-        "price": "",
-        "desc": "Leaves, debris and overgrowth."
-      },
-      {
-        "name": "Tree Trimming",
-        "price": "",
-        "desc": "Safer, healthier trees."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Curb appeal, handled.",
     "about": "Dr.green lawn service is a lawn & landscaping in Oakland Park. Customers rate us 4.8 stars on Google from 4 reviews. We come to you.",
     "hours": [],
@@ -709,7 +348,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "lawn"
   },
   {
     "slug": "local-caribbean-restaurant",
@@ -724,38 +364,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Get directions",
     "rating": "4.2",
     "reviewCount": "44",
-    "services": [
-      {
-        "name": "Daily Plates",
-        "price": "",
-        "desc": "Hot plates made fresh every day."
-      },
-      {
-        "name": "Jerk & Grilled",
-        "price": "",
-        "desc": "Seasoned and cooked just right."
-      },
-      {
-        "name": "Stews & Curries",
-        "price": "",
-        "desc": "Slow-cooked and full of flavor."
-      },
-      {
-        "name": "Rice, Peas & Sides",
-        "price": "",
-        "desc": "Plantains, salad and more."
-      },
-      {
-        "name": "Patties & Snacks",
-        "price": "",
-        "desc": "Grab-and-go favorites."
-      },
-      {
-        "name": "Family Trays",
-        "price": "",
-        "desc": "Feed the whole crew."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Food that tastes like home.",
     "about": "Local Caribbean Restaurant is a caribbean restaurant in Oakland Park. Customers rate us 4.2 stars on Google from 44 reviews.",
     "hours": [],
@@ -768,7 +377,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "carib"
   },
   {
     "slug": "rubens-auto-service",
@@ -783,38 +393,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "5",
     "reviewCount": "193",
-    "services": [
-      {
-        "name": "Diagnostics",
-        "price": "",
-        "desc": "Check engine light? We find the problem."
-      },
-      {
-        "name": "Brakes",
-        "price": "",
-        "desc": "Pads, rotors and brake service."
-      },
-      {
-        "name": "Oil Change",
-        "price": "",
-        "desc": "Keep your engine running smooth."
-      },
-      {
-        "name": "A/C Repair",
-        "price": "",
-        "desc": "Stay cool in the Florida heat."
-      },
-      {
-        "name": "Suspension & Steering",
-        "price": "",
-        "desc": "Ride smooth and handle right."
-      },
-      {
-        "name": "General Repair",
-        "price": "",
-        "desc": "From small fixes to big jobs."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Straight answers. Fair prices.",
     "about": "Rubens Auto Service is a auto repair in Oakland Park. Customers rate us 5 stars on Google from 193 reviews.",
     "hours": [],
@@ -827,7 +406,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "auto"
   },
   {
     "slug": "afrokreyol-luxury-braids-k-tips-and-locs",
@@ -842,38 +422,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "27",
-    "services": [
-      {
-        "name": "Knotless Braids",
-        "price": "",
-        "desc": "Light, neat and long-lasting."
-      },
-      {
-        "name": "Box Braids",
-        "price": "",
-        "desc": "Any size, any length."
-      },
-      {
-        "name": "Locs & Retwists",
-        "price": "",
-        "desc": "Starter locs, retwists and maintenance."
-      },
-      {
-        "name": "Kids Styles",
-        "price": "",
-        "desc": "Cute, gentle styles for kids."
-      },
-      {
-        "name": "Cornrows",
-        "price": "",
-        "desc": "Classic and designer patterns."
-      },
-      {
-        "name": "Take-Down & Wash",
-        "price": "",
-        "desc": "Fresh start for your next style."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Protective styles, done right.",
     "about": "Afrokreyol Luxury Braids, K-Tips & Locs is a braiding & locs in Plantation. Customers rate us 4.9 stars on Google from 27 reviews.",
     "hours": [],
@@ -886,7 +435,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Plantation"
-    }
+    },
+    "industry": "braids"
   },
   {
     "slug": "poison-ivy-landscaping-llc",
@@ -901,38 +451,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "5",
     "reviewCount": "19",
-    "services": [
-      {
-        "name": "Lawn Mowing",
-        "price": "",
-        "desc": "Weekly or every other week."
-      },
-      {
-        "name": "Edging & Trimming",
-        "price": "",
-        "desc": "Clean lines, neat yard."
-      },
-      {
-        "name": "Hedges & Shrubs",
-        "price": "",
-        "desc": "Shaped and healthy."
-      },
-      {
-        "name": "Mulch & Flower Beds",
-        "price": "",
-        "desc": "Fresh, finished look."
-      },
-      {
-        "name": "Yard Cleanup",
-        "price": "",
-        "desc": "Leaves, debris and overgrowth."
-      },
-      {
-        "name": "Tree Trimming",
-        "price": "",
-        "desc": "Safer, healthier trees."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Curb appeal, handled.",
     "about": "Poison Ivy Landscaping is a lawn & landscaping in Sunrise. Customers rate us 5 stars on Google from 19 reviews. We come to you.",
     "hours": [],
@@ -945,7 +464,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Sunrise"
-    }
+    },
+    "industry": "lawn"
   },
   {
     "slug": "braids-by-mea-g",
@@ -960,38 +480,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "42",
-    "services": [
-      {
-        "name": "Knotless Braids",
-        "price": "",
-        "desc": "Light, neat and long-lasting."
-      },
-      {
-        "name": "Box Braids",
-        "price": "",
-        "desc": "Any size, any length."
-      },
-      {
-        "name": "Locs & Retwists",
-        "price": "",
-        "desc": "Starter locs, retwists and maintenance."
-      },
-      {
-        "name": "Kids Styles",
-        "price": "",
-        "desc": "Cute, gentle styles for kids."
-      },
-      {
-        "name": "Cornrows",
-        "price": "",
-        "desc": "Classic and designer patterns."
-      },
-      {
-        "name": "Take-Down & Wash",
-        "price": "",
-        "desc": "Fresh start for your next style."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Protective styles, done right.",
     "about": "Braids by Mea G is a braiding & locs in Tamarac. Customers rate us 4.9 stars on Google from 42 reviews. We come to you.",
     "hours": [],
@@ -1004,7 +493,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Tamarac"
-    }
+    },
+    "industry": "braids"
   },
   {
     "slug": "joyful-pups-grooming-and-lodge",
@@ -1063,7 +553,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "pet"
   },
   {
     "slug": "sensual-touch-salon-and-barbershop",
@@ -1078,38 +569,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "5",
     "reviewCount": "17",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "Sensual Touch Salon and Barbershop is a barbershop in Tamarac. Customers rate us 5 stars on Google from 17 reviews.",
     "hours": [],
@@ -1122,7 +582,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "nails-rock-coconut-creek",
@@ -1137,38 +598,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.4",
     "reviewCount": "81",
-    "services": [
-      {
-        "name": "Manicure",
-        "price": "",
-        "desc": "Shape, cuticle care and polish."
-      },
-      {
-        "name": "Pedicure",
-        "price": "",
-        "desc": "Soak, scrub and polish."
-      },
-      {
-        "name": "Gel Polish",
-        "price": "",
-        "desc": "Long-lasting shine."
-      },
-      {
-        "name": "Acrylic Full Set",
-        "price": "",
-        "desc": "Any shape, any length."
-      },
-      {
-        "name": "Fill-In",
-        "price": "",
-        "desc": "Keep your set looking fresh."
-      },
-      {
-        "name": "Nail Art",
-        "price": "",
-        "desc": "Designs that stand out."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Relax. We'll handle the rest.",
     "about": "Nails Rock Coconut Creek is a nail salon in Coconut Creek. Customers rate us 4.4 stars on Google from 81 reviews.",
     "hours": [],
@@ -1181,7 +611,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Coconut Creek"
-    }
+    },
+    "industry": "nails"
   },
   {
     "slug": "spotless-shine-mobile-car-detailing",
@@ -1196,38 +627,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "5",
     "reviewCount": "24",
-    "services": [
-      {
-        "name": "Interior Detail",
-        "price": "",
-        "desc": "Vacuum, shampoo and wipe-down."
-      },
-      {
-        "name": "Exterior Wash & Wax",
-        "price": "",
-        "desc": "Shine that lasts."
-      },
-      {
-        "name": "Full Detail",
-        "price": "",
-        "desc": "Inside and out."
-      },
-      {
-        "name": "Ceramic Coating",
-        "price": "",
-        "desc": "Long-term protection."
-      },
-      {
-        "name": "Headlight Restoration",
-        "price": "",
-        "desc": "Clear, bright headlights."
-      },
-      {
-        "name": "Odor Removal",
-        "price": "",
-        "desc": "Fresh-smelling cabin."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your car, like new.",
     "about": "Spotless Shine Mobile Car Detailing is a auto detailing in Coral Springs. Customers rate us 5 stars on Google from 24 reviews. We come to you.",
     "hours": [],
@@ -1240,7 +640,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Coral Springs"
-    }
+    },
+    "industry": "detail"
   },
   {
     "slug": "tailor-shop-by-torrez",
@@ -1255,38 +656,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call now",
     "rating": "4.6",
     "reviewCount": "90",
-    "services": [
-      {
-        "name": "Hemming",
-        "price": "",
-        "desc": "Pants, skirts and dresses taken to the right length."
-      },
-      {
-        "name": "Take In / Let Out",
-        "price": "",
-        "desc": "Fits like it was made for you."
-      },
-      {
-        "name": "Dresses & Formalwear",
-        "price": "",
-        "desc": "Wedding, prom and special events."
-      },
-      {
-        "name": "Suits & Jackets",
-        "price": "",
-        "desc": "Sleeves, shoulders and trousers."
-      },
-      {
-        "name": "Zippers & Buttons",
-        "price": "",
-        "desc": "Fixed so you can wear it again."
-      },
-      {
-        "name": "Repairs",
-        "price": "",
-        "desc": "Rips, tears and worn spots mended."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood tailor.",
     "about": "Tailor Shop by Torrez is a tailor & alterations in Fort Lauderdale. Customers rate us 4.6 stars on Google from 90 reviews.",
     "hours": [],
@@ -1299,7 +669,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Fort Lauderdale"
-    }
+    },
+    "industry": "tailor"
   },
   {
     "slug": "dirt-away-pressure-cleaning-llc",
@@ -1314,38 +685,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "4.9",
     "reviewCount": "90",
-    "services": [
-      {
-        "name": "Driveways",
-        "price": "",
-        "desc": "Oil, mold and stains gone."
-      },
-      {
-        "name": "Roofs",
-        "price": "",
-        "desc": "Soft wash for tile and shingle."
-      },
-      {
-        "name": "House Walls",
-        "price": "",
-        "desc": "Fresh, bright exterior."
-      },
-      {
-        "name": "Pool Decks & Patios",
-        "price": "",
-        "desc": "Safe, clean surfaces."
-      },
-      {
-        "name": "Fences",
-        "price": "",
-        "desc": "Wood and vinyl."
-      },
-      {
-        "name": "Sidewalks",
-        "price": "",
-        "desc": "Curb appeal from the street."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Clean you can see.",
     "about": "Dirt Away Pressure Cleaning is a pressure cleaning in Fort Lauderdale. Customers rate us 4.9 stars on Google from 90 reviews. We come to you.",
     "hours": [],
@@ -1358,7 +698,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Fort Lauderdale"
-    }
+    },
+    "industry": "pressure"
   },
   {
     "slug": "jojos-hair-care",
@@ -1373,38 +714,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "199",
-    "services": [
-      {
-        "name": "Cut & Style",
-        "price": "",
-        "desc": "Wash, cut and finish."
-      },
-      {
-        "name": "Color",
-        "price": "",
-        "desc": "Single process, highlights and touch-ups."
-      },
-      {
-        "name": "Blowout",
-        "price": "",
-        "desc": "Smooth, bouncy and ready to go."
-      },
-      {
-        "name": "Treatments",
-        "price": "",
-        "desc": "Deep conditioning for healthy hair."
-      },
-      {
-        "name": "Updos & Events",
-        "price": "",
-        "desc": "Styles for weddings and special days."
-      },
-      {
-        "name": "Wash & Set",
-        "price": "",
-        "desc": "Fresh, classic styling."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Hair you'll love.",
     "about": "Jojo's Hair Care is a hair salon in Lauderdale Lakes. Customers rate us 4.9 stars on Google from 199 reviews.",
     "hours": [],
@@ -1417,7 +727,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderdale Lakes"
-    }
+    },
+    "industry": "salon"
   },
   {
     "slug": "broward-tires-and-repairs",
@@ -1432,38 +743,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call now",
     "rating": "4.8",
     "reviewCount": "43",
-    "services": [
-      {
-        "name": "New & Used Tires",
-        "price": "",
-        "desc": "Options for every budget."
-      },
-      {
-        "name": "Flat Repair",
-        "price": "",
-        "desc": "Patched and back on the road."
-      },
-      {
-        "name": "Mount & Balance",
-        "price": "",
-        "desc": "Smooth ride, even wear."
-      },
-      {
-        "name": "Tire Rotation",
-        "price": "",
-        "desc": "Make your tires last longer."
-      },
-      {
-        "name": "TPMS Sensors",
-        "price": "",
-        "desc": "Tire pressure light fixed."
-      },
-      {
-        "name": "Rims & Wheels",
-        "price": "",
-        "desc": "Wheel service and installs."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Back on the road, fast.",
     "about": "Broward Tires & Repairs is a tire shop in Lauderdale Lakes. Customers rate us 4.8 stars on Google from 43 reviews.",
     "hours": [],
@@ -1476,7 +756,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderdale Lakes"
-    }
+    },
+    "industry": "tires"
   },
   {
     "slug": "a1-the-barber",
@@ -1491,38 +772,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "5",
     "reviewCount": "43",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "A1 The Barber is a barbershop in Lauderhill. Customers rate us 5 stars on Google from 43 reviews.",
     "hours": [],
@@ -1535,7 +785,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderhill"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "caribbean-pot-on-wheels-jerk-center",
@@ -1550,38 +801,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to order",
     "rating": "4.6",
     "reviewCount": "92",
-    "services": [
-      {
-        "name": "Daily Plates",
-        "price": "",
-        "desc": "Hot plates made fresh every day."
-      },
-      {
-        "name": "Jerk & Grilled",
-        "price": "",
-        "desc": "Seasoned and cooked just right."
-      },
-      {
-        "name": "Stews & Curries",
-        "price": "",
-        "desc": "Slow-cooked and full of flavor."
-      },
-      {
-        "name": "Rice, Peas & Sides",
-        "price": "",
-        "desc": "Plantains, salad and more."
-      },
-      {
-        "name": "Patties & Snacks",
-        "price": "",
-        "desc": "Grab-and-go favorites."
-      },
-      {
-        "name": "Family Trays",
-        "price": "",
-        "desc": "Feed the whole crew."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Food that tastes like home.",
     "about": "Caribbean Pot On Wheels Jerk Center is a caribbean restaurant in Lauderhill. Customers rate us 4.6 stars on Google from 92 reviews.",
     "hours": [],
@@ -1594,7 +814,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderhill"
-    }
+    },
+    "industry": "carib"
   },
   {
     "slug": "lise-caribbean-best-kitchen",
@@ -1609,38 +830,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to order",
     "rating": "4.9",
     "reviewCount": "68",
-    "services": [
-      {
-        "name": "Daily Plates",
-        "price": "",
-        "desc": "Hot plates made fresh every day."
-      },
-      {
-        "name": "Jerk & Grilled",
-        "price": "",
-        "desc": "Seasoned and cooked just right."
-      },
-      {
-        "name": "Stews & Curries",
-        "price": "",
-        "desc": "Slow-cooked and full of flavor."
-      },
-      {
-        "name": "Rice, Peas & Sides",
-        "price": "",
-        "desc": "Plantains, salad and more."
-      },
-      {
-        "name": "Patties & Snacks",
-        "price": "",
-        "desc": "Grab-and-go favorites."
-      },
-      {
-        "name": "Family Trays",
-        "price": "",
-        "desc": "Feed the whole crew."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Food that tastes like home.",
     "about": "Lise Caribbean Best Kitchen is a caribbean restaurant in Lauderhill. Customers rate us 4.9 stars on Google from 68 reviews.",
     "hours": [],
@@ -1653,7 +843,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderhill"
-    }
+    },
+    "industry": "carib"
   },
   {
     "slug": "luxe-braids-beauty",
@@ -1668,38 +859,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "5",
     "reviewCount": "108",
-    "services": [
-      {
-        "name": "Knotless Braids",
-        "price": "",
-        "desc": "Light, neat and long-lasting."
-      },
-      {
-        "name": "Box Braids",
-        "price": "",
-        "desc": "Any size, any length."
-      },
-      {
-        "name": "Locs & Retwists",
-        "price": "",
-        "desc": "Starter locs, retwists and maintenance."
-      },
-      {
-        "name": "Kids Styles",
-        "price": "",
-        "desc": "Cute, gentle styles for kids."
-      },
-      {
-        "name": "Cornrows",
-        "price": "",
-        "desc": "Classic and designer patterns."
-      },
-      {
-        "name": "Take-Down & Wash",
-        "price": "",
-        "desc": "Fresh start for your next style."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Protective styles, done right.",
     "about": "Luxe Braids Beauty is a braiding & locs in Lauderhill. Customers rate us 5 stars on Google from 108 reviews.",
     "hours": [],
@@ -1712,7 +872,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderhill"
-    }
+    },
+    "industry": "braids"
   },
   {
     "slug": "magic-touch-barber-shop",
@@ -1727,38 +888,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.8",
     "reviewCount": "139",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "Magic Touch Barber Shop is a barbershop in Lauderhill. Customers rate us 4.8 stars on Google from 139 reviews.",
     "hours": [],
@@ -1771,7 +901,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderhill"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "florida-smart-renovation-llc",
@@ -1786,38 +917,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "5",
     "reviewCount": "32",
-    "services": [
-      {
-        "name": "Drywall Repair",
-        "price": "",
-        "desc": "Holes, cracks and water damage."
-      },
-      {
-        "name": "Painting",
-        "price": "",
-        "desc": "Interior and exterior."
-      },
-      {
-        "name": "Doors & Trim",
-        "price": "",
-        "desc": "Installs and repairs."
-      },
-      {
-        "name": "Fixtures & Fans",
-        "price": "",
-        "desc": "Lights, fans and hardware."
-      },
-      {
-        "name": "Kitchen & Bath Updates",
-        "price": "",
-        "desc": "Small upgrades, big difference."
-      },
-      {
-        "name": "Small Repairs",
-        "price": "",
-        "desc": "The to-do list, done."
-      }
-    ],
+    "services": [],
     "aboutTitle": "One call fixes it.",
     "about": "Florida Smart Renovation is a handyman & remodeling in Margate. Customers rate us 5 stars on Google from 32 reviews. We come to you.",
     "hours": [],
@@ -1830,7 +930,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Margate"
-    }
+    },
+    "industry": "handy"
   },
   {
     "slug": "hanah-tailor-and-alterations",
@@ -1845,38 +946,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call now",
     "rating": "4.6",
     "reviewCount": "106",
-    "services": [
-      {
-        "name": "Hemming",
-        "price": "",
-        "desc": "Pants, skirts and dresses taken to the right length."
-      },
-      {
-        "name": "Take In / Let Out",
-        "price": "",
-        "desc": "Fits like it was made for you."
-      },
-      {
-        "name": "Dresses & Formalwear",
-        "price": "",
-        "desc": "Wedding, prom and special events."
-      },
-      {
-        "name": "Suits & Jackets",
-        "price": "",
-        "desc": "Sleeves, shoulders and trousers."
-      },
-      {
-        "name": "Zippers & Buttons",
-        "price": "",
-        "desc": "Fixed so you can wear it again."
-      },
-      {
-        "name": "Repairs",
-        "price": "",
-        "desc": "Rips, tears and worn spots mended."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood tailor.",
     "about": "Hanah Tailor & Alterations is a tailor & alterations in Margate. Customers rate us 4.6 stars on Google from 106 reviews.",
     "hours": [],
@@ -1889,7 +959,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Margate"
-    }
+    },
+    "industry": "tailor"
   },
   {
     "slug": "j-m-f-drywall-handyman",
@@ -1904,38 +975,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "4.8",
     "reviewCount": "51",
-    "services": [
-      {
-        "name": "Drywall Repair",
-        "price": "",
-        "desc": "Holes, cracks and water damage."
-      },
-      {
-        "name": "Painting",
-        "price": "",
-        "desc": "Interior and exterior."
-      },
-      {
-        "name": "Doors & Trim",
-        "price": "",
-        "desc": "Installs and repairs."
-      },
-      {
-        "name": "Fixtures & Fans",
-        "price": "",
-        "desc": "Lights, fans and hardware."
-      },
-      {
-        "name": "Kitchen & Bath Updates",
-        "price": "",
-        "desc": "Small upgrades, big difference."
-      },
-      {
-        "name": "Small Repairs",
-        "price": "",
-        "desc": "The to-do list, done."
-      }
-    ],
+    "services": [],
     "aboutTitle": "One call fixes it.",
     "about": "J.M.F Drywall Handyman is a handyman & remodeling in Margate. Customers rate us 4.8 stars on Google from 51 reviews. We come to you.",
     "hours": [],
@@ -1948,7 +988,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Margate"
-    }
+    },
+    "industry": "handy"
   },
   {
     "slug": "the-fashion-repair",
@@ -1963,38 +1004,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call now",
     "rating": "4.9",
     "reviewCount": "32",
-    "services": [
-      {
-        "name": "Hemming",
-        "price": "",
-        "desc": "Pants, skirts and dresses taken to the right length."
-      },
-      {
-        "name": "Take In / Let Out",
-        "price": "",
-        "desc": "Fits like it was made for you."
-      },
-      {
-        "name": "Dresses & Formalwear",
-        "price": "",
-        "desc": "Wedding, prom and special events."
-      },
-      {
-        "name": "Suits & Jackets",
-        "price": "",
-        "desc": "Sleeves, shoulders and trousers."
-      },
-      {
-        "name": "Zippers & Buttons",
-        "price": "",
-        "desc": "Fixed so you can wear it again."
-      },
-      {
-        "name": "Repairs",
-        "price": "",
-        "desc": "Rips, tears and worn spots mended."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood tailor.",
     "about": "The Fashion Repair is a tailor & alterations in Margate. Customers rate us 4.9 stars on Google from 32 reviews.",
     "hours": [],
@@ -2007,7 +1017,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Margate"
-    }
+    },
+    "industry": "tailor"
   },
   {
     "slug": "maggy-may-beauty-salon",
@@ -2022,38 +1033,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.2",
     "reviewCount": "123",
-    "services": [
-      {
-        "name": "Cut & Style",
-        "price": "",
-        "desc": "Wash, cut and finish."
-      },
-      {
-        "name": "Color",
-        "price": "",
-        "desc": "Single process, highlights and touch-ups."
-      },
-      {
-        "name": "Blowout",
-        "price": "",
-        "desc": "Smooth, bouncy and ready to go."
-      },
-      {
-        "name": "Treatments",
-        "price": "",
-        "desc": "Deep conditioning for healthy hair."
-      },
-      {
-        "name": "Updos & Events",
-        "price": "",
-        "desc": "Styles for weddings and special days."
-      },
-      {
-        "name": "Wash & Set",
-        "price": "",
-        "desc": "Fresh, classic styling."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Hair you'll love.",
     "about": "Maggy May Beauty Salon is a hair salon in North Lauderdale. Customers rate us 4.2 stars on Google from 123 reviews.",
     "hours": [],
@@ -2066,7 +1046,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "North Lauderdale"
-    }
+    },
+    "industry": "salon"
   },
   {
     "slug": "k-and-k-nails-and-spa",
@@ -2081,38 +1062,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.3",
     "reviewCount": "152",
-    "services": [
-      {
-        "name": "Manicure",
-        "price": "",
-        "desc": "Shape, cuticle care and polish."
-      },
-      {
-        "name": "Pedicure",
-        "price": "",
-        "desc": "Soak, scrub and polish."
-      },
-      {
-        "name": "Gel Polish",
-        "price": "",
-        "desc": "Long-lasting shine."
-      },
-      {
-        "name": "Acrylic Full Set",
-        "price": "",
-        "desc": "Any shape, any length."
-      },
-      {
-        "name": "Fill-In",
-        "price": "",
-        "desc": "Keep your set looking fresh."
-      },
-      {
-        "name": "Nail Art",
-        "price": "",
-        "desc": "Designs that stand out."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Relax. We'll handle the rest.",
     "about": "K&K Nails and Spa is a nail salon in Oakland Park. Customers rate us 4.3 stars on Google from 152 reviews.",
     "hours": [],
@@ -2125,7 +1075,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "nails"
   },
   {
     "slug": "oakland-auto-center",
@@ -2140,38 +1091,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "4.7",
     "reviewCount": "128",
-    "services": [
-      {
-        "name": "Diagnostics",
-        "price": "",
-        "desc": "Check engine light? We find the problem."
-      },
-      {
-        "name": "Brakes",
-        "price": "",
-        "desc": "Pads, rotors and brake service."
-      },
-      {
-        "name": "Oil Change",
-        "price": "",
-        "desc": "Keep your engine running smooth."
-      },
-      {
-        "name": "A/C Repair",
-        "price": "",
-        "desc": "Stay cool in the Florida heat."
-      },
-      {
-        "name": "Suspension & Steering",
-        "price": "",
-        "desc": "Ride smooth and handle right."
-      },
-      {
-        "name": "General Repair",
-        "price": "",
-        "desc": "From small fixes to big jobs."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Straight answers. Fair prices.",
     "about": "Oakland Auto Center is a auto repair in Oakland Park. Customers rate us 4.7 stars on Google from 128 reviews.",
     "hours": [],
@@ -2184,7 +1104,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "auto"
   },
   {
     "slug": "the-little-seamstress",
@@ -2199,38 +1120,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call now",
     "rating": "4.6",
     "reviewCount": "127",
-    "services": [
-      {
-        "name": "Hemming",
-        "price": "",
-        "desc": "Pants, skirts and dresses taken to the right length."
-      },
-      {
-        "name": "Take In / Let Out",
-        "price": "",
-        "desc": "Fits like it was made for you."
-      },
-      {
-        "name": "Dresses & Formalwear",
-        "price": "",
-        "desc": "Wedding, prom and special events."
-      },
-      {
-        "name": "Suits & Jackets",
-        "price": "",
-        "desc": "Sleeves, shoulders and trousers."
-      },
-      {
-        "name": "Zippers & Buttons",
-        "price": "",
-        "desc": "Fixed so you can wear it again."
-      },
-      {
-        "name": "Repairs",
-        "price": "",
-        "desc": "Rips, tears and worn spots mended."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood tailor.",
     "about": "The Little Seamstress is a tailor & alterations in Oakland Park. Customers rate us 4.6 stars on Google from 127 reviews.",
     "hours": [],
@@ -2243,7 +1133,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "tailor"
   },
   {
     "slug": "the-real-cut",
@@ -2258,38 +1149,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "195",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "The Real Cut is a barbershop in Oakland Park. Customers rate us 4.9 stars on Google from 195 reviews.",
     "hours": [],
@@ -2302,7 +1162,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "uldas-professional-beauty-nails-and-spa",
@@ -2317,38 +1178,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "99",
-    "services": [
-      {
-        "name": "Manicure",
-        "price": "",
-        "desc": "Shape, cuticle care and polish."
-      },
-      {
-        "name": "Pedicure",
-        "price": "",
-        "desc": "Soak, scrub and polish."
-      },
-      {
-        "name": "Gel Polish",
-        "price": "",
-        "desc": "Long-lasting shine."
-      },
-      {
-        "name": "Acrylic Full Set",
-        "price": "",
-        "desc": "Any shape, any length."
-      },
-      {
-        "name": "Fill-In",
-        "price": "",
-        "desc": "Keep your set looking fresh."
-      },
-      {
-        "name": "Nail Art",
-        "price": "",
-        "desc": "Designs that stand out."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Relax. We'll handle the rest.",
     "about": "Ulda's Professional Beauty Nails & Spa is a nail salon in Oakland Park. Customers rate us 4.9 stars on Google from 99 reviews.",
     "hours": [],
@@ -2361,7 +1191,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Oakland Park"
-    }
+    },
+    "industry": "nails"
   },
   {
     "slug": "affectionate-pet-grooming",
@@ -2376,38 +1207,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.2",
     "reviewCount": "110",
-    "services": [
-      {
-        "name": "Full Groom",
-        "price": "",
-        "desc": "Bath, haircut, nails and ears."
-      },
-      {
-        "name": "Bath & Brush",
-        "price": "",
-        "desc": "Clean, fluffy and fresh."
-      },
-      {
-        "name": "Nail Trim",
-        "price": "",
-        "desc": "Quick and gentle."
-      },
-      {
-        "name": "De-Shedding",
-        "price": "",
-        "desc": "Less fur around the house."
-      },
-      {
-        "name": "Puppy Grooming",
-        "price": "",
-        "desc": "A gentle first visit."
-      },
-      {
-        "name": "Ear Cleaning",
-        "price": "",
-        "desc": "Clean and comfortable."
-      }
-    ],
+    "services": [],
     "aboutTitle": "We treat them like family.",
     "about": "Affectionate Pet Grooming is a pet grooming in Tamarac. Customers rate us 4.2 stars on Google from 110 reviews.",
     "hours": [],
@@ -2420,7 +1220,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "pet"
   },
   {
     "slug": "doggy-studio-grooming-and-mobile-grooming",
@@ -2435,38 +1236,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.5",
     "reviewCount": "135",
-    "services": [
-      {
-        "name": "Full Groom",
-        "price": "",
-        "desc": "Bath, haircut, nails and ears."
-      },
-      {
-        "name": "Bath & Brush",
-        "price": "",
-        "desc": "Clean, fluffy and fresh."
-      },
-      {
-        "name": "Nail Trim",
-        "price": "",
-        "desc": "Quick and gentle."
-      },
-      {
-        "name": "De-Shedding",
-        "price": "",
-        "desc": "Less fur around the house."
-      },
-      {
-        "name": "Puppy Grooming",
-        "price": "",
-        "desc": "A gentle first visit."
-      },
-      {
-        "name": "Ear Cleaning",
-        "price": "",
-        "desc": "Clean and comfortable."
-      }
-    ],
+    "services": [],
     "aboutTitle": "We treat them like family.",
     "about": "Doggy Studio Grooming & Mobile Grooming is a pet grooming in Tamarac. Customers rate us 4.5 stars on Google from 135 reviews.",
     "hours": [],
@@ -2479,7 +1249,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "pet"
   },
   {
     "slug": "goda-nail-spa",
@@ -2494,38 +1265,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.4",
     "reviewCount": "273",
-    "services": [
-      {
-        "name": "Manicure",
-        "price": "",
-        "desc": "Shape, cuticle care and polish."
-      },
-      {
-        "name": "Pedicure",
-        "price": "",
-        "desc": "Soak, scrub and polish."
-      },
-      {
-        "name": "Gel Polish",
-        "price": "",
-        "desc": "Long-lasting shine."
-      },
-      {
-        "name": "Acrylic Full Set",
-        "price": "",
-        "desc": "Any shape, any length."
-      },
-      {
-        "name": "Fill-In",
-        "price": "",
-        "desc": "Keep your set looking fresh."
-      },
-      {
-        "name": "Nail Art",
-        "price": "",
-        "desc": "Designs that stand out."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Relax. We'll handle the rest.",
     "about": "Goda Nail Spa is a nail salon in Tamarac. Customers rate us 4.4 stars on Google from 273 reviews.",
     "hours": [],
@@ -2538,7 +1278,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "nails"
   },
   {
     "slug": "invicta-barber-shop",
@@ -2553,38 +1294,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.8",
     "reviewCount": "68",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "Invicta Barber Shop is a barbershop in Tamarac. Customers rate us 4.8 stars on Google from 68 reviews.",
     "hours": [],
@@ -2597,7 +1307,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "kendall-kafe",
@@ -2612,38 +1323,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to order",
     "rating": "4.5",
     "reviewCount": "260",
-    "services": [
-      {
-        "name": "Breakfast Plates",
-        "price": "",
-        "desc": "Eggs your way, all day."
-      },
-      {
-        "name": "Omelets",
-        "price": "",
-        "desc": "Fresh and filling."
-      },
-      {
-        "name": "Pancakes & French Toast",
-        "price": "",
-        "desc": "Sweet morning favorites."
-      },
-      {
-        "name": "Sandwiches",
-        "price": "",
-        "desc": "Lunch done right."
-      },
-      {
-        "name": "Coffee",
-        "price": "",
-        "desc": "Hot, fresh and ready."
-      },
-      {
-        "name": "Daily Specials",
-        "price": "",
-        "desc": "Ask what's cooking today."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood cafe.",
     "about": "Kendall Kafe is a cafe in Tamarac. Customers rate us 4.5 stars on Google from 260 reviews.",
     "hours": [],
@@ -2656,7 +1336,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "cafe"
   },
   {
     "slug": "kerrys-jamaican-restaurant",
@@ -2671,38 +1352,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to order",
     "rating": "4.9",
     "reviewCount": "203",
-    "services": [
-      {
-        "name": "Daily Plates",
-        "price": "",
-        "desc": "Hot plates made fresh every day."
-      },
-      {
-        "name": "Jerk & Grilled",
-        "price": "",
-        "desc": "Seasoned and cooked just right."
-      },
-      {
-        "name": "Stews & Curries",
-        "price": "",
-        "desc": "Slow-cooked and full of flavor."
-      },
-      {
-        "name": "Rice, Peas & Sides",
-        "price": "",
-        "desc": "Plantains, salad and more."
-      },
-      {
-        "name": "Patties & Snacks",
-        "price": "",
-        "desc": "Grab-and-go favorites."
-      },
-      {
-        "name": "Family Trays",
-        "price": "",
-        "desc": "Feed the whole crew."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Food that tastes like home.",
     "about": "Kerry's Jamaican Restaurant is a caribbean restaurant in Tamarac. Customers rate us 4.9 stars on Google from 203 reviews.",
     "hours": [],
@@ -2715,7 +1365,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "carib"
   },
   {
     "slug": "lotus-lash-and-nail-spa",
@@ -2774,7 +1425,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "nails"
   },
   {
     "slug": "mr-brakes-honest-auto-repairs",
@@ -2789,38 +1441,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call for a quote",
     "rating": "4.5",
     "reviewCount": "120",
-    "services": [
-      {
-        "name": "Diagnostics",
-        "price": "",
-        "desc": "Check engine light? We find the problem."
-      },
-      {
-        "name": "Brakes",
-        "price": "",
-        "desc": "Pads, rotors and brake service."
-      },
-      {
-        "name": "Oil Change",
-        "price": "",
-        "desc": "Keep your engine running smooth."
-      },
-      {
-        "name": "A/C Repair",
-        "price": "",
-        "desc": "Stay cool in the Florida heat."
-      },
-      {
-        "name": "Suspension & Steering",
-        "price": "",
-        "desc": "Ride smooth and handle right."
-      },
-      {
-        "name": "General Repair",
-        "price": "",
-        "desc": "From small fixes to big jobs."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Straight answers. Fair prices.",
     "about": "MR. Brakes Honest Auto Repairs is a auto repair in Tamarac. Customers rate us 4.5 stars on Google from 120 reviews. We come to you.",
     "hours": [],
@@ -2833,7 +1454,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Tamarac"
-    }
+    },
+    "industry": "auto"
   },
   {
     "slug": "mobile-pet-cano-grooming",
@@ -2892,7 +1514,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Service area",
       "value": "Tamarac"
-    }
+    },
+    "industry": "pet"
   },
   {
     "slug": "nails-by-lee",
@@ -2907,38 +1530,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "5",
     "reviewCount": "138",
-    "services": [
-      {
-        "name": "Manicure",
-        "price": "",
-        "desc": "Shape, cuticle care and polish."
-      },
-      {
-        "name": "Pedicure",
-        "price": "",
-        "desc": "Soak, scrub and polish."
-      },
-      {
-        "name": "Gel Polish",
-        "price": "",
-        "desc": "Long-lasting shine."
-      },
-      {
-        "name": "Acrylic Full Set",
-        "price": "",
-        "desc": "Any shape, any length."
-      },
-      {
-        "name": "Fill-In",
-        "price": "",
-        "desc": "Keep your set looking fresh."
-      },
-      {
-        "name": "Nail Art",
-        "price": "",
-        "desc": "Designs that stand out."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Relax. We'll handle the rest.",
     "about": "Nails By Lee is a nail salon in Tamarac. Customers rate us 5 stars on Google from 138 reviews.",
     "hours": [],
@@ -2951,7 +1543,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "nails"
   },
   {
     "slug": "next-level-barber-studio",
@@ -2966,38 +1559,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "96",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "Next Level Barber Studio is a barbershop in Tamarac. Customers rate us 4.9 stars on Google from 96 reviews.",
     "hours": [],
@@ -3010,7 +1572,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "university-barber-shop",
@@ -3025,38 +1588,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.8",
     "reviewCount": "204",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "University Barber Shop is a barbershop in Tamarac. Customers rate us 4.8 stars on Google from 204 reviews.",
     "hours": [],
@@ -3069,7 +1601,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Tamarac"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "monark-barbershop",
@@ -3084,38 +1617,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "148",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "Monark Barbershop is a barbershop in Wilton Manors. Customers rate us 4.9 stars on Google from 148 reviews.",
     "hours": [],
@@ -3128,7 +1630,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Wilton Manors"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "diva-beauty-bar",
@@ -3143,38 +1646,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.3",
     "reviewCount": "400",
-    "services": [
-      {
-        "name": "Manicure",
-        "price": "",
-        "desc": "Shape, cuticle care and polish."
-      },
-      {
-        "name": "Pedicure",
-        "price": "",
-        "desc": "Soak, scrub and polish."
-      },
-      {
-        "name": "Gel Polish",
-        "price": "",
-        "desc": "Long-lasting shine."
-      },
-      {
-        "name": "Acrylic Full Set",
-        "price": "",
-        "desc": "Any shape, any length."
-      },
-      {
-        "name": "Fill-In",
-        "price": "",
-        "desc": "Keep your set looking fresh."
-      },
-      {
-        "name": "Nail Art",
-        "price": "",
-        "desc": "Designs that stand out."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Relax. We'll handle the rest.",
     "about": "Diva Beauty Bar is a nail salon in Coconut Creek. Customers rate us 4.3 stars on Google from 400 reviews.",
     "hours": [],
@@ -3187,7 +1659,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Coconut Creek"
-    }
+    },
+    "industry": "nails"
   },
   {
     "slug": "hot-tips-nail-salon",
@@ -3202,38 +1675,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "536",
-    "services": [
-      {
-        "name": "Manicure",
-        "price": "",
-        "desc": "Shape, cuticle care and polish."
-      },
-      {
-        "name": "Pedicure",
-        "price": "",
-        "desc": "Soak, scrub and polish."
-      },
-      {
-        "name": "Gel Polish",
-        "price": "",
-        "desc": "Long-lasting shine."
-      },
-      {
-        "name": "Acrylic Full Set",
-        "price": "",
-        "desc": "Any shape, any length."
-      },
-      {
-        "name": "Fill-In",
-        "price": "",
-        "desc": "Keep your set looking fresh."
-      },
-      {
-        "name": "Nail Art",
-        "price": "",
-        "desc": "Designs that stand out."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Relax. We'll handle the rest.",
     "about": "Hot Tips Nail Salon is a nail salon in Coconut Creek. Customers rate us 4.9 stars on Google from 536 reviews.",
     "hours": [],
@@ -3246,7 +1688,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Coconut Creek"
-    }
+    },
+    "industry": "nails"
   },
   {
     "slug": "lovely-nails-inc",
@@ -3261,38 +1704,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.6",
     "reviewCount": "257",
-    "services": [
-      {
-        "name": "Manicure",
-        "price": "",
-        "desc": "Shape, cuticle care and polish."
-      },
-      {
-        "name": "Pedicure",
-        "price": "",
-        "desc": "Soak, scrub and polish."
-      },
-      {
-        "name": "Gel Polish",
-        "price": "",
-        "desc": "Long-lasting shine."
-      },
-      {
-        "name": "Acrylic Full Set",
-        "price": "",
-        "desc": "Any shape, any length."
-      },
-      {
-        "name": "Fill-In",
-        "price": "",
-        "desc": "Keep your set looking fresh."
-      },
-      {
-        "name": "Nail Art",
-        "price": "",
-        "desc": "Designs that stand out."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Relax. We'll handle the rest.",
     "about": "Lovely Nails is a nail salon in Coconut Creek. Customers rate us 4.6 stars on Google from 257 reviews.",
     "hours": [],
@@ -3305,7 +1717,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Coconut Creek"
-    }
+    },
+    "industry": "nails"
   },
   {
     "slug": "next-day-alterations",
@@ -3320,38 +1733,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call now",
     "rating": "3.4",
     "reviewCount": "65",
-    "services": [
-      {
-        "name": "Hemming",
-        "price": "",
-        "desc": "Pants, skirts and dresses taken to the right length."
-      },
-      {
-        "name": "Take In / Let Out",
-        "price": "",
-        "desc": "Fits like it was made for you."
-      },
-      {
-        "name": "Dresses & Formalwear",
-        "price": "",
-        "desc": "Wedding, prom and special events."
-      },
-      {
-        "name": "Suits & Jackets",
-        "price": "",
-        "desc": "Sleeves, shoulders and trousers."
-      },
-      {
-        "name": "Zippers & Buttons",
-        "price": "",
-        "desc": "Fixed so you can wear it again."
-      },
-      {
-        "name": "Repairs",
-        "price": "",
-        "desc": "Rips, tears and worn spots mended."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood tailor.",
     "about": "Next Day Alterations is a tailor & alterations in Fort Lauderdale. Customers rate us 3.4 stars on Google from 65 reviews.",
     "hours": [],
@@ -3364,7 +1746,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Fort Lauderdale"
-    }
+    },
+    "industry": "tailor"
   },
   {
     "slug": "carib-island-restaurant",
@@ -3379,38 +1762,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to order",
     "rating": "4.5",
     "reviewCount": "353",
-    "services": [
-      {
-        "name": "Daily Plates",
-        "price": "",
-        "desc": "Hot plates made fresh every day."
-      },
-      {
-        "name": "Jerk & Grilled",
-        "price": "",
-        "desc": "Seasoned and cooked just right."
-      },
-      {
-        "name": "Stews & Curries",
-        "price": "",
-        "desc": "Slow-cooked and full of flavor."
-      },
-      {
-        "name": "Rice, Peas & Sides",
-        "price": "",
-        "desc": "Plantains, salad and more."
-      },
-      {
-        "name": "Patties & Snacks",
-        "price": "",
-        "desc": "Grab-and-go favorites."
-      },
-      {
-        "name": "Family Trays",
-        "price": "",
-        "desc": "Feed the whole crew."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Food that tastes like home.",
     "about": "Carib Island Restaurant is a caribbean restaurant in Lauderhill. Customers rate us 4.5 stars on Google from 353 reviews.",
     "hours": [],
@@ -3423,7 +1775,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderhill"
-    }
+    },
+    "industry": "carib"
   },
   {
     "slug": "top-tier-barbershop",
@@ -3438,38 +1791,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "605",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "Top Tier Barbershop is a barbershop in Lauderhill. Customers rate us 4.9 stars on Google from 605 reviews.",
     "hours": [],
@@ -3482,7 +1804,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Lauderhill"
-    }
+    },
+    "industry": "barber"
   },
   {
     "slug": "glam-luxe-beauty-salon",
@@ -3497,38 +1820,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "3.9",
     "reviewCount": "18",
-    "services": [
-      {
-        "name": "Cut & Style",
-        "price": "",
-        "desc": "Wash, cut and finish."
-      },
-      {
-        "name": "Color",
-        "price": "",
-        "desc": "Single process, highlights and touch-ups."
-      },
-      {
-        "name": "Blowout",
-        "price": "",
-        "desc": "Smooth, bouncy and ready to go."
-      },
-      {
-        "name": "Treatments",
-        "price": "",
-        "desc": "Deep conditioning for healthy hair."
-      },
-      {
-        "name": "Updos & Events",
-        "price": "",
-        "desc": "Styles for weddings and special days."
-      },
-      {
-        "name": "Wash & Set",
-        "price": "",
-        "desc": "Fresh, classic styling."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Hair you'll love.",
     "about": "Glam Luxe Beauty Salon is a hair salon in North Lauderdale. Customers rate us 3.9 stars on Google from 18 reviews.",
     "hours": [],
@@ -3541,7 +1833,8 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "North Lauderdale"
-    }
+    },
+    "industry": "salon"
   },
   {
     "slug": "ace-of-fadez-barbershop",
@@ -3556,38 +1849,7 @@ export const generatedPreviews: Demo[] = [
     "cta": "Call to book",
     "rating": "4.9",
     "reviewCount": "883",
-    "services": [
-      {
-        "name": "Haircut",
-        "price": "",
-        "desc": "Classic cuts done your way."
-      },
-      {
-        "name": "Fade",
-        "price": "",
-        "desc": "Skin, low, mid or high, blended clean."
-      },
-      {
-        "name": "Cut + Beard",
-        "price": "",
-        "desc": "Full cut with beard shape and line-up."
-      },
-      {
-        "name": "Beard Trim & Line-Up",
-        "price": "",
-        "desc": "Sharp edges between cuts."
-      },
-      {
-        "name": "Kids Cut",
-        "price": "",
-        "desc": "Patient barbers for the little ones."
-      },
-      {
-        "name": "Hot Towel Shave",
-        "price": "",
-        "desc": "A smooth, classic finish."
-      }
-    ],
+    "services": [],
     "aboutTitle": "Your neighborhood barbershop.",
     "about": "Ace of Fadez Barbershop is a barbershop in Sunrise. Customers rate us 4.9 stars on Google from 883 reviews.",
     "hours": [],
@@ -3600,6 +1862,7 @@ export const generatedPreviews: Demo[] = [
     "chip": {
       "label": "Find us",
       "value": "Sunrise"
-    }
+    },
+    "industry": "barber"
   }
 ];

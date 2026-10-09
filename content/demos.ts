@@ -32,6 +32,10 @@ export type Demo = {
   /** Small card on the hero image. Defaults to "Next available · Today 3:30 PM". */
   chip?: { label: string; value: string };
   aboutTitle?: string;
+  /** Industry template for real-prospect previews (photos, layout, fonts). */
+  industry?: import("@/components/industry/types").IndustryKey;
+  /** Custom About text (otherwise the industry template writes one). */
+  aboutOverride?: string;
   /** Optional hero photo, e.g. "/photos/fade-factory.jpg" (put the file in /public/photos). */
   photo?: string;
 };
@@ -260,6 +264,9 @@ export const previews: Demo[] = [
     // Lead #1 — real business. Facts from Google, Yelp and Instagram. Ask the owner for prices, photos and 3 favorite reviews.
     slug: "snip-and-stitch",
     style: "tailor",
+    industry: "tailor",
+    aboutOverride:
+      "Snip and Stitch is a men's and women's tailoring shop in Fort Lauderdale, trusted with high-end clothing and wedding gowns. Customers give us 4.9 stars on Google from 128 reviews. Se habla español.",
     niche: "Tailor & Alterations",
     name: "Snip and Stitch",
     city: "Fort Lauderdale",

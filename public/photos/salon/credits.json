@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 3993320,
+    "pageUrl": "https://www.pexels.com/photo/woman-getting-a-haircut-3993320/",
+    "desc": "Stylist working on a client's hair in a modern salon with lit mirrors"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 10028673,
+    "pageUrl": "https://www.pexels.com/photo/close-up-of-women-hairdressing-10028673/",
+    "desc": "Close-up of a stylist blow-drying long hair with a round brush"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 2799605,
+    "pageUrl": "https://www.pexels.com/photo/person-holding-black-brush-2799605/",
+    "desc": "Colorist in gloves applying hair color with a brush to a client's long hair"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 20046793,
+    "pageUrl": "https://www.pexels.com/photo/woman-posing-at-in-a-hair-salon-20046793/",
+    "desc": "Smiling woman with glossy brunette balayage waves in a salon"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 7195805,
+    "pageUrl": "https://www.pexels.com/photo/backwash-chairs-in-modern-beauty-salon-7195805/",
+    "desc": "Modern salon interior with wash chairs, styling stations and product shelves"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 3065171,
+    "pageUrl": "https://www.pexels.com/photo/photo-of-womans-hairstyle-3065171/",
+    "desc": "Stylist creating soft blonde-to-brunette curls on a client's hair"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 3992875,
+    "pageUrl": "https://www.pexels.com/photo/woman-getting-a-haircut-3992875/",
+    "desc": "Hairstylist preparing a client for a haircut at her station"
+  }
+]

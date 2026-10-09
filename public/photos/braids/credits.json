@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 36587243,
+    "pageUrl": "https://www.pexels.com/photo/hair-stylist-working-in-a-vibrant-salon-36587243/",
+    "desc": "Braider combing and parting a client's hair in a colorful braiding salon"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 36441633,
+    "pageUrl": "https://www.pexels.com/photo/african-hair-braiding-in-salon-setting-36441633/",
+    "desc": "Braider installing long box braids on a woman's hair"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 39489545,
+    "pageUrl": "https://www.pexels.com/photo/young-girl-getting-braids-in-lagos-nigeria-39489545/",
+    "desc": "Young girl resting her head while getting neat cornrows braided"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 34191088,
+    "pageUrl": "https://www.pexels.com/photo/close-up-of-textured-braids-on-a-woman-34191088/",
+    "desc": "Back view of finished copper-toned twist braids"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 10013307,
+    "pageUrl": "https://www.pexels.com/photo/portrait-of-a-beautiful-woman-with-dreadlocks-smiling-10013307/",
+    "desc": "Smiling young woman with long braids and silver hair cuffs"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 7705544,
+    "pageUrl": "https://www.pexels.com/photo/woman-in-blue-denim-jacket-with-dreadlocks-7705544/",
+    "desc": "Woman with long styled locs wearing a denim jacket"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 16197743,
+    "pageUrl": "https://www.pexels.com/photo/sitting-girls-making-hair-16197743/",
+    "desc": "Braider working on a young girl's hair in a small salon"
+  }
+]

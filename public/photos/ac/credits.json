@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 5463575,
+    "pageUrl": "https://www.pexels.com/photo/5463575/",
+    "desc": "AC technician kneeling at an outdoor condenser unit, reading refrigerant manifold gauges"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 5463580,
+    "pageUrl": "https://www.pexels.com/photo/5463580/",
+    "desc": "Close-up of a technician's hands testing an AC condenser coil with a meter"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 5463578,
+    "pageUrl": "https://www.pexels.com/photo/5463578/",
+    "desc": "Technician testing wiring inside an open outdoor AC condenser unit with a multimeter"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 5463584,
+    "pageUrl": "https://www.pexels.com/photo/5463584/",
+    "desc": "Technician kneeling beside an outdoor AC unit, checking pressure with manifold gauges"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 5463582,
+    "pageUrl": "https://www.pexels.com/photo/5463582/",
+    "desc": "Technician using a digital meter on an AC unit's refrigerant line"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 5463585,
+    "pageUrl": "https://www.pexels.com/photo/5463585/",
+    "desc": "Technician in a sun hat working on an outdoor AC unit's lines with a meter"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 5463579,
+    "pageUrl": "https://www.pexels.com/photo/5463579/",
+    "desc": "HVAC technician servicing an outdoor AC condenser unit with refrigerant gauges"
+  }
+]

@@ -1,0 +1,393 @@
+import fs from "node:fs";
+import path from "node:path";
+import Image from "next/image";
+import type { CSSProperties, ReactNode } from "react";
+import type { Demo } from "@/content/demos";
+import { fontFamily, FONT_VARS } from "./fonts";
+import { Icon } from "./icons";
+import { BeforeAfter } from "./BeforeAfter";
+import type { Industry, SectionKey } from "./types";
+
+type Photo = { src: string; alt: string };
+
+/** Reads /public/photos/<key>/credits.json written by the photo research. */
+function loadPhotos(key: string): Record<string, Photo> {
+  const dir = path.join(process.cwd(), "public", "photos", key);
+  const out: Record<string, Photo> = {};
+  try {
+    const credits = JSON.parse(fs.readFileSync(path.join(dir, "credits.json"), "utf8")) as { file: string; desc: string }[];
+    credits.forEach((c) => {
+      if (fs.existsSync(path.join(dir, c.file))) out[c.file.replace(/\.\w+$/, "")] = { src: `/photos/${key}/${c.file}`, alt: c.desc };
+    });
+  } catch {}
+  return out;
+}
+
+const fill = (s: string, d: Demo, ratingLine: string) =>
+  s.replaceAll("{city}", d.city).replaceAll("{name}", d.name).replaceAll("{ratingLine}", ratingLine).replace(/\s+$/, "");
+
+export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Industry; banner: ReactNode }) {
+  const p = ind.palette;
+  const demo = { ...raw, rating: raw.rating && /^\d$/.test(raw.rating) ? `${raw.rating}.0` : raw.rating };
+  const reviewsWord = demo.reviewCount === "1" ? "review" : "reviews";
+  const photos = loadPhotos(ind.key);
+  const ph = (k: string) => photos[k];
+  const gallery = ["g1", "g2", "g3", "g4", "g5"].map(ph).filter(Boolean) as Photo[];
+  const ratingLine = demo.rating ? `Customers rate us ${demo.rating} stars on Google from ${demo.reviewCount} ${reviewsWord}.` : "";
+  const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${demo.name} ${demo.address}`)}`;
+  const tel = demo.phone ? `tel:${demo.phone.replace(/[^\d]/g, "")}` : maps;
+  const primaryLabel = demo.phone ? ind.cta : "Get directions";
+  const services = demo.services.length ? demo.services.map((s) => ({ ...s, icon: undefined })) : ind.services;
+  const vars = {
+    "--bg": p.bg, "--fg": p.fg, "--muted": p.muted, "--card": p.card, "--line": p.line,
+    "--accent": p.accent, "--accentFg": p.accentFg, "--dark": p.dark, "--darkFg": p.darkFg,
+    "--r": ind.radius, "--display": fontFamily(ind.font),
+  } as CSSProperties;
+
+  const H = ({ kicker, title, dark = false, center = false }: { kicker: string; title: string; dark?: boolean; center?: boolean }) => (
+    <div className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+      <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--accent)]">{kicker}</p>
+      <h2 className={`display mt-3 text-[2.1rem] leading-[1.05] sm:text-5xl ${dark ? "text-[var(--darkFg)]" : ""}`}>{title}</h2>
+    </div>
+  );
+  const btn = "inline-flex min-h-[52px] items-center justify-center gap-2 rounded-[min(var(--r),999px)] px-7 text-[15px] font-bold transition active:scale-[0.98]";
+  const btnMain = `${btn} bg-[var(--accent)] text-[var(--accentFg)] shadow-lg hover:brightness-110`;
+  const Stars = () => (
+    <span className="flex text-[#f5b301]">{[0, 1, 2, 3, 4].map((i) => <Icon key={i} name="star" className="h-4 w-4 fill-current" />)}</span>
+  );
+
+  // ---------------- hero ----------------
+  const heroText = (dark: boolean) => (
+    <>
+      {demo.rating ? (
+        <p className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-semibold ${dark ? "bg-white/10 text-white backdrop-blur" : "bg-[var(--card)] shadow-sm"}`}>
+          <Stars /> {demo.rating} · {demo.reviewCount} Google {reviewsWord}
+        </p>
+      ) : (
+        <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--accent)]">{ind.eyebrow}</p>
+      )}
+      <h1 className={`display mt-5 text-[2.9rem] leading-[0.98] sm:text-7xl ${dark ? "text-white" : ""}`}>{fill(ind.headline, demo, ratingLine)}</h1>
+      <p className={`mt-5 max-w-xl text-lg leading-relaxed ${dark ? "text-white/80" : "text-[var(--muted)]"}`}>{fill(ind.sub, demo, ratingLine)}</p>
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href={tel} className={btnMain}><Icon name={demo.phone ? "phone" : "pin"} className="h-[18px] w-[18px]" /> {primaryLabel}</a>
+        <a href="#services" className={`${btn} border ${dark ? "border-white/30 text-white backdrop-blur hover:bg-white/10" : "border-[var(--line)] bg-[var(--card)]"}`}>{ind.cta2}</a>
+      </div>
+    </>
+  );
+  const hero = () => {
+    const h = ph("hero");
+    if (ind.hero === "overlay" || !h) {
+      return (
+        <section className="relative isolate flex min-h-[640px] items-end overflow-hidden bg-[var(--dark)] sm:min-h-[720px]">
+          {h && <Image src={h.src} alt={h.alt} fill priority sizes="100vw" className="-z-10 object-cover" />}
+          <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+          <div className="mx-auto w-full max-w-6xl px-5 pb-14 pt-32 sm:pb-20">{heroText(true)}</div>
+        </section>
+      );
+    }
+    if (ind.hero === "split") {
+      return (
+        <section className="bg-[var(--bg)]">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 md:grid-cols-[1.05fr_1fr] md:py-20">
+            <div>{heroText(false)}</div>
+            <div className="relative">
+              <div className="relative aspect-[4/4.6] overflow-hidden rounded-[var(--r)] shadow-2xl">
+                <Image src={h.src} alt={h.alt} fill priority sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+              </div>
+              <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-[min(var(--r),20px)] bg-[var(--card)] px-4 py-3 shadow-xl">
+                <span className="grid h-10 w-10 place-items-center rounded-full bg-[var(--accent)] text-[var(--accentFg)]"><Icon name="pin" /></span>
+                <span><span className="block text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">Find us</span><span className="block font-bold">{demo.city}</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+    const c1 = ph("g1"), c2 = ph("g2");
+    return (
+      <section className="bg-[var(--bg)]">
+        <div className="mx-auto max-w-6xl px-5 pb-10 pt-12 md:pt-20">
+          <div className="max-w-3xl">{heroText(false)}</div>
+          <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-[2fr_1fr] md:grid-rows-2">
+            <div className="relative col-span-2 aspect-[16/10] overflow-hidden rounded-[var(--r)] md:col-span-1 md:row-span-2 md:aspect-auto">
+              <Image src={h.src} alt={h.alt} fill priority sizes="(min-width: 768px) 66vw, 100vw" className="object-cover" />
+            </div>
+            {[c1, c2].filter(Boolean).map((c) => (
+              <div key={c!.src} className="relative aspect-square overflow-hidden rounded-[var(--r)] md:aspect-[4/3]">
+                <Image src={c!.src} alt={c!.alt} fill sizes="(min-width: 768px) 33vw, 50vw" className="object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  };
+
+  // ---------------- sections ----------------
+  const S: Record<SectionKey, () => ReactNode> = {
+    trustBar: () => (
+      <section className="border-y border-[var(--line)] bg-[var(--card)]">
+        <ul className="mx-auto grid max-w-6xl grid-cols-2 gap-x-4 gap-y-5 px-5 py-7 md:grid-cols-4">
+          {[
+            ...(demo.rating ? [{ icon: "star" as const, text: `${demo.rating}★ on Google` }] : []),
+            { icon: "pin" as const, text: `Serving ${demo.city}` },
+            ...ind.trust,
+          ].slice(0, 4).map((t) => (
+            <li key={t.text} className="flex items-center gap-3 text-[15px] font-semibold">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[var(--accent)]/15 text-[var(--accent)]"><Icon name={t.icon} /></span>
+              {t.text}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ),
+    services: () => (
+      <section id="services" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+        <H kicker={ind.servicesKicker} title={ind.servicesTitle} />
+        {ind.servicesStyle === "list" ? (
+          <ul className="mt-10 grid gap-x-12 md:grid-cols-2">
+            {services.map((s) => (
+              <li key={s.name} className="border-b border-[var(--line)] py-5">
+                <div className="flex items-baseline gap-3">
+                  <h3 className="display text-2xl">{s.name}</h3>
+                  <span className="flex-1 border-b border-dotted border-[var(--muted)]/40" />
+                  <a href={tel} className="text-sm font-bold text-[var(--accent)]">{demo.phone ? "Book" : "Visit"}</a>
+                </div>
+                <p className="mt-1.5 text-[15px] text-[var(--muted)]">{s.desc}</p>
+              </li>
+            ))}
+          </ul>
+        ) : ind.servicesStyle === "photoCards" && gallery.length >= 3 ? (
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s, i) => (
+              <li key={s.name} className="overflow-hidden rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)]">
+                <div className="relative aspect-[16/10]">
+                  <Image src={gallery[i % gallery.length].src} alt={gallery[i % gallery.length].alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="display text-2xl">{s.name}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-[var(--muted)]">{s.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s) => (
+              <li key={s.name} className="rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)] p-6 transition hover:-translate-y-0.5 hover:shadow-lg">
+                <span className="grid h-12 w-12 place-items-center rounded-[min(var(--r),14px)] bg-[var(--accent)] text-[var(--accentFg)]"><Icon name={s.icon ?? "check"} className="h-6 w-6" /></span>
+                <h3 className="display mt-5 text-2xl">{s.name}</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-[var(--muted)]">{s.desc}</p>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+    ),
+    menu: () =>
+      ind.menu ? (
+        <section id="services" className="bg-[var(--dark)] text-[var(--darkFg)]">
+          <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+            <H kicker={ind.servicesKicker} title={ind.servicesTitle} dark center />
+            <div className="mt-12 grid gap-10 md:grid-cols-2">
+              {ind.menu.map((m) => (
+                <div key={m.section}>
+                  <h3 className="display border-b border-[var(--darkFg)]/20 pb-3 text-2xl text-[var(--accent)]">{m.section}</h3>
+                  <ul className="mt-4 space-y-4">
+                    {m.items.map((it) => (
+                      <li key={it.name}>
+                        <p className="text-lg font-bold">{it.name}</p>
+                        <p className="text-[15px] text-[var(--darkFg)]/65">{it.desc}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <p className="mt-10 text-center text-sm text-[var(--darkFg)]/55">Menu items and prices vary — call or stop in for today&apos;s specials.</p>
+          </div>
+        </section>
+      ) : null,
+    gallery: () =>
+      gallery.length ? (
+        <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+          <H kicker="Gallery" title={ind.galleryTitle} />
+          <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3">
+            {gallery.slice(0, 5).map((g, i) => (
+              <div key={g.src} className={`relative overflow-hidden rounded-[var(--r)] ${i === 0 ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-square"}`}>
+                <Image src={g.src} alt={g.alt} fill sizes="(min-width: 768px) 33vw, 50vw" className="object-cover transition duration-500 hover:scale-105" />
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null,
+    beforeAfter: () =>
+      ph("g1") ? (
+        <section className="bg-[var(--card)]">
+          <div className="mx-auto max-w-5xl px-5 py-16 md:py-24">
+            <H kicker="See the difference" title={ind.beforeAfterTitle ?? "Before & after"} center />
+            <div className="mt-10"><BeforeAfter src={ph("g1")!.src} alt={ph("g1")!.alt} /></div>
+            <p className="mt-4 text-center text-sm text-[var(--muted)]">Drag the slider. Example shown — your own job photos go here.</p>
+          </div>
+        </section>
+      ) : null,
+    process: () =>
+      ind.process ? (
+        <section className="bg-[var(--dark)] text-[var(--darkFg)]">
+          <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+            <H kicker="How it works" title="Simple from first call to done." dark />
+            <ol className="mt-12 grid gap-8 md:grid-cols-3">
+              {ind.process.map((s, i) => (
+                <li key={s.t}>
+                  <span className="display block text-6xl text-[var(--accent)]">0{i + 1}</span>
+                  <h3 className="display mt-3 text-2xl">{s.t}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-[var(--darkFg)]/70">{s.d}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      ) : null,
+    whyUs: () =>
+      ind.whyUs ? (
+        <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-2 md:py-24">
+          {ph("g3") && (
+            <div className="relative aspect-[4/3.6] overflow-hidden rounded-[var(--r)]">
+              <Image src={ph("g3")!.src} alt={ph("g3")!.alt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+            </div>
+          )}
+          <div>
+            <H kicker="Why choose us" title={`Why ${demo.city} picks ${demo.name}`} />
+            <ul className="mt-8 space-y-6">
+              {ind.whyUs.map((w) => (
+                <li key={w.t} className="flex gap-4">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[var(--accent)] text-[var(--accentFg)]"><Icon name={w.icon ?? "check"} /></span>
+                  <span><b className="block text-lg">{w.t}</b><span className="text-[15px] text-[var(--muted)]">{w.d}</span></span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ) : null,
+    about: () => (
+      <section id="about" className="bg-[var(--card)]">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-[1fr_1.1fr] md:py-24">
+          <div className="order-2 md:order-1">
+            <H kicker="About us" title={fill(ind.aboutTitle, demo, ratingLine)} />
+            <p className="mt-5 text-lg leading-relaxed text-[var(--muted)]">{demo.aboutOverride ?? fill(ind.about, demo, ratingLine)}</p>
+            <div className="mt-8 rounded-[min(var(--r),20px)] border border-[var(--line)] bg-[var(--bg)] p-6">
+              <p className="flex items-start gap-3 font-semibold"><Icon name="pin" className="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" /> {demo.address}</p>
+              {demo.phone && <p className="mt-3 flex items-center gap-3 font-semibold"><Icon name="phone" className="h-5 w-5 text-[var(--accent)]" /> {demo.phone}</p>}
+              {demo.hours.length > 0 && (
+                <dl className="mt-4 space-y-1.5 border-t border-[var(--line)] pt-4 text-[15px]">
+                  {demo.hours.map((h) => (
+                    <div key={h.days} className="flex justify-between gap-4"><dt className="text-[var(--muted)]">{h.days}</dt><dd className="font-semibold">{h.time}</dd></div>
+                  ))}
+                </dl>
+              )}
+              <a href={maps} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex font-bold text-[var(--accent)]">Get directions →</a>
+            </div>
+          </div>
+          {ph("about") && (
+            <div className="relative order-1 aspect-[4/4.4] overflow-hidden rounded-[var(--r)] md:order-2">
+              <Image src={ph("about")!.src} alt={ph("about")!.alt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+            </div>
+          )}
+        </div>
+      </section>
+    ),
+    serviceArea: () => (
+      <section className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+        <H kicker="Service area" title={`Proudly serving ${demo.city} and nearby`} />
+        <ul className="mt-8 flex flex-wrap gap-2.5">
+          {[demo.city, ...NEARBY.filter((c) => c !== demo.city)].slice(0, 10).map((c) => (
+            <li key={c} className="rounded-full border border-[var(--line)] bg-[var(--card)] px-4 py-2 text-[15px] font-semibold">{c}</li>
+          ))}
+        </ul>
+      </section>
+    ),
+    reviews: () => (
+      <section id="reviews" className="bg-[var(--accent)] text-[var(--accentFg)]">
+        <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-[13px] font-bold uppercase tracking-[0.18em] opacity-80">Reviews</p>
+            <p className="display mt-2 text-4xl sm:text-5xl">{demo.rating ? `${demo.rating} stars on Google` : "Loved by locals"}</p>
+            {demo.rating && <p className="mt-2 text-lg opacity-85">From {demo.reviewCount} real customer {reviewsWord}.</p>}
+          </div>
+          <a href={maps} target="_blank" rel="noopener noreferrer"
+            className={`${btn} bg-[var(--accentFg)] text-[var(--accent)]`}><Stars /> Read our reviews</a>
+        </div>
+      </section>
+    ),
+    faq: () => (
+      <section className="mx-auto max-w-3xl px-5 py-16 md:py-24">
+        <H kicker="FAQ" title="Questions? We've got answers." center />
+        <div className="mt-10 divide-y divide-[var(--line)] rounded-[min(var(--r),24px)] border border-[var(--line)] bg-[var(--card)] px-6">
+          {ind.faq.map((f) => (
+            <details key={f.q} className="group py-1">
+              <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-[17px] font-bold [&::-webkit-details-marker]:hidden">
+                {f.q}<span className="text-2xl text-[var(--accent)] transition group-open:rotate-45">+</span>
+              </summary>
+              <p className="pb-5 text-[var(--muted)]">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    ),
+    cta: () => {
+      const bg = ph("g4") ?? ph("hero");
+      return (
+        <section className="relative isolate overflow-hidden bg-[var(--dark)]">
+          {bg && <Image src={bg.src} alt="" fill sizes="100vw" className="-z-10 object-cover opacity-35" />}
+          <div className="mx-auto max-w-4xl px-5 py-20 text-center text-white md:py-28">
+            <h2 className="display text-[2.3rem] leading-[1.02] sm:text-6xl">{ind.finalTitle}</h2>
+            <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">{fill(ind.finalSub, demo, ratingLine)}</p>
+            <a href={tel} className={`${btnMain} mt-8`}><Icon name={demo.phone ? "phone" : "pin"} className="h-[18px] w-[18px]" /> {demo.phone ? `${ind.cta} · ${demo.phone}` : "Get directions"}</a>
+          </div>
+        </section>
+      );
+    },
+  };
+
+  return (
+    <div style={vars} className={`${FONT_VARS} min-h-screen bg-[var(--bg)] pb-20 text-[var(--fg)] md:pb-0 [&_.display]:[font-family:var(--display)] ${ind.upper ? "[&_.display]:uppercase [&_.display]:tracking-[-0.01em]" : "[&_.display]:tracking-[-0.02em]"} [&_.display]:font-bold`}>
+      {banner}
+      {ind.urgency && (
+        <div className="bg-[var(--accent)] px-4 py-2 text-center text-[13px] font-bold text-[var(--accentFg)]">
+          {ind.urgency} {demo.phone && <a href={tel} className="underline underline-offset-2">{demo.phone}</a>}
+        </div>
+      )}
+      <header className={`${ind.hero === "overlay" ? "absolute inset-x-0 z-20 text-white" : "border-b border-[var(--line)] bg-[var(--bg)]"}`}>
+        <div className="mx-auto flex h-[68px] max-w-6xl items-center justify-between gap-4 px-5">
+          <span className="display min-w-0 truncate text-xl sm:text-2xl">{demo.name}</span>
+          <nav className="hidden items-center gap-7 text-sm font-semibold md:flex" aria-label="Site">
+            <a href="#services" className="opacity-80 hover:opacity-100">{ind.menu ? "Menu" : "Services"}</a>
+            <a href="#about" className="opacity-80 hover:opacity-100">About</a>
+            <a href="#reviews" className="opacity-80 hover:opacity-100">Reviews</a>
+          </nav>
+          <a href={tel} className={`${btnMain} !min-h-11 shrink-0 !px-4 !text-sm`}>
+            <Icon name={demo.phone ? "phone" : "pin"} className="h-4 w-4" />
+            <span className="hidden sm:inline">{demo.phone || "Directions"}</span><span className="sm:hidden">{demo.phone ? "Call" : "Map"}</span>
+          </a>
+        </div>
+      </header>
+      <div className={ind.hero === "overlay" ? "relative" : ""}>{hero()}</div>
+      {ind.sections.map((k) => <div key={k}>{S[k]()}</div>)}
+      <footer className="bg-[var(--dark)] text-[var(--darkFg)]/70">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-10 text-sm sm:flex-row sm:justify-between">
+          <p className="display text-lg text-[var(--darkFg)]">{demo.name}</p>
+          <p>{demo.address}{demo.phone ? ` · ${demo.phone}` : ""}</p>
+        </div>
+      </footer>
+      {/* sticky call bar on phones */}
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-black/10 bg-[var(--card)]/95 p-3 backdrop-blur md:hidden">
+        <a href={tel} className={`${btnMain} w-full`}><Icon name={demo.phone ? "phone" : "pin"} className="h-[18px] w-[18px]" /> {primaryLabel}</a>
+      </div>
+    </div>
+  );
+}
+
+const NEARBY = [
+  "Fort Lauderdale", "Oakland Park", "Wilton Manors", "Lauderhill", "Lauderdale Lakes", "Tamarac", "North Lauderdale",
+  "Sunrise", "Plantation", "Margate", "Coconut Creek", "Coral Springs", "Pompano Beach", "Davie",
+];
