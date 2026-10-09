@@ -16,6 +16,13 @@ const ico = (d: ReactNode) => (
 );
 
 const THEMES: Record<DemoStyle, Theme> = {
+  tailor: {
+    vars: { bg: "#faf6ef", fg: "#1c2440", muted: "#5d6377", card: "#ffffff", line: "#ebe3d4", accent: "#a8742f", accentFg: "#ffffff", hero: "#1c2440" },
+    display: "font-[Georgia,'Times_New_Roman',serif] font-normal tracking-[-0.01em]",
+    heroDark: true,
+    pattern: "repeating-linear-gradient(90deg,#26304f 0 22px,#2c3759 22px 23px,#26304f 23px 46px,#b8874033 46px 47px),#26304f",
+    icon: ico(<><circle cx="18" cy="46" r="7" /><circle cx="46" cy="46" r="7" /><path d="M23 41 46 12M41 41 18 12" /><path d="M8 8c10 0 14 6 24 6s14-6 24-6" strokeDasharray="3 4" /></>),
+  },
   barber: {
     vars: { bg: "#0f0f10", fg: "#f5f2ea", muted: "#a7a39a", card: "#19191b", line: "#2a2a2d", accent: "#e8b04b", accentFg: "#141414", hero: "#0f0f10" },
     display: "uppercase tracking-[-0.02em] font-black",
@@ -73,7 +80,9 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
   const heroFg = th.heroDark ? "text-white" : "text-[var(--fg)]";
   const heroMuted = th.heroDark ? "text-white/70" : "text-[var(--muted)]";
   const btn = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold transition active:scale-[0.98]";
-  const tel = `tel:${demo.phone.replace(/[^\d]/g, "")}`;
+  const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${demo.name} ${demo.address}`)}`;
+  const tel = demo.phone ? `tel:${demo.phone.replace(/[^\d]/g, "")}` : maps;
+  const callLabel = demo.phone ? `Call ${demo.phone}` : "Get directions";
 
   return (
     <div style={style} className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
@@ -90,7 +99,7 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
             <a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a>
           </nav>
           <a href={tel} className={`${btn} !min-h-10 shrink-0 !px-4 !text-sm bg-[var(--accent)] text-[var(--accentFg)]`}>
-            Call<span className="hidden sm:inline"> {demo.phone}</span>
+            {demo.phone ? <>Call<span className="hidden sm:inline"> {demo.phone}</span></> : "Directions"}
           </a>
         </div>
       </header>
@@ -106,8 +115,8 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
             <h1 className={`mt-5 text-[2.6rem] leading-[1.02] sm:text-6xl ${th.display}`}>{demo.tagline}</h1>
             <p className={`mt-5 max-w-lg text-lg leading-relaxed ${heroMuted}`}>{demo.intro}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="#visit" className={`${btn} bg-[var(--accent)] text-[var(--accentFg)] shadow-lg`}>{demo.cta}</a>
-              <a href={tel} className={`${btn} border ${th.heroDark ? "border-white/20 text-white" : "border-[var(--line)] bg-white"}`}>Call {demo.phone}</a>
+              <a href={demo.phone ? "#visit" : tel} target={demo.phone ? undefined : "_blank"} rel="noopener noreferrer" className={`${btn} bg-[var(--accent)] text-[var(--accentFg)] shadow-lg`}>{demo.cta}</a>
+              <a href={demo.phone ? tel : "#services"} className={`${btn} border ${th.heroDark ? "border-white/20 text-white" : "border-[var(--line)] bg-white"}`}>{demo.phone ? callLabel : "See our services"}</a>
             </div>
             <ul className={`mt-8 flex flex-wrap gap-2 text-[13px] font-medium ${heroMuted}`}>
               {demo.badges.map((b) => (
@@ -126,11 +135,11 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
                 </div>
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
-              <p className="absolute bottom-5 right-5 text-right text-sm font-medium text-white/90">{demo.city} · {demo.niche}</p>
+              <p className="absolute right-5 top-5 text-right text-sm font-medium text-white/90 drop-shadow">{demo.city} · {demo.niche}</p>
             </div>
             <div className="absolute -bottom-5 -left-3 rounded-2xl bg-white px-4 py-3 text-[#111] shadow-xl sm:-left-6">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-[#666]">Next available</p>
-              <p className="text-[15px] font-bold">Today · 3:30 PM</p>
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-[#666]">{demo.chip?.label ?? "Next available"}</p>
+              <p className="text-[15px] font-bold">{demo.chip?.value ?? "Today · 3:30 PM"}</p>
             </div>
           </div>
         </div>
@@ -138,14 +147,14 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
 
       {/* services */}
       <section id="services" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--accent)]">Services & prices</p>
+        <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--accent)]">{demo.services.some((x) => x.price) ? "Services & prices" : "Services"}</p>
         <h2 className={`mt-3 text-3xl sm:text-4xl ${th.display}`}>What we do best</h2>
         <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {demo.services.map((s) => (
             <li key={s.name} className="rounded-3xl border border-[var(--line)] bg-[var(--card)] p-6">
               <div className="flex items-baseline justify-between gap-3">
                 <h3 className="text-lg font-bold">{s.name}</h3>
-                <span className="shrink-0 font-bold text-[var(--accent)]">{s.price}</span>
+                {s.price && <span className="shrink-0 font-bold text-[var(--accent)]">{s.price}</span>}
               </div>
               <p className="mt-2 text-[15px] leading-relaxed text-[var(--muted)]">{s.desc}</p>
             </li>
@@ -158,11 +167,12 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-[1.3fr_1fr] md:py-24">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--accent)]">About us</p>
-            <h2 className={`mt-3 text-3xl sm:text-4xl ${th.display}`}>Local. Trusted. On time.</h2>
+            <h2 className={`mt-3 text-3xl sm:text-4xl ${th.display}`}>{demo.aboutTitle ?? "Local. Trusted. On time."}</h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--muted)]">{demo.about}</p>
           </div>
           <div id="visit" className="rounded-3xl border border-[var(--line)] bg-[var(--bg)] p-7">
-            <h3 className="text-lg font-bold">Hours</h3>
+            <h3 className="text-lg font-bold">{demo.hours.length ? "Hours" : "Visit us"}</h3>
+            {demo.hours.length === 0 && <p className="mt-3 text-[15px] text-[var(--muted)]">Stop by the shop or get directions below.</p>}
             <dl className="mt-4 space-y-2.5">
               {demo.hours.map((h) => (
                 <div key={h.days} className="flex justify-between gap-4 text-[15px]">
@@ -171,7 +181,7 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
               ))}
             </dl>
             <p className="mt-6 border-t border-[var(--line)] pt-5 text-[15px]">{demo.address}</p>
-            <a href={tel} className={`${btn} mt-5 w-full bg-[var(--accent)] text-[var(--accentFg)]`}>{demo.cta}</a>
+            <a href={tel} className={`${btn} mt-5 w-full bg-[var(--accent)] text-[var(--accentFg)]`}>{demo.phone ? demo.cta : "Get directions"}</a>
           </div>
         </div>
       </section>
@@ -180,6 +190,12 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
       <section id="reviews" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--accent)]">Reviews</p>
         <h2 className={`mt-3 text-3xl sm:text-4xl ${th.display}`}>{demo.rating} stars from {demo.reviewCount} neighbors</h2>
+        {demo.reviews.length === 0 && (
+          <a href={maps} target="_blank" rel="noopener noreferrer"
+            className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--card)] px-6 font-semibold">
+            <span className="flex text-[var(--accent)]"><Star /><Star /><Star /><Star /><Star /></span> Read our reviews on Google
+          </a>
+        )}
         <ul className="mt-10 grid gap-4 md:grid-cols-3">
           {demo.reviews.map((r) => (
             <li key={r.name} className="rounded-3xl border border-[var(--line)] bg-[var(--card)] p-6">
@@ -195,7 +211,7 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
       <footer className={`${th.heroDark ? "bg-[var(--hero)] text-white/70" : "border-t border-[var(--line)] text-[var(--muted)]"} pb-24`}>
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-10 text-sm sm:flex-row sm:justify-between">
           <p>© {demo.name} · {demo.city}, FL</p>
-          <p>{demo.phone}</p>
+          <p>{demo.phone || demo.address}</p>
         </div>
       </footer>
 
