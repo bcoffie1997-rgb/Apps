@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 19145893,
+    "pageUrl": "https://www.pexels.com/photo/dog-groomer-at-work-19145893/",
+    "desc": "Groomer trimming a Shih Tzu with scissors on a grooming table while another dog waits"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 19145883,
+    "pageUrl": "https://www.pexels.com/photo/arms-of-a-person-bathing-a-dog-19145883/",
+    "desc": "Shih Tzu getting a bath in a grooming tub"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 19145873,
+    "pageUrl": "https://www.pexels.com/photo/blow-drying-a-dog-19145873/",
+    "desc": "Curly gray dog being blow-dried with a grooming dryer"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 28730603,
+    "pageUrl": "https://www.pexels.com/photo/smiling-samoyeds-outdoors-in-ascot-vale-28730603/",
+    "desc": "Two fluffy white Samoyed dogs smiling in a garden"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 8530860,
+    "pageUrl": "https://www.pexels.com/photo/a-long-haired-chihuahua-wearing-a-ribbon-8530860/",
+    "desc": "Happy long-haired Chihuahua wearing a bow tie and hair clip"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 23542061,
+    "pageUrl": "https://www.pexels.com/photo/small-terrier-on-table-23542061/",
+    "desc": "Freshly groomed Miniature Schnauzer on a grooming table with a slicker brush"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 19145897,
+    "pageUrl": "https://www.pexels.com/photo/groomer-standing-and-washing-dog-19145897/",
+    "desc": "Groomer in gloves washing a curly-haired dog in a grooming salon tub"
+  }
+]

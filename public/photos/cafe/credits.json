@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 22882256,
+    "pageUrl": "https://www.pexels.com/photo/breakfast-on-plate-22882256/",
+    "desc": "Breakfast plate of crispy bacon, scrambled eggs, pancakes and a cup of syrup on a wooden table"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 12439492,
+    "pageUrl": "https://www.pexels.com/photo/delicious-breakfast-on-white-ceramic-plate-12439492/",
+    "desc": "Omelet with bacon, sausage links and toasted bread on a white plate"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 2516025,
+    "pageUrl": "https://www.pexels.com/photo/person-pouring-syrup-on-pancake-2516025/",
+    "desc": "Syrup being poured over a buttered stack of pancakes"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 35240175,
+    "pageUrl": "https://www.pexels.com/photo/barista-pouring-coffee-into-white-mugs-in-cafe-35240175/",
+    "desc": "Fresh coffee being poured from a glass carafe into white mugs at a cafe counter"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 35054704,
+    "pageUrl": "https://www.pexels.com/photo/delicious-grilled-sandwiches-and-cappuccino-on-wooden-table-35054704/",
+    "desc": "Grilled sandwiches with a cappuccino on a wooden cafe table"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 10940365,
+    "pageUrl": "https://www.pexels.com/photo/counter-top-of-a-coffee-bar-10940365/",
+    "desc": "Bright cafe counter with a pastry case, wicker pendant lights and plants"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 6205653,
+    "pageUrl": "https://www.pexels.com/photo/woman-preparing-fresh-aromatic-coffee-with-latte-art-6205653/",
+    "desc": "Barista in an apron pouring steamed milk into a coffee cup behind the counter"
+  }
+]

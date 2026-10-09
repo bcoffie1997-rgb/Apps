@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 4162011,
+    "pageUrl": "https://www.pexels.com/photo/lawn-mower-on-grass-4162011/",
+    "desc": "Push mower cutting a lush green lawn in a garden"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 6728926,
+    "pageUrl": "https://www.pexels.com/photo/a-person-mowing-the-lawn-6728926/",
+    "desc": "Worker mowing a sunlit lawn with a push mower"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 11400235,
+    "pageUrl": "https://www.pexels.com/photo/a-person-using-a-grass-cutter-tool-green-grass-11400235/",
+    "desc": "Close-up of a string trimmer edging grass along a curb with clippings flying"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 24595771,
+    "pageUrl": "https://www.pexels.com/photo/man-cutting-hedge-with-a-trimmer-in-the-garden-24595771/",
+    "desc": "Man trimming a tall hedge with an electric hedge trimmer"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 36178097,
+    "pageUrl": "https://www.pexels.com/photo/tropical-palm-trees-in-vibrant-garden-setting-36178097/",
+    "desc": "Landscaped tropical garden with palm trees, manicured shrubs and a bougainvillea bed"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 11534117,
+    "pageUrl": "https://www.pexels.com/photo/man-in-blue-long-sleeve-shirt-planting-a-tree-11534117/",
+    "desc": "Landscaper in a sun hat planting a young tree in a fresh mulch ring on a green lawn"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 4920288,
+    "pageUrl": "https://www.pexels.com/photo/maintenance-man-controlling-a-lawn-mower-4920288/",
+    "desc": "Smiling groundskeeper in navy coveralls working with a string trimmer"
+  }
+]
