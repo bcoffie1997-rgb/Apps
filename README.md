@@ -24,7 +24,7 @@ Next.js + Tailwind. Hosted on Vercel. English at `/`, Spanish at `/es`.
 
 ## Leads
 The form sends each lead to:
-- `SHEET_WEBHOOK_URL` — your Google Sheet + email alert. Setup: `google-sheet-crm/README.md`.
+- `SHEET_WEBHOOK_URL` — your live Google Sheet CRM + email alert. Setup: `google-sheet-crm/README.md`.
 - `FORM_WEBHOOK_URL` — optional, GoHighLevel or any other webhook.
 
 ## Sample thumbnails

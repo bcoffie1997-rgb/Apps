@@ -1,38 +1,36 @@
-# Google Sheet CRM — setup (10 minutes)
+# Missed Call Pros — Live CRM (Google Sheet)
 
-Every form on missedcallpros.com adds a row to your Google Sheet and emails you the lead.
+One script turns your Google Sheet into a live CRM and connects the website form to it.
 
-## 1. Add the script to your sheet
-1. Open your leads Google Sheet.
-2. Menu: **Extensions → Apps Script**.
-3. Delete everything in the editor. Paste all of `Code.gs` (this folder).
-4. On line 8, change `you@example.com` to the email that should get new-lead alerts.
-5. Click **Save** (disk icon).
+## Set it up (10 minutes, once)
+1. Open the sheet → **Extensions → Apps Script**.
+2. Delete what's there. Paste all of `Code.gs`. On line 20, put your email in `NOTIFY_EMAIL`. Click **Save**.
+3. Toolbar: choose **setup** → **▶ Run** → **Review permissions** → your account → **Advanced → Go to project → Allow**.
+4. Back in the sheet you now have: **Dashboard, Leads, Activity Log, Settings**.
+5. Connect the website: **Deploy → New deployment** → gear → **Web app** → Execute as **Me**, Who has access **Anyone** → **Deploy** → copy the URL ending in `/exec`.
+6. Vercel → Settings → Environment Variables → `SHEET_WEBHOOK_URL` = that URL → Redeploy.
+7. Settings tab → column B: type your salespeople's names.
 
-## 2. Approve it once
-1. In the toolbar, pick the function **setup**, click **▶ Run**.
-2. Click **Review permissions** → pick your Google account → **Advanced** → **Go to project (unsafe)** → **Allow**.
-   (It says "unsafe" only because you wrote the script yourself.)
-3. Go back to your sheet — a **Leads** tab with headers now exists.
+## Daily use
+| You do | The sheet does |
+|---|---|
+| Type or paste a business name in **Leads** | Fills Date Added, sets Status = New |
+| Tick **✔ Contacted Today** | Last Contact = today, First Contact (if blank), Touches +1, Next Follow-Up = today + 3 days, adds a line to Activity Log |
+| Change **Status** | Counts as a contact, logged in Activity Log |
+| Add a line in **Activity Log** (business + type) | Updates that lead's Last Contact and Touches |
+| Nothing | Days Since First Contact, Days Since Last Contact, Days in Pipeline and Follow-Up Status update every day |
+| Website form is submitted | New row in Leads (Source = Website form, follow-up today) + email to you |
 
-## 3. Publish it as a web app
-1. Click **Deploy → New deployment**.
-2. Gear icon → **Web app**.
-3. Execute as: **Me**. Who has access: **Anyone**. (Required — the website isn't signed in to Google.)
-4. Click **Deploy** and copy the **Web app URL** (ends in `/exec`).
+Colors: red = overdue / 7+ days without contact, yellow = due today / 3–6 days, grey = closed.
 
-## 4. Connect it to the website
-1. Vercel → your project → **Settings → Environment Variables**.
-2. Add `SHEET_WEBHOOK_URL` = the Web app URL. Environments: all.
-3. **Deployments → ⋯ → Redeploy**.
+**Dashboard:** total leads, added this week, due today, overdue, won clients, monthly recurring revenue, open pipeline, win rate, per-salesperson numbers, "call these today" list and "going cold" list.
 
-## 5. Test
-Submit the form on missedcallpros.com/contact. Within seconds you should see a new row and get an email.
+**8am email:** if NOTIFY_EMAIL is set, you get the day's overdue + due-today follow-ups every morning.
 
-## Using it as your CRM
-- **Status** column has a dropdown: New → Contacted → Preview sent → Meeting set → Won / Lost.
-- **Follow-up date** and **Notes** are yours to fill in.
-- Tip: Data → Create a filter, then filter Status = New each morning.
+**Change follow-up timing:** Settings → I2 (default 3 days).
 
-## If you change the script later
-Deploy → **Manage deployments** → pencil icon → Version: **New version** → Deploy. The URL stays the same.
+## Uploading a list of leads
+Paste rows into Leads starting at column B (Business Name, Contact, Phone, Email, Type, City, Address…). Date Added and Status fill in automatically.
+
+## After changing the script
+Deploy → Manage deployments → pencil → Version: **New version** → Deploy. The URL stays the same.
