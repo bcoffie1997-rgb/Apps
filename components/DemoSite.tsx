@@ -16,6 +16,13 @@ const ico = (d: ReactNode) => (
 );
 
 const THEMES: Record<DemoStyle, Theme> = {
+  pet: {
+    vars: { bg: "#fff8f0", fg: "#3a2717", muted: "#7a6150", card: "#ffffff", line: "#f1e2d0", accent: "#d9632b", accentFg: "#ffffff", hero: "#fff8f0" },
+    display: "font-extrabold tracking-[-0.03em]",
+    heroDark: false,
+    pattern: "radial-gradient(circle at 30% 35%,#fff 0 7%,transparent 8%),radial-gradient(circle at 72% 60%,#fff 0 9%,transparent 10%),radial-gradient(circle at 55% 22%,#ffffffaa 0 5%,transparent 6%),linear-gradient(135deg,#f6b26b,#d9632b)",
+    icon: ico(<><circle cx="20" cy="22" r="5" /><circle cx="32" cy="16" r="5" /><circle cx="44" cy="22" r="5" /><circle cx="14" cy="34" r="4" /><path d="M32 30c-8 0-14 9-14 15 0 5 5 7 9 5s6-2 10 0 9 0 9-5c0-6-6-15-14-15Z" /></>),
+  },
   tailor: {
     vars: { bg: "#faf6ef", fg: "#1c2440", muted: "#5d6377", card: "#ffffff", line: "#ebe3d4", accent: "#a8742f", accentFg: "#ffffff", hero: "#1c2440" },
     display: "font-[Georgia,'Times_New_Roman',serif] font-normal tracking-[-0.01em]",
@@ -108,10 +115,14 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
       <section className={th.heroDark ? "bg-[var(--hero)]" : "bg-[var(--bg)]"}>
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.1fr_1fr] md:py-20">
           <div className={heroFg}>
-            <p className="inline-flex items-center gap-2 text-sm font-semibold">
-              <span className="flex text-[var(--accent)]"><Star /><Star /><Star /><Star /><Star /></span>
-              <span className={heroMuted}>{demo.rating} · {demo.reviewCount} Google reviews</span>
-            </p>
+            {demo.rating ? (
+              <p className="inline-flex items-center gap-2 text-sm font-semibold">
+                <span className="flex text-[var(--accent)]"><Star /><Star /><Star /><Star /><Star /></span>
+                <span className={heroMuted}>{demo.rating} · {demo.reviewCount} Google reviews</span>
+              </p>
+            ) : (
+              <p className={`text-sm font-semibold uppercase tracking-[0.14em] ${heroMuted}`}>{demo.niche} · {demo.city}</p>
+            )}
             <h1 className={`mt-5 text-[2.6rem] leading-[1.02] sm:text-6xl ${th.display}`}>{demo.tagline}</h1>
             <p className={`mt-5 max-w-lg text-lg leading-relaxed ${heroMuted}`}>{demo.intro}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -189,7 +200,7 @@ export function DemoSite({ demo, banner }: { demo: Demo; banner: ReactNode }) {
       {/* reviews */}
       <section id="reviews" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
         <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--accent)]">Reviews</p>
-        <h2 className={`mt-3 text-3xl sm:text-4xl ${th.display}`}>{demo.rating} stars from {demo.reviewCount} neighbors</h2>
+        <h2 className={`mt-3 text-3xl sm:text-4xl ${th.display}`}>{demo.rating ? `${demo.rating} stars from ${demo.reviewCount} neighbors` : "What customers say"}</h2>
         {demo.reviews.length === 0 && (
           <a href={maps} target="_blank" rel="noopener noreferrer"
             className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--card)] px-6 font-semibold">

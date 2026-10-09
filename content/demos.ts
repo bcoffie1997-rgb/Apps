@@ -9,7 +9,7 @@
  * "style" picks the look: barber | salon | auto | restaurant | contractor | cleaning
  */
 
-export type DemoStyle = "barber" | "salon" | "auto" | "restaurant" | "contractor" | "cleaning" | "tailor";
+export type DemoStyle = "barber" | "salon" | "auto" | "restaurant" | "contractor" | "cleaning" | "tailor" | "pet";
 
 export type Demo = {
   slug: string;
@@ -253,6 +253,8 @@ export const samples: Demo[] = [
  * Tip: copy the closest sample above, then change the slug, name, phone, city, services.
  * The link to show them: https://www.missedcallpros.com/preview/<slug>
  */
+import { generatedPreviews } from "./previews.generated";
+
 export const previews: Demo[] = [
   {
     // Lead #1 — real business. Facts from Google, Yelp and Instagram. Ask the owner for prices, photos and 3 favorite reviews.
@@ -288,6 +290,7 @@ export const previews: Demo[] = [
     badges: ["4.9★ on Google", "Bridal & gowns", "Se habla español"],
     chip: { label: "Find us", value: "SW Davie Blvd" },
   },
+  ...generatedPreviews,
 ];
 
 export const findSample = (slug: string) => samples.find((d) => d.slug === slug);

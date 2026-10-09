@@ -16,7 +16,7 @@ export function DemoBanner({ previewFor }: { previewFor?: string }) {
             {previewFor ? (
               <>
                 <b className="block font-semibold">{b.preview} {previewFor}</b>
-                <span className="block text-white/60">{b.by} · {bEs.preview} {previewFor}</span>
+                <span className="hidden text-white/60 sm:block">{b.by} · {bEs.preview} {previewFor}</span>
               </>
             ) : (
               <>
