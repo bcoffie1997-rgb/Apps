@@ -111,7 +111,7 @@ function buildSettings_(ss) {
     sh.setFrozenRows(1);
     sh.setColumnWidths(1, 9, 160);
     sh.getRange("F2:F20").setNumberFormat("$#,##0");
-    sh.getRange("A22").setValue("Add your salespeople in column B. Dropdowns update automatically.")
+    sh.getRange("H4").setValue("Add your salespeople in column B. Dropdowns update automatically.")
       .setFontColor("#6B7280").setFontStyle("italic");
   }
   sh.setTabColor("#9CA3AF");
