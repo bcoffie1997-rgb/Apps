@@ -1,12 +1,17 @@
 "use client";
 import { useEffect, useState } from "react";
-import { site } from "@/site.config";
+import type { Copy } from "@/content/en";
+
+const MISSED = [
+  { from: "(954) 555-0142", ago: "2m" },
+  { from: "(305) 555-0187", ago: "14m" },
+  { from: "(754) 555-0119", ago: "31m" },
+];
 
 const TIMELINE = [0, 700, 1500, 2300, 4300, 5800]; // ms at which each stage starts
 const LOOP = 10000;
 
-export function PhoneHero() {
-  const p = site.hero.phone;
+export function PhoneHero({ p }: { p: Copy["hero"]["phone"] }) {
   const [stage, setStage] = useState(0);
 
   useEffect(() => {
@@ -30,7 +35,7 @@ export function PhoneHero() {
 
   return (
     <div className="relative mx-auto w-[300px] sm:w-[330px]" role="img"
-      aria-label={`Phone lock screen showing ${p.missed.length} missed calls that turn into: ${p.booked} ${p.bookedDetail}`}>
+      aria-label={p.ariaLabel}>
       {/* glow */}
       <div aria-hidden className={`absolute -inset-10 rounded-full blur-3xl transition-all duration-1000 ${resolved ? "bg-accent/25" : "bg-red-500/10"}`} />
 
@@ -57,12 +62,12 @@ export function PhoneHero() {
           <div className="mt-5 space-y-2 px-3 sm:mt-6">
             <div className={`notif flex items-center justify-between px-2 pb-1 text-white ${shown(1) ? "opacity-100" : "opacity-0"}`}>
               <span className="text-[17px] font-semibold tracking-tight">
-                {resolved ? "Handled automatically" : `${missedCount} Missed Call${missedCount === 1 ? "" : "s"}`}
+                {resolved ? p.handled : `${missedCount} ${missedCount === 1 ? p.missedCall : p.missedCalls}`}
               </span>
               <span className={`h-2 w-2 rounded-full ${resolved ? "bg-accent" : "bg-red-500"}`} />
             </div>
 
-            {p.missed.map((m, i) => (
+            {MISSED.map((m, i) => (
               <div key={m.from}
                 className={`notif flex items-center gap-3 rounded-2xl bg-white/[0.12] px-3 py-2.5 backdrop-blur-md ${
                   shown(i + 1) ? (resolved ? "translate-y-0 scale-[0.97] opacity-40" : "translate-y-0 opacity-100") : "-translate-y-3 scale-95 opacity-0"
@@ -71,14 +76,14 @@ export function PhoneHero() {
                   <svg viewBox="0 0 24 24" className="h-5 w-5 fill-white"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="flex justify-between text-[13px] text-white"><b className="font-semibold">Missed Call</b><span className="text-white/55">{m.ago}</span></span>
+                  <span className="flex justify-between text-[13px] text-white"><b className="truncate font-semibold">{p.missedCall}</b><span className="shrink-0 pl-2 text-white/55">{m.ago}</span></span>
                   <span className="block truncate text-[13px] text-white/75">{m.from}</span>
                 </span>
               </div>
             ))}
 
             <div className={`notif rounded-2xl bg-white/[0.14] px-3 py-2.5 backdrop-blur-md ${shown(4) ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}>
-              <span className="flex justify-between text-[13px] text-white"><b className="font-semibold">Text sent automatically</b><span className="text-white/55">now</span></span>
+              <span className="flex justify-between text-[13px] text-white"><b className="font-semibold">{p.textSent}</b><span className="shrink-0 pl-2 text-white/55">{p.now}</span></span>
               <span className="mt-0.5 block text-[13px] leading-snug text-white/80">{p.textBack}</span>
             </div>
 
@@ -88,7 +93,7 @@ export function PhoneHero() {
                   <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5" /></svg>
                 </span>
                 <span className="min-w-0">
-                  <span className="block whitespace-nowrap text-[15px] font-bold tracking-tight sm:text-[16px]">{p.booked}</span>
+                  <span className="block text-[15px] font-bold leading-tight tracking-tight sm:text-[16px]">{p.booked}</span>
                   <span className="block text-[13px] font-medium text-ink/70">{p.bookedDetail}</span>
                 </span>
               </span>
