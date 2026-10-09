@@ -51,6 +51,10 @@ const COLS = [
   "Monthly Value",         // Z  formula
   "Days in Pipeline",      // AA formula
   "Last Updated",          // AB auto
+  "Priority",              // AC ▼ High / Medium / Low
+  "How to Approach",       // AD ▼ Walk in / Call / text
+  "Google Rating",         // AE
+  "Reviews",               // AF
 ];
 const C = Object.fromEntries(COLS.map((h, i) => [h, i + 1]));
 const FORMULA_COLS = [23, 24, 25, 26, 27];
@@ -141,10 +145,12 @@ function buildLeads_(ss, settings) {
     .setWrap(true).setVerticalAlignment("middle");
   sh.getRange(1, C["First Contact"], 1, 9).setBackground("#1F2937"); // auto/formula columns: darker
   sh.getRange(1, C["✔ Contacted Today"]).setBackground("#22E58B").setFontColor("#0B0D12");
+  sh.getRange(1, C["Last Updated"]).setBackground("#1F2937");
+  sh.getRange(1, C["Priority"], 1, 4).setBackground("#0B0D12");
   sh.setRowHeight(1, 44);
 
   // Widths
-  const widths = [110, 190, 140, 120, 180, 120, 120, 200, 100, 120, 120, 125, 105, 95, 115, 260, 160, 90, 80, 110, 110, 70, 95, 95, 115, 90, 85, 140];
+  const widths = [110, 190, 140, 120, 180, 120, 120, 200, 100, 120, 120, 125, 105, 95, 115, 260, 160, 90, 80, 110, 110, 70, 95, 95, 115, 90, 85, 140, 90, 120, 80, 75];
   widths.forEach((w, i) => sh.setColumnWidth(i + 1, w));
 
   // Formats
@@ -160,7 +166,7 @@ function buildLeads_(ss, settings) {
   sh.getRange(2, C["Notes"], n, 1).setWrap(true);
 
   // Dropdowns + checkbox + date picker
-  const list = (col) => SpreadsheetApp.newDataValidation().requireValueInRange(settings.getRange(2, col, 30, 1), true).setAllowInvalid(true).build();
+  const list = (col) => SpreadsheetApp.newDataValidation().requireValueInRange(settings.getRange(2, col, 80, 1), true).setAllowInvalid(true).build();
   const fixed = (vals) => SpreadsheetApp.newDataValidation().requireValueInList(vals, true).setAllowInvalid(true).build();
   sh.getRange(2, C["Status"], n, 1).setDataValidation(list(1));
   sh.getRange(2, C["Salesperson"], n, 1).setDataValidation(list(2));
@@ -170,6 +176,10 @@ function buildLeads_(ss, settings) {
   sh.getRange(2, C["Has Website?"], n, 1).setDataValidation(fixed(["No website", "Outdated", "Has one"]));
   sh.getRange(2, C["Language"], n, 1).setDataValidation(fixed(["English", "Spanish"]));
   sh.getRange(2, C["OK to Text"], n, 1).setDataValidation(fixed(["Yes", "No"]));
+  sh.getRange(2, C["Priority"], n, 1).setDataValidation(fixed(["High", "Medium", "Low"]));
+  sh.getRange(2, C["How to Approach"], n, 1).setDataValidation(fixed(["Walk in", "Call / text"]));
+  sh.getRange(2, C["Google Rating"], n, 1).setNumberFormat("0.0").setHorizontalAlignment("center");
+  sh.getRange(2, C["Reviews"], n, 1).setHorizontalAlignment("center");
   sh.getRange(2, C["✔ Contacted Today"], n, 1).insertCheckboxes();
   sh.getRange(2, C["Next Follow-Up"], n, 1).setDataValidation(SpreadsheetApp.newDataValidation().requireDate().setAllowInvalid(true).build());
 
@@ -185,6 +195,14 @@ function buildLeads_(ss, settings) {
   const since = sh.getRange(2, C["Days Since Last Contact"], n, 1);
   rules.push(SpreadsheetApp.newConditionalFormatRule().whenNumberGreaterThanOrEqualTo(7).setBackground("#FECACA").setFontColor("#991B1B").setRanges([since]).build());
   rules.push(SpreadsheetApp.newConditionalFormatRule().whenNumberBetween(3, 6).setBackground("#FEF3C7").setRanges([since]).build());
+  const pr = sh.getRange(2, C["Priority"], n, 1);
+  rules.push(SpreadsheetApp.newConditionalFormatRule().whenTextEqualTo("High").setBackground("#FECACA").setFontColor("#991B1B").setBold(true).setRanges([pr]).build());
+  rules.push(SpreadsheetApp.newConditionalFormatRule().whenTextEqualTo("Medium").setBackground("#FEF3C7").setRanges([pr]).build());
+  rules.push(SpreadsheetApp.newConditionalFormatRule().whenTextEqualTo("Low").setFontColor("#6B7280").setRanges([pr]).build());
+  // High-priority businesses stand out right in the name column
+  rules.push(SpreadsheetApp.newConditionalFormatRule()
+    .whenFormulaSatisfied('=AND($AC2="High",$L2<>"Won",$L2<>"Lost",$L2<>"Not Interested")').setBold(true).setFontColor("#B91C1C")
+    .setRanges([sh.getRange(2, C["Business Name"], n, 1)]).build());
   // Whole row goes grey when the deal is closed
   rules.push(SpreadsheetApp.newConditionalFormatRule()
     .whenFormulaSatisfied('=OR($L2="Lost",$L2="Not Interested")').setFontColor("#9CA3AF").setRanges([sh.getRange(2, 1, n, 19)]).build());
@@ -404,6 +422,7 @@ function doPost(e) {
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     let sh = ss.getSheetByName(TAB.leads);
     if (!sh) { setup(); sh = ss.getSheetByName(TAB.leads); }
+    if (d.action === "import") return json_(importLeads_(sh, d.leads || []));
     const now = new Date();
     const row = new Array(22).fill("");
     row[C["Date Added"] - 1] = now;
@@ -443,6 +462,68 @@ function doPost(e) {
   } finally {
     lock.releaseLock();
   }
+}
+
+// Bulk import (a list of leads). Skips businesses already in the sheet (same name + phone).
+function importLeads_(sh, leads) {
+  const last = lastDataRow_(sh);
+  const existing = new Set();
+  if (last >= 2) {
+    sh.getRange(2, 1, last - 1, C["Phone"]).getValues().forEach((r) =>
+      existing.add((String(r[C["Business Name"] - 1]) + "|" + String(r[C["Phone"] - 1])).trim().toLowerCase()));
+  }
+  const now = new Date();
+  const main = [];
+  const extra = [];
+  let skipped = 0;
+  leads.forEach((l) => {
+    const key = (String(l.businessName || "") + "|" + String(l.phone || "")).trim().toLowerCase();
+    if (!l.businessName || existing.has(key)) { skipped++; return; }
+    existing.add(key);
+    const row = new Array(22).fill("");
+    row[C["Date Added"] - 1] = now;
+    row[C["Business Name"] - 1] = l.businessName;
+    row[C["Contact Name"] - 1] = l.contactName || "";
+    row[C["Phone"] - 1] = l.phone || "";
+    row[C["Email"] - 1] = l.email || "";
+    row[C["Business Type"] - 1] = l.businessType || "";
+    row[C["City"] - 1] = l.city || "";
+    row[C["Address"] - 1] = l.address || "";
+    row[C["Has Website?"] - 1] = l.hasWebsite || "";
+    row[C["Source"] - 1] = l.source || "";
+    row[C["Salesperson"] - 1] = l.salesperson || "";
+    row[C["Status"] - 1] = l.status || "New";
+    row[C["✔ Contacted Today"] - 1] = false;
+    row[C["Notes"] - 1] = l.notes || "";
+    main.push(row);
+    extra.push([now, l.priority || "", l.approach || "", l.rating === undefined ? "" : l.rating, l.reviews === undefined ? "" : l.reviews]);
+  });
+  // New business types → add to the Settings dropdown list
+  const settings = SpreadsheetApp.getActive().getSheetByName(TAB.settings);
+  if (settings) {
+    const typeCol = settings.getRange(2, 3, 60, 1).getValues().map((r) => String(r[0]));
+    const known = new Set(typeCol.filter(Boolean).map((t) => t.toLowerCase()));
+    const fresh = [];
+    main.forEach((r) => {
+      const t = String(r[C["Business Type"] - 1]);
+      if (t && !known.has(t.toLowerCase())) { known.add(t.toLowerCase()); fresh.push([t]); }
+    });
+    if (fresh.length) {
+      const firstEmpty = typeCol.findIndex((t) => !t);
+      const at = 2 + (firstEmpty === -1 ? typeCol.length : firstEmpty);
+      settings.getRange(at, 3, fresh.length, 1).setValues(fresh);
+      const leadsSheet = SpreadsheetApp.getActive().getSheetByName(TAB.leads);
+      leadsSheet.getRange(2, C["Business Type"], leadsSheet.getMaxRows() - 1, 1).setDataValidation(
+        SpreadsheetApp.newDataValidation().requireValueInRange(settings.getRange(2, 3, 80, 1), true).setAllowInvalid(true).build());
+    }
+  }
+  if (main.length) {
+    const start = last + 1;
+    ensureRows_(sh, start + main.length + 50);
+    sh.getRange(start, 1, main.length, 22).setValues(main);
+    sh.getRange(start, C["Last Updated"], extra.length, 5).setValues(extra);
+  }
+  return { ok: true, added: main.length, skipped: skipped };
 }
 
 function doGet() {
