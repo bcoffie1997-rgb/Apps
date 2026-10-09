@@ -255,33 +255,37 @@ export const samples: Demo[] = [
  */
 export const previews: Demo[] = [
   {
-    // Lead #1 — real business. Only verified facts: name, address, Google rating + count. Ask the owner for phone, hours, prices, photos.
+    // Lead #1 — real business. Facts from Google, Yelp and Instagram. Ask the owner for prices, photos and 3 favorite reviews.
     slug: "snip-and-stitch",
     style: "tailor",
     niche: "Tailor & Alterations",
     name: "Snip and Stitch",
     city: "Fort Lauderdale",
     address: "111 SW Davie Blvd, Fort Lauderdale, FL 33315",
-    phone: "",
+    phone: "(954) 765-6663", // from Yelp + Instagram
     tagline: "Perfect fit, every time.",
-    intro: "Hems, repairs and alterations done right, here on SW Davie Blvd. Bring it in and leave looking sharp.",
-    cta: "Get directions",
+    intro: "Bridal, gowns and everyday alterations for men and women, done right here on SW Davie Blvd.",
+    cta: "Call to book a fitting",
     rating: "4.9",
     reviewCount: "128",
     services: [
+      { name: "Bridal & Gowns", price: "", desc: "Wedding dresses, bridesmaids and evening gowns fitted for your big day." },
       { name: "Hemming", price: "", desc: "Pants, jeans, skirts and dresses taken up to the right length." },
       { name: "Take In / Let Out", price: "", desc: "Waist, seams and sleeves adjusted so it fits like it was made for you." },
-      { name: "Zippers & Buttons", price: "", desc: "Broken zipper or missing button? Fixed so you can wear it again." },
-      { name: "Dresses & Formalwear", price: "", desc: "Prom, wedding and special-event alterations." },
       { name: "Suits & Jackets", price: "", desc: "Sleeves, shoulders and trousers tailored for a clean look." },
+      { name: "Zippers & Buttons", price: "", desc: "Broken zipper or missing button? Fixed so you can wear it again." },
       { name: "Repairs", price: "", desc: "Rips, tears and worn spots mended." },
     ],
     aboutTitle: "Your neighborhood tailor.",
     about:
-      "Snip and Stitch is a tailor and alterations shop in Fort Lauderdale. Customers give us 4.9 stars on Google from 128 reviews — come see why.",
-    hours: [],
+      "Snip and Stitch is a men's and women's tailoring shop in Fort Lauderdale, trusted with high-end clothing and wedding gowns. Customers give us 4.9 stars on Google from 128 reviews. Se habla español.",
+    hours: [
+      { days: "Mon–Fri", time: "9:30am – 5:30pm" },
+      { days: "Saturday", time: "9:30am – 2:30pm" },
+      { days: "Sunday", time: "Closed" },
+    ],
     reviews: [],
-    badges: ["4.9★ on Google", "Alterations & repairs", "Fort Lauderdale"],
+    badges: ["4.9★ on Google", "Bridal & gowns", "Se habla español"],
     chip: { label: "Find us", value: "SW Davie Blvd" },
   },
 ];
