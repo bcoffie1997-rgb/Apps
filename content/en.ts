@@ -10,43 +10,43 @@ export const en = {
 
   seo: {
     home: {
-      title: "Missed Call Pros | Small Business Websites in Fort Lauderdale & South Florida",
+      title: "Missed Call Pros | Small Business Websites, Live in 48 Hours",
       description:
-        "We build your small business website before you ask and launch it in 48 hours. Web design for barbers, salons, auto shops, restaurants and contractors in Fort Lauderdale, Broward and Miami-Dade.",
+        "We build your small business website before you ask and launch it in 48 hours. Web design for barbers, salons, auto shops, restaurants and contractors anywhere in the U.S.",
     },
     pricing: {
       title: "Pricing — Small Business Website Plans",
       description:
-        "Website plans from $147/mo for South Florida small businesses. $597 setup, month-to-month, cancel with 30 days notice.",
+        "Website plans from $147/mo for small businesses. $597 setup, month-to-month, cancel with 30 days notice.",
     },
     work: {
       title: "Sample Designs — Websites for Local Businesses",
       description:
-        "Live sample websites for barbers, salons, auto shops, restaurants, contractors and cleaners. See what we can build for your South Florida business.",
+        "Live sample websites for barbers, salons, auto shops, restaurants, contractors and cleaners. See what we can build for your business.",
     },
     about: {
-      title: "About — Local Web Design in Fort Lauderdale",
+      title: "About — Small Business Web Design, Nationwide",
       description:
-        "A local Fort Lauderdale web studio. We meet face-to-face, build your website first, and show it to you before you pay.",
+        "Based in Fort Lauderdale, working with small businesses everywhere. We build your website first and show it to you before you pay.",
     },
     contact: {
       title: "Contact — Get Your Website Built",
       description:
-        "Call (754) 281-0014 or send your business name. We'll build your website first and launch it in 48 hours. Serving Fort Lauderdale, Broward and Miami-Dade.",
+        "Call (754) 281-0014 or send your business name. We'll build your website first and launch it in 48 hours — wherever your business is.",
     },
     privacy: { title: "Privacy Policy", description: "How Missed Call Pros collects and uses your information." },
     terms: { title: "Terms of Service", description: "Terms for Missed Call Pros services, including text messaging." },
     hi: { title: "Nice to Meet You", description: "We stopped by your business. Here's what happens next." },
     keywords: [
+      "small business website design",
+      "website for small business",
+      "local business web design",
       "web design Fort Lauderdale",
-      "small business website Broward",
-      "website design Miami-Dade",
-      "South Florida web design",
       "website for barbershop",
       "website for auto shop",
       "website for contractors",
       "missed call text back",
-      "local web agency Fort Lauderdale",
+      "done-for-you website for small business",
     ],
   },
 
@@ -74,7 +74,7 @@ export const en = {
   },
 
   hero: {
-    eyebrow: "Fort Lauderdale · Broward · Miami-Dade",
+    eyebrow: "Websites for local businesses · Nationwide",
     titleStart: "Every missed call is a customer going",
     titleAccent: "down the street.",
     subtitle: "We build your website before you ask — live in 48 hours.",
@@ -176,7 +176,7 @@ export const en = {
     points: [
       { title: "See it before you pay", body: "Your site is built and shown to you first. No deposit to get started." },
       { title: "No long contracts", body: "Month-to-month. Cancel any time with 30 days notice." },
-      { title: "Local and in person", body: "We're in Fort Lauderdale. We'll meet you at your shop." },
+      { title: "Wherever you are", body: "Based in Fort Lauderdale, working with businesses in every state." },
       { title: "We pick up the phone", body: "Need a change? Call or text us. A real person answers." },
     ],
   },
@@ -195,10 +195,10 @@ export const en = {
       },
       {
         q: "Do you work with my type of business?",
-        a: "We work with barbers, salons, auto shops, restaurants, contractors, cleaners and most local service businesses in South Florida.",
+        a: "We work with barbers, salons, auto shops, restaurants, contractors, cleaners and most local service businesses — anywhere in the U.S.",
       },
       { q: "Can my website be in Spanish too?", a: "Yes. We can build your site in English, Spanish, or both — at no extra cost." },
-      { q: "Will you meet with me in person?", a: "Yes. We're local to Fort Lauderdale and happy to meet face-to-face anywhere in Broward or Miami-Dade." },
+      { q: "Do you work with businesses outside Florida?", a: "Yes. We're based in Fort Lauderdale and work with businesses anywhere in the U.S. Everything happens by phone, text and video — you never have to leave your shop." },
     ],
   },
 
@@ -259,7 +259,7 @@ export const en = {
 
   work: {
     eyebrow: "Sample designs",
-    title: "Built for the businesses that keep South Florida running.",
+    title: "Built for the businesses that keep every town running.",
     subtitle:
       "These are sample sites we designed to show what's possible. Every one is live — tap to open it. Yours will be built around your real photos, services and reviews.",
     sampleTag: "Sample",
@@ -269,13 +269,14 @@ export const en = {
     eyebrow: "About",
     title: "Local. Face-to-face. We show you first.",
     intro:
-      "Missed Call Pros is a Fort Lauderdale web studio built for the owners who are too busy working to think about a website. We don't send you a proposal. We send you your website.",
+      "Missed Call Pros is a web studio based in Fort Lauderdale, built for owners everywhere who are too busy working to think about a website. We don't send you a proposal. We send you your website.",
     values: [
-      { title: "We're local", body: "Based in Fort Lauderdale. We serve Broward and Miami-Dade, and we'll come to your shop." },
+      { title: "We work everywhere", body: "Based in Fort Lauderdale, building websites for businesses across the country." },
       { title: "Face-to-face", body: "Real people, real handshakes. You'll always know who to call — and we pick up." },
       { title: "You see it before you pay", body: "We build your site first. If it's not right, you don't pay. That's the deal." },
     ],
-    areaTitle: "Proudly serving Broward & Miami-Dade.",
+    areaTitle: "Based in Fort Lauderdale. Working everywhere.",
+    areaChips: ["All 50 states", "Fort Lauderdale HQ", "Done by phone, text & video", "Live in 48 hours", "English & Spanish"],
     storyLabel: "Our story",
     story:
       "We kept seeing the same thing: great local businesses with five-star work and no website. Customers searched, found nothing, and called someone else. So we started building the sites first and showing owners what they were missing. Then we made sure they'd never lose another customer to a missed call.",
@@ -287,11 +288,11 @@ export const en = {
     subtitle: "Tell us about your business. We'll reach out within one business day — usually the same day.",
     tapToCall: "Tap to call",
     hours: "Mon–Sat, 8am–7pm",
-    serviceArea: "Service area",
-    serviceAreaBody: "Broward & Miami-Dade — including",
+    serviceArea: "Where we work",
+    serviceAreaBody: "Based in Fort Lauderdale, FL. We build and launch websites for businesses in every state — all by phone, text and video.",
     andMore: "and more.",
     openMap: "Open in Google Maps",
-    mapLabel: "Map of our service area: Broward County and Miami-Dade County",
+    mapLabel: "We work with businesses across the United States",
     form: {
       name: "Your name",
       namePh: "Jane Smith",
@@ -336,12 +337,12 @@ export const en = {
   },
 
   footer: {
-    blurb: "Websites for local businesses in Broward & Miami-Dade. Built first. Live in 48 hours.",
+    blurb: "Websites for local businesses, anywhere in the U.S. Built first. Live in 48 hours.",
     pages: "Pages",
     contact: "Contact",
     legal: "Legal",
     rights: "All rights reserved.",
-    tagline: "Web design · Fort Lauderdale · Broward · Miami-Dade",
+    tagline: "Based in Fort Lauderdale · Serving businesses nationwide",
   },
 
   demoBanner: {

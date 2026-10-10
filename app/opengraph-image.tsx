@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/site.config";
 
-export const alt = `${site.name} — websites for South Florida small businesses, live in 48 hours`;
+export const alt = `${site.name} — websites for small businesses nationwide, live in 48 hours`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -27,7 +27,7 @@ export default function OgImage() {
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 24, color: "rgba(255,255,255,0.55)" }}>
-          <div>Fort Lauderdale · Broward · Miami-Dade</div>
+          <div>Based in Fort Lauderdale · Serving businesses nationwide</div>
           <div>{site.phone}</div>
         </div>
       </div>

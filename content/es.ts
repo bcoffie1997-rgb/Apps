@@ -11,14 +11,14 @@ export const es: Copy = {
 
   seo: {
     home: {
-      title: "Missed Call Pros | Páginas Web para Negocios en Fort Lauderdale y el Sur de la Florida",
+      title: "Missed Call Pros | Páginas Web para Negocios, Listas en 48 Horas",
       description:
-        "Creamos la página web de tu negocio antes de que la pidas y la publicamos en 48 horas. Diseño web para barberías, salones, talleres, restaurantes y contratistas en Fort Lauderdale, Broward y Miami-Dade.",
+        "Creamos la página web de tu negocio antes de que la pidas y la publicamos en 48 horas. Diseño web para barberías, salones, talleres, restaurantes y contratistas en cualquier parte de EE. UU.",
     },
     pricing: {
       title: "Precios — Planes de Página Web para Negocios",
       description:
-        "Planes desde $147 al mes para pequeños negocios del Sur de la Florida. Instalación de $597, mes a mes, cancela con 30 días de aviso.",
+        "Planes desde $147 al mes para pequeños negocios. Instalación de $597, mes a mes, cancela con 30 días de aviso.",
     },
     work: {
       title: "Diseños de Muestra — Páginas Web para Negocios Locales",
@@ -26,23 +26,23 @@ export const es: Copy = {
         "Páginas web de muestra para barberías, salones, talleres, restaurantes, contratistas y servicios de limpieza. Mira lo que podemos crear para tu negocio.",
     },
     about: {
-      title: "Quiénes Somos — Diseño Web Local en Fort Lauderdale",
+      title: "Quiénes Somos — Diseño Web para Negocios en Todo EE. UU.",
       description:
-        "Un estudio web local en Fort Lauderdale. Nos reunimos en persona, creamos tu página primero y te la mostramos antes de que pagues.",
+        "Con base en Fort Lauderdale, trabajamos con negocios en todas partes. Creamos tu página primero y te la mostramos antes de que pagues.",
     },
     contact: {
       title: "Contacto — Pide Tu Página Web",
       description:
-        "Llama al (754) 281-0014 o envíanos el nombre de tu negocio. Creamos tu página primero y la publicamos en 48 horas. Fort Lauderdale, Broward y Miami-Dade.",
+        "Llama al (754) 281-0014 o envíanos el nombre de tu negocio. Creamos tu página primero y la publicamos en 48 horas, estés donde estés.",
     },
     privacy: { title: "Política de Privacidad", description: "Cómo Missed Call Pros recopila y usa tu información." },
     terms: { title: "Términos de Servicio", description: "Términos de los servicios de Missed Call Pros, incluyendo mensajes de texto." },
     hi: { title: "Mucho Gusto", description: "Pasamos por tu negocio. Esto es lo que sigue." },
     keywords: [
       "diseño web Fort Lauderdale",
-      "página web para negocios Miami",
-      "página web para pequeños negocios Broward",
-      "diseño de páginas web Miami-Dade",
+      "página web para negocios hispanos",
+      "páginas web para pequeños negocios en EE.UU.",
+      "diseño de páginas web para negocios locales",
       "página web para barbería",
       "página web para taller mecánico",
       "página web para restaurante",
@@ -74,7 +74,7 @@ export const es: Copy = {
   },
 
   hero: {
-    eyebrow: "Fort Lauderdale · Broward · Miami-Dade",
+    eyebrow: "Páginas web para negocios locales · En todo EE. UU.",
     titleStart: "Cada llamada perdida es un cliente que se va",
     titleAccent: "con la competencia.",
     subtitle: "Creamos tu página web antes de que la pidas — lista en 48 horas.",
@@ -176,7 +176,7 @@ export const es: Copy = {
     points: [
       { title: "Mírala antes de pagar", body: "Tu página se crea y se te muestra primero. Sin depósito para empezar." },
       { title: "Sin contratos largos", body: "Mes a mes. Cancela cuando quieras con 30 días de aviso." },
-      { title: "Locales y en persona", body: "Estamos en Fort Lauderdale. Te visitamos en tu negocio." },
+      { title: "Donde estés", body: "Con base en Fort Lauderdale, trabajamos con negocios en todos los estados." },
       { title: "Contestamos el teléfono", body: "¿Necesitas un cambio? Llámanos o textéanos. Te atiende una persona real." },
     ],
   },
@@ -195,10 +195,10 @@ export const es: Copy = {
       },
       {
         q: "¿Trabajan con mi tipo de negocio?",
-        a: "Trabajamos con barberías, salones, talleres, restaurantes, contratistas, servicios de limpieza y la mayoría de negocios locales del Sur de la Florida.",
+        a: "Trabajamos con barberías, salones, talleres, restaurantes, contratistas, servicios de limpieza y la mayoría de negocios locales, en cualquier parte de EE. UU.",
       },
       { q: "¿Mi página puede estar en español?", a: "Sí. Creamos tu página en inglés, en español o en los dos — sin costo extra." },
-      { q: "¿Se reúnen conmigo en persona?", a: "Sí. Somos de Fort Lauderdale y con gusto te visitamos en cualquier parte de Broward o Miami-Dade." },
+      { q: "¿Trabajan con negocios fuera de la Florida?", a: "Sí. Tenemos base en Fort Lauderdale y trabajamos con negocios en todo EE. UU. Todo se hace por teléfono, texto y video — no tienes que salir de tu negocio." },
     ],
   },
 
@@ -259,7 +259,7 @@ export const es: Copy = {
 
   work: {
     eyebrow: "Diseños de muestra",
-    title: "Hechas para los negocios que mueven el Sur de la Florida.",
+    title: "Hechas para los negocios que mueven cada ciudad.",
     subtitle:
       "Estas son páginas de muestra que diseñamos para enseñarte lo que es posible. Todas funcionan — toca una para abrirla. La tuya se hará con tus fotos, servicios y reseñas reales.",
     sampleTag: "Muestra",
@@ -269,13 +269,14 @@ export const es: Copy = {
     eyebrow: "Nosotros",
     title: "Locales. En persona. Te la mostramos primero.",
     intro:
-      "Missed Call Pros es un estudio web de Fort Lauderdale para dueños de negocio que están demasiado ocupados trabajando para pensar en una página web. No te mandamos una propuesta. Te mandamos tu página.",
+      "Missed Call Pros es un estudio web con base en Fort Lauderdale para dueños de negocio en todas partes que están demasiado ocupados trabajando para pensar en una página web. No te mandamos una propuesta. Te mandamos tu página.",
     values: [
-      { title: "Somos locales", body: "Estamos en Fort Lauderdale. Atendemos Broward y Miami-Dade, y vamos a tu negocio." },
+      { title: "Trabajamos en todas partes", body: "Con base en Fort Lauderdale, creamos páginas web para negocios en todo el país." },
       { title: "En persona", body: "Gente real, trato real. Siempre sabrás a quién llamar — y contestamos." },
       { title: "La ves antes de pagar", body: "Creamos tu página primero. Si no está bien, no pagas. Ese es el trato." },
     ],
-    areaTitle: "Orgullosos de servir a Broward y Miami-Dade.",
+    areaTitle: "Base en Fort Lauderdale. Trabajamos en todas partes.",
+    areaChips: ["Los 50 estados", "Sede en Fort Lauderdale", "Por teléfono, texto y video", "Lista en 48 horas", "Inglés y español"],
     storyLabel: "Nuestra historia",
     story:
       "Siempre veíamos lo mismo: excelentes negocios locales con trabajo de cinco estrellas y sin página web. Los clientes buscaban, no encontraban nada y llamaban a otro. Así que empezamos a crear las páginas primero y a enseñarles a los dueños lo que se estaban perdiendo. Y luego nos aseguramos de que nunca más perdieran un cliente por una llamada perdida.",
@@ -287,11 +288,11 @@ export const es: Copy = {
     subtitle: "Cuéntanos de tu negocio. Te contactamos en un día hábil — casi siempre el mismo día.",
     tapToCall: "Toca para llamar",
     hours: "lun–sáb, 8am–7pm",
-    serviceArea: "Área de servicio",
-    serviceAreaBody: "Broward y Miami-Dade — incluyendo",
+    serviceArea: "Dónde trabajamos",
+    serviceAreaBody: "Con base en Fort Lauderdale, FL. Creamos y publicamos páginas web para negocios en todos los estados — todo por teléfono, texto y video.",
     andMore: "y más.",
     openMap: "Abrir en Google Maps",
-    mapLabel: "Mapa de nuestra área de servicio: condados de Broward y Miami-Dade",
+    mapLabel: "Trabajamos con negocios en todo Estados Unidos",
     form: {
       name: "Tu nombre",
       namePh: "María López",
@@ -336,12 +337,12 @@ export const es: Copy = {
   },
 
   footer: {
-    blurb: "Páginas web para negocios locales en Broward y Miami-Dade. Las creamos primero. Listas en 48 horas.",
+    blurb: "Páginas web para negocios locales en todo EE. UU. Las creamos primero. Listas en 48 horas.",
     pages: "Páginas",
     contact: "Contacto",
     legal: "Legal",
     rights: "Todos los derechos reservados.",
-    tagline: "Diseño web · Fort Lauderdale · Broward · Miami-Dade",
+    tagline: "Base en Fort Lauderdale · Negocios en todo el país",
   },
 
   demoBanner: {

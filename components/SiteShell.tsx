@@ -48,8 +48,7 @@ function businessLd(lang: Lang) {
     knowsLanguage: ["en", "es"],
     address: { "@type": "PostalAddress", addressLocality: site.city, addressRegion: site.region, addressCountry: "US" },
     areaServed: [
-      ...site.counties.map((name) => ({ "@type": "AdministrativeArea", name: `${name}, FL` })),
-      ...site.serviceAreas.map((name) => ({ "@type": "City", name: `${name}, FL` })),
+      { "@type": "Country", name: "United States" },
     ],
     openingHours: "Mo-Sa 08:00-19:00",
     makesOffer: site.pricing.plans.map((p) => ({

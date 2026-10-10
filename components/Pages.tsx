@@ -5,7 +5,6 @@ import { site } from "@/site.config";
 import { alternates, getCopy, localize, type Lang } from "@/lib/i18n";
 import { PhoneHero } from "./PhoneHero";
 import { ContactForm } from "./ContactForm";
-import { ServiceMap } from "./ServiceMap";
 import { ArrowIcon, CheckIcon, MailIcon, MessageIcon, PhoneIcon, PinIcon } from "./Icons";
 import {
   Faq, Features, FinalCta, Guarantee, HowItWorks, PageHero, PricingCards, PricingPreview, SampleGrid, SamplesStrip, StatsStrip,
@@ -140,7 +139,7 @@ export function AboutPage({ lang }: { lang: Lang }) {
               <PinIcon className="relative h-8 w-8 text-accent" />
               <p className="relative mt-6 text-3xl font-bold leading-tight tracking-tight">{a.areaTitle}</p>
               <ul className="relative mt-6 flex flex-wrap gap-2">
-                {site.serviceAreas.map((c) => (
+                {a.areaChips.map((c) => (
                   <li key={c} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm text-white/75">{c}</li>
                 ))}
               </ul>
@@ -186,11 +185,10 @@ export function ContactPage({ lang }: { lang: Lang }) {
               </a>
             </div>
             <div className="card overflow-hidden">
-              <ServiceMap label={c.mapLabel} openLabel={c.openMap} />
               <div className="p-6">
                 <p className="flex items-center gap-2 font-semibold"><PinIcon className="h-5 w-5 text-accent-700" /> {c.serviceArea}</p>
                 <p className="mt-2 text-[15px] leading-relaxed text-ink/65">
-                  {c.serviceAreaBody} {site.serviceAreas.slice(0, 8).join(", ")} {c.andMore}
+                  {c.serviceAreaBody}
                 </p>
               </div>
             </div>
