@@ -18,7 +18,7 @@ export default function PreviewIndex() {
           <LogoMark className="h-10 w-10" />
           <div>
             <h1 className="text-2xl font-bold tracking-tight">Prospect previews</h1>
-            <p className="text-[15px] text-[#0b0d12]/60">{previews.length} sites · tap one to open it on your phone</p>
+            <p className="text-[15px] text-[#0b0d12]/60">{previews.length} sites · tap one to open it on your phone · <a href="/pitch" className="font-semibold text-[#067a45] underline">Sales walkthrough</a></p>
           </div>
         </div>
         {cities.map((city) => (
@@ -26,14 +26,14 @@ export default function PreviewIndex() {
             <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-[#067a45]">{city} · {byCity.get(city)!.length}</h2>
             <ul className="mt-3 divide-y divide-[#0b0d12]/[0.07] overflow-hidden rounded-2xl border border-[#0b0d12]/[0.07] bg-white">
               {byCity.get(city)!.map((p) => (
-                <li key={p.slug}>
-                  <a href={`/preview/${p.slug}`} className="flex min-h-14 items-center justify-between gap-3 px-4 py-3 hover:bg-[#f5f6f8]">
+                <li key={p.slug} className="flex items-center">
+                  <a href={`/preview/${p.slug}`} className="flex min-h-14 min-w-0 flex-1 items-center justify-between gap-3 px-4 py-3 hover:bg-[#f5f6f8]">
                     <span className="min-w-0">
                       <span className="block truncate font-semibold">{p.name}</span>
                       <span className="block truncate text-sm text-[#0b0d12]/60">{p.niche}{p.phone ? ` · ${p.phone}` : " · no phone listed"}</span>
                     </span>
-                    <span aria-hidden className="shrink-0 text-[#0b0d12]/40">→</span>
                   </a>
+                  <a href={`/pitch?for=${p.slug}`} className="mr-3 shrink-0 rounded-full bg-[#0b0d12] px-3.5 py-2 text-sm font-semibold text-white">Pitch</a>
                 </li>
               ))}
             </ul>
