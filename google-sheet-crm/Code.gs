@@ -179,7 +179,7 @@ function buildLeads_(ss, settings) {
   sh.getRange(2, C["Priority"], n, 1).setDataValidation(fixed(["High", "Medium", "Low"]));
   sh.getRange(2, C["How to Approach"], n, 1).setDataValidation(fixed(["Walk in", "Call / text"]));
   sh.getRange(2, C["Google Rating"], n, 1).setNumberFormat("0.0").setHorizontalAlignment("center");
-  sh.getRange(2, C["Reviews"], n, 1).setHorizontalAlignment("center");
+  sh.getRange(2, C["Reviews"], n, 1).setNumberFormat("0").setHorizontalAlignment("center");
   sh.getRange(2, C["✔ Contacted Today"], n, 1).insertCheckboxes();
   sh.getRange(2, C["Next Follow-Up"], n, 1).setDataValidation(SpreadsheetApp.newDataValidation().requireDate().setAllowInvalid(true).build());
 
