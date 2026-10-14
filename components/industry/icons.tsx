@@ -24,6 +24,11 @@ const P: Record<IconName, React.ReactNode> = {
   tag: <><path d="M3 12V4h8l10 10-8 8L3 12Z" /><circle cx="7.5" cy="8" r="1.5" /></>,
   truck: <><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7" /><circle cx="7" cy="17.5" r="1.8" /><circle cx="17" cy="17.5" r="1.8" /></>,
   bolt: <path d="M13 3 5 14h6l-1 7 8-11h-6l1-7Z" />,
+  gem: <><path d="M6 4h12l3 5-9 11L3 9l3-5Z" /><path d="M3 9h18M9 4l3 16 3-16" /></>,
+  box: <><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5v-9Z" /><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9" /></>,
+  cake: <><path d="M4 21h16v-8H4v8ZM4 16c2 1.5 4 1.5 6 0s4-1.5 6 0 3 1 4 0" /><path d="M12 13V9M12 6.5c-.8-.8-.8-2 0-3 .8 1 .8 2.2 0 3Z" /></>,
+  candle: <><path d="M8 21h8V10H8v11Z" /><path d="M12 10V7M12 4.5c-1 1-1 2 0 2.5 1-.5 1-1.5 0-2.5Z" /></>,
+  basket: <><path d="M3 10h18l-2 10H5L3 10Z" /><path d="m8 10 3-6M16 10l-3-6M9 14v3M15 14v3" /></>,
 };
 
 export function Icon({ name, className = "h-5 w-5" }: { name: IconName; className?: string }) {

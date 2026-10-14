@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 11352722,
+    "pageUrl": "https://www.pexels.com/photo/11352722/",
+    "desc": "Rows of glowing votive candles in glass holders casting a warm amber light"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 5874916,
+    "pageUrl": "https://www.pexels.com/photo/white-statues-on-the-wooden-table-5874916/",
+    "desc": "Devotional display with white saint statues, a framed Virgin Mary portrait and a guardian angel tapestry"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 35639824,
+    "pageUrl": "https://www.pexels.com/photo/statue-of-virgin-mary-and-child-jesus-with-crowns-35639824/",
+    "desc": "Hand-painted statue of the Virgin Mary holding the Christ Child, both wearing gold crowns"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 4044070,
+    "pageUrl": "https://www.pexels.com/photo/brown-and-white-food-in-clear-glass-jars-4044070/",
+    "desc": "Glass jars of dried herbs and botanicals lined up on a wooden shelf"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 6766451,
+    "pageUrl": "https://www.pexels.com/photo/close-up-of-crystals-6766451/",
+    "desc": "Amethyst clusters, clear quartz points and smoky quartz crystals on a white surface"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 7176650,
+    "pageUrl": "https://www.pexels.com/photo/burning-incense-sticks-in-glass-on-table-with-decor-7176650/",
+    "desc": "Incense sticks smoking in a metal holder beside dried flowers and colored powder on a wooden table"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 6755793,
+    "pageUrl": "https://www.pexels.com/photo/woman-in-an-apron-sitting-at-the-table-with-a-bunch-of-handmade-candles-6755793/",
+    "desc": "Woman in an apron preparing handmade candles in glass jars at a worktable"
+  }
+]

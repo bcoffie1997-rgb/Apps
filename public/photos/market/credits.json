@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 2252584,
+    "pageUrl": "https://www.pexels.com/photo/assorted-vegetable-store-displays-2252584/",
+    "desc": "Market display of bell peppers, cabbage, orange habanero peppers and red chiles"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 37321079,
+    "pageUrl": "https://www.pexels.com/photo/vibrant-display-of-fresh-market-vegetables-37321079/",
+    "desc": "Woven baskets of tomatoes, green chiles, green beans, scallions and potatoes at a produce stand"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 12031516,
+    "pageUrl": "https://www.pexels.com/photo/corn-tortillas-in-close-up-shot-12031516/",
+    "desc": "Tall stack of fresh corn tortillas"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 5319845,
+    "pageUrl": "https://www.pexels.com/photo/red-chili-peppers-hanging-from-the-ceiling-5319845/",
+    "desc": "Strings of dried red chile peppers hanging from a shop ceiling"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 6545445,
+    "pageUrl": "https://www.pexels.com/photo/woman-in-tropical-print-dress-ordering-in-front-of-cashier-behind-the-counter-6545445/",
+    "desc": "Customer being helped at the wooden counter of a small neighborhood shop with stocked shelves"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 8475146,
+    "pageUrl": "https://www.pexels.com/photo/a-man-paying-his-bill-in-the-grocery-store-8475146/",
+    "desc": "Smiling cashier taking a card payment at a grocery store checkout"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 34674788,
+    "pageUrl": "https://www.pexels.com/photo/smiling-shopkeeper-with-homemade-preserves-34674788/",
+    "desc": "Smiling shopkeeper in an apron behind jars of homemade preserves and pantry goods"
+  }
+]

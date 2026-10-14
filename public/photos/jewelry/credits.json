@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 20858959,
+    "pageUrl": "https://www.pexels.com/photo/display-of-jewelry-20858959/",
+    "desc": "Gold earrings, rings and a chain bracelet on an elegant store display stand"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 7679654,
+    "pageUrl": "https://www.pexels.com/photo/gold-necklaces-hanging-on-jewelry-stand-7679654/",
+    "desc": "Gold chains and pendant necklaces hanging on a jewelry display rack"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 94843,
+    "pageUrl": "https://www.pexels.com/photo/gold-ring-94843/",
+    "desc": "Rows of gold and silver wedding bands in a jewelry display tray"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 6263143,
+    "pageUrl": "https://www.pexels.com/photo/a-jeweler-making-an-emerald-ring-6263143/",
+    "desc": "Jeweler setting an emerald ring with a fine tool on a ring clamp"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 15743937,
+    "pageUrl": "https://www.pexels.com/photo/brunette-woman-wearing-gold-earring-15743937/",
+    "desc": "Close-up of a gold hoop earring"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 6263113,
+    "pageUrl": "https://www.pexels.com/photo/a-person-holding-a-diamond-ring-6263113/",
+    "desc": "Jeweler inspecting a diamond ring through a loupe"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 6263144,
+    "pageUrl": "https://www.pexels.com/photo/6263144/",
+    "desc": "Jeweler at his workbench using a torch in a small jewelry workshop"
+  }
+]

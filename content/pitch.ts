@@ -96,6 +96,13 @@ export const recommend: Record<string, { plan: PitchPlanId; why: string; alt?: s
   pressure: { plan: "growth", why: "Loud equipment, missed calls. The text-back saves the job; reviews and before/after photos close it." },
   carib: { plan: "basic", why: "Customers mostly want your menu, hours and location. Basic plus a strong Google profile covers it.", alt: "Growth if they want reviews coming in." },
   cafe: { plan: "basic", why: "People want your menu, hours and where to park. Basic gets that in front of them.", alt: "Growth if they want reviews coming in." },
+  botanica: { plan: "growth", why: "People call to ask \"do you have this candle or that saint?\" before they drive over. Miss the call and they go to the next botánica. A bilingual site and text-back keep them coming to you.", alt: "Basic if they mostly get walk-ins." },
+  market: { plan: "basic", why: "Customers want your hours, location and what you carry. A bilingual site plus a complete Google profile brings in neighbors who don't know you yet.", alt: "Growth if they want more Google reviews." },
+  bakery: { plan: "growth", why: "Cake orders come by phone — and a missed call is a lost quinceañera or birthday cake. Text-back catches every order; reviews and a cake gallery sell the next one.", alt: "Busy if they want online cake orders." },
+  latin: { plan: "basic", why: "People want your menu, hours and location — in Spanish and English. Basic plus a strong Google profile brings in new customers who search in English.", alt: "Growth if they want reviews coming in." },
+  jewelry: { plan: "growth", why: "Big-ticket gifts start with a Google search and a phone call. Reviews build the trust that sells gold.", alt: "Busy + Local SEO if they want to grow fast." },
+  craft: { plan: "growth", why: "One job can be thousands of dollars. You're in the shop with your hands busy — the text-back saves the job, and a photo gallery of your work closes it." },
+  shipping: { plan: "growth", why: "Families call to ask rates and pickup times. Every missed call is a box that goes with a competitor. Text-back answers when you can't." },
   pet: { plan: "growth", why: "Pet owners only trust businesses with reviews. You can't answer with a dog on the table — the text-back can.", alt: "Go Busy if grooming is by appointment." },
 };
 

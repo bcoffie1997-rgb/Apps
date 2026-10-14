@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 10153052,
+    "pageUrl": "https://www.pexels.com/photo/interior-design-of-a-kitchen-10153052/",
+    "desc": "Custom kitchen with wood-slat cabinetry, island, LED accent lighting and built-in appliances"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 28513061,
+    "pageUrl": "https://www.pexels.com/photo/carpenter-working-in-a-busy-workshop-28513061/",
+    "desc": "Carpenter with ear protection cutting lumber in a busy cabinet workshop"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 8356420,
+    "pageUrl": "https://www.pexels.com/photo/leather-seats-in-the-interior-of-a-yacht-8356420/",
+    "desc": "Boat helm with upholstered captain seats overlooking a marina"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 6660957,
+    "pageUrl": "https://www.pexels.com/photo/a-brown-leather-fabric-on-sewing-machine-6660957/",
+    "desc": "Industrial sewing machine stitching a piece of leather upholstery"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 31759241,
+    "pageUrl": "https://www.pexels.com/photo/craftsman-working-in-workshop-sewing-leather-31759241/",
+    "desc": "Craftsman hand-stitching upholstery material in his workshop"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 7167993,
+    "pageUrl": "https://www.pexels.com/photo/farmhouse-kitchen-style-with-wooden-cabinets-7167993/",
+    "desc": "Kitchen with raised-panel wood cabinets, glass-front uppers and a hexagon tile backsplash"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 5974413,
+    "pageUrl": "https://www.pexels.com/photo/focused-ethnic-male-carpenter-hammering-nail-into-wooden-detail-in-workshop-5974413/",
+    "desc": "Carpenter carefully hammering a wooden piece at his workbench"
+  }
+]

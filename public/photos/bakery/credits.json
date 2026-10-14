@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 12097596,
+    "pageUrl": "https://www.pexels.com/photo/close-up-of-mexican-bread-on-a-food-shelf-12097596/",
+    "desc": "Trays of fresh conchas and pan dulce in a bakery display case"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 15491577,
+    "pageUrl": "https://www.pexels.com/photo/flowers-over-bread-in-bakery-15491577/",
+    "desc": "Traditional panaderia with wooden display cases of conchas, bolillos and pan dulce under a flower arrangement"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 34611831,
+    "pageUrl": "https://www.pexels.com/photo/tiered-display-of-mexican-conchas-pastries-34611831/",
+    "desc": "Tiered stand piled with colorful conchas"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 31332192,
+    "pageUrl": "https://www.pexels.com/photo/assorted-pastry-display-in-bakery-showcase-31332192/",
+    "desc": "Bakery showcase of decorated cakes topped with fresh berries and assorted pastries"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 35661532,
+    "pageUrl": "https://www.pexels.com/photo/assorted-donuts-and-pastries-in-bakery-display-case-35661532/",
+    "desc": "Glass bakery case with glazed donuts, chocolate pastries and sweet bars"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 5964559,
+    "pageUrl": "https://www.pexels.com/photo/person-cutting-a-cake-5964559/",
+    "desc": "Pastry chef in gloves slicing a sponge cake into layers"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 3218467,
+    "pageUrl": "https://www.pexels.com/photo/man-preparing-dough-for-bread-3218467/",
+    "desc": "Baker in an apron shaping bread dough on a floured work table"
+  }
+]

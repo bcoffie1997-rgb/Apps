@@ -29,7 +29,7 @@ export default function PreviewIndex() {
                 <li key={p.slug} className="flex items-center">
                   <a href={`/preview/${p.slug}`} className="flex min-h-14 min-w-0 flex-1 items-center justify-between gap-3 px-4 py-3 hover:bg-[#f5f6f8]">
                     <span className="min-w-0">
-                      <span className="block truncate font-semibold">{p.name}</span>
+                      <span className="block truncate font-semibold">{p.name}{p.lang && <span className="ml-2 rounded bg-[#067a45]/10 px-1.5 py-0.5 align-middle text-[11px] font-bold text-[#067a45]">ES/EN</span>}</span>
                       <span className="block truncate text-sm text-[#0b0d12]/60">{p.niche}{p.phone ? ` · ${p.phone}` : " · no phone listed"}</span>
                     </span>
                   </a>

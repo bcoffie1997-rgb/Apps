@@ -8,6 +8,7 @@
  * "24/7", "free estimates" etc.). Soft, true-for-any-good-shop promises only.
  */
 import type { Industry, IndustryKey } from "@/components/industry/types";
+import { LATIN_EN } from "./industries.latin";
 
 const ABOUT = "{name} is a local {city} business. {ratingLine}";
 
@@ -452,6 +453,7 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
     ],
     finalTitle: "Book your pet's spa day.", finalSub: "Pet grooming in {city}.",
   },
+  ...LATIN_EN,
 };
 
 void ABOUT;

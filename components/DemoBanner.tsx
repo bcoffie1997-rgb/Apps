@@ -4,9 +4,9 @@ import { es } from "@/content/es";
 import { LogoMark } from "./Logo";
 
 /** Thin bar on top of every sample/preview site so it's always clear who built it. */
-export function DemoBanner({ previewFor }: { previewFor?: string }) {
-  const b = en.demoBanner;
-  const bEs = es.demoBanner;
+export function DemoBanner({ previewFor, lang = "en" }: { previewFor?: string; lang?: "en" | "es" }) {
+  const b = lang === "es" ? es.demoBanner : en.demoBanner;
+  const bEs = lang === "es" ? en.demoBanner : es.demoBanner;
   return (
     <div className="sticky top-0 z-40 bg-[#0B0D12] text-white" style={{ paddingTop: "env(safe-area-inset-top)" }}>
       <div className="mx-auto flex min-h-12 max-w-6xl items-center justify-between gap-3 px-4 py-2">

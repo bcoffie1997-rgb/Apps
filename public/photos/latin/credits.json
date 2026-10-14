@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 25389275,
+    "pageUrl": "https://www.pexels.com/photo/barbacoa-meat-on-leaves-25389275/",
+    "desc": "Barbacoa tacos on fresh corn tortillas with cilantro and lime on a red plate"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 12290343,
+    "pageUrl": "https://www.pexels.com/photo/woman-preparing-tortilla-12290343/",
+    "desc": "Woman cooking handmade tortillas on a comal over an open wood fire"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 28902906,
+    "pageUrl": "https://www.pexels.com/photo/crispy-empanadas-with-sauces-on-white-plate-28902906/",
+    "desc": "Golden fried empanadas with two dipping sauces on a white plate"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 17952748,
+    "pageUrl": "https://www.pexels.com/photo/fried-cubes-and-rice-on-white-plate-17952748/",
+    "desc": "Plate of seasoned rice with fried plantain and crispy pork bites"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 5737840,
+    "pageUrl": "https://www.pexels.com/photo/a-person-holding-toasted-tortilla-on-a-pan-5737840/",
+    "desc": "Cook flipping fresh tortillas on a griddle"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 28959271,
+    "pageUrl": "https://www.pexels.com/photo/delicious-mexican-tacos-platter-in-mexico-city-28959271/",
+    "desc": "Platter of loaded tacos with salsa, avocado, pickled onion and slaw"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 5737252,
+    "pageUrl": "https://www.pexels.com/photo/a-woman-cooking-on-table-5737252/",
+    "desc": "Cook in an apron preparing guacamole surrounded by avocados, chiles, limes and tomatoes"
+  }
+]

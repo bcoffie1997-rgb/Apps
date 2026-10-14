@@ -26,18 +26,55 @@ function loadPhotos(key: string): Record<string, Photo> {
 const fill = (s: string, d: Demo, ratingLine: string) =>
   s.replaceAll("{city}", d.city).replaceAll("{name}", d.name).replaceAll("{ratingLine}", ratingLine).replace(/\s+$/, "");
 
-export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Industry; banner: ReactNode }) {
+type Lang = "en" | "es";
+
+const UI = {
+  en: {
+    review: "review", reviews: "reviews", ratingLine: (r: string, n: string, w: string) => `Customers rate us ${r} stars on Google from ${n} ${w}.`,
+    directions: "Get directions", findUs: "Find us", onGoogle: "on Google", serving: "Serving", book: "Book", visit: "Visit",
+    menuNote: "Menu items and prices vary — call or stop in for today's specials.", gallery: "Gallery", seeDiff: "See the difference",
+    beforeAfter: "Before & after", drag: "Drag the slider. Example shown — your own job photos go here.", how: "How it works",
+    howTitle: "Simple from first call to done.", why: "Why choose us", whyTitle: (c: string, n: string) => `Why ${c} picks ${n}`,
+    about: "About us", area: "Service area", areaTitle: (c: string) => `Proudly serving ${c} and nearby`, reviewsK: "Reviews",
+    starsOn: (r: string) => `${r} stars on Google`, loved: "Loved by locals", from: (n: string, w: string) => `From ${n} real customer ${w}.`,
+    read: "Read our reviews", faq: "FAQ", faqTitle: "Questions? We've got answers.", menu: "Menu", services: "Services",
+    call: "Call", map: "Map", dirShort: "Directions",
+  },
+  es: {
+    review: "reseña", reviews: "reseñas", ratingLine: (r: string, n: string, w: string) => `Nuestros clientes nos dan ${r} estrellas en Google en ${n} ${w}.`,
+    directions: "Cómo llegar", findUs: "Encuéntrenos", onGoogle: "en Google", serving: "En", book: "Reservar", visit: "Visitar",
+    menuNote: "Los platos y precios pueden variar — llame o visítenos para ver los especiales del día.", gallery: "Galería", seeDiff: "Vea la diferencia",
+    beforeAfter: "Antes y después", drag: "Mueva la barra. Foto de ejemplo — aquí van las fotos de sus trabajos.", how: "Cómo funciona",
+    howTitle: "Fácil, de la llamada al resultado.", why: "Por qué elegirnos", whyTitle: (c: string, n: string) => `Por qué ${c} elige a ${n}`,
+    about: "Quiénes somos", area: "Dónde trabajamos", areaTitle: (c: string) => `Con orgullo en ${c} y alrededores`, reviewsK: "Reseñas",
+    starsOn: (r: string) => `${r} estrellas en Google`, loved: "Querido por la comunidad", from: (n: string, w: string) => `De ${n} ${w} de clientes reales.`,
+    read: "Lea nuestras reseñas", faq: "Preguntas", faqTitle: "¿Preguntas? Aquí las respuestas.", menu: "Menú", services: "Servicios",
+    call: "Llamar", map: "Mapa", dirShort: "Cómo llegar",
+  },
+} as const;
+
+export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }: {
+  demo: Demo; ind: Industry; banner: ReactNode; lang?: Lang; langLinks?: { en: string; es: string };
+}) {
+  const t = UI[lang];
+  const es = lang === "es";
+  ind = {
+    ...ind,
+    eyebrow: (es ? raw.eyebrowEs : raw.eyebrow) ?? ind.eyebrow,
+    menu: (es ? raw.menuEs : raw.menu) ?? ind.menu,
+  };
   const p = ind.palette;
   const demo = { ...raw, rating: raw.rating && /^\d$/.test(raw.rating) ? `${raw.rating}.0` : raw.rating };
-  const reviewsWord = demo.reviewCount === "1" ? "review" : "reviews";
+  const reviewsWord = demo.reviewCount === "1" ? t.review : t.reviews;
   const photos = loadPhotos(ind.key);
   const ph = (k: string) => photos[k];
   const gallery = ["g1", "g2", "g3", "g4", "g5"].map(ph).filter(Boolean) as Photo[];
-  const ratingLine = demo.rating ? `Customers rate us ${demo.rating} stars on Google from ${demo.reviewCount} ${reviewsWord}.` : "";
+  const ratingLine = demo.rating ? t.ratingLine(demo.rating, demo.reviewCount, reviewsWord) : "";
   const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${demo.name} ${demo.address}`)}`;
   const tel = demo.phone ? `tel:${demo.phone.replace(/[^\d]/g, "")}` : maps;
-  const primaryLabel = demo.phone ? ind.cta : "Get directions";
-  const services = demo.services.length ? demo.services.map((s) => ({ ...s, icon: undefined })) : ind.services;
+  const primaryLabel = demo.phone ? ind.cta : t.directions;
+  const own = es && raw.servicesEs?.length ? raw.servicesEs : demo.services;
+  const services = own.length ? own.map((s) => ({ ...s, icon: undefined })) : ind.services;
   const vars = {
     "--bg": p.bg, "--fg": p.fg, "--muted": p.muted, "--card": p.card, "--line": p.line,
     "--accent": p.accent, "--accentFg": p.accentFg, "--dark": p.dark, "--darkFg": p.darkFg,
@@ -61,7 +98,7 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
     <>
       {demo.rating ? (
         <p className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-semibold ${dark ? "bg-white/10 text-white backdrop-blur" : "bg-[var(--card)] shadow-sm"}`}>
-          <Stars /> {demo.rating} · {demo.reviewCount} Google {reviewsWord}
+          <Stars /> {demo.rating} · {demo.reviewCount} {reviewsWord} {t.onGoogle}
         </p>
       ) : (
         <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--accent)]">{ind.eyebrow}</p>
@@ -96,7 +133,7 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
               </div>
               <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-[min(var(--r),20px)] bg-[var(--card)] px-4 py-3 shadow-xl">
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-[var(--accent)] text-[var(--accentFg)]"><Icon name="pin" /></span>
-                <span><span className="block text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">Find us</span><span className="block font-bold">{demo.city}</span></span>
+                <span><span className="block text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">{t.findUs}</span><span className="block font-bold">{demo.city}</span></span>
               </div>
             </div>
           </div>
@@ -129,8 +166,8 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
       <section className="border-y border-[var(--line)] bg-[var(--card)]">
         <ul className="mx-auto grid max-w-6xl grid-cols-2 gap-x-4 gap-y-5 px-5 py-7 md:grid-cols-4">
           {[
-            ...(demo.rating ? [{ icon: "star" as const, text: `${demo.rating}★ on Google` }] : []),
-            { icon: "pin" as const, text: `Serving ${demo.city}` },
+            ...(demo.rating ? [{ icon: "star" as const, text: `${demo.rating}★ ${t.onGoogle}` }] : []),
+            { icon: "pin" as const, text: `${t.serving} ${demo.city}` },
             ...ind.trust,
           ].slice(0, 4).map((t) => (
             <li key={t.text} className="flex items-center gap-3 text-[15px] font-semibold">
@@ -151,7 +188,7 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
                 <div className="flex items-baseline gap-3">
                   <h3 className="display text-2xl">{s.name}</h3>
                   <span className="flex-1 border-b border-dotted border-[var(--muted)]/40" />
-                  <a href={tel} className="text-sm font-bold text-[var(--accent)]">{demo.phone ? "Book" : "Visit"}</a>
+                  <a href={tel} className="text-sm font-bold text-[var(--accent)]">{demo.phone ? t.book : t.visit}</a>
                 </div>
                 <p className="mt-1.5 text-[15px] text-[var(--muted)]">{s.desc}</p>
               </li>
@@ -204,14 +241,14 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
                 </div>
               ))}
             </div>
-            <p className="mt-10 text-center text-sm text-[var(--darkFg)]/55">Menu items and prices vary — call or stop in for today&apos;s specials.</p>
+            <p className="mt-10 text-center text-sm text-[var(--darkFg)]/55">{t.menuNote}</p>
           </div>
         </section>
       ) : null,
     gallery: () =>
       gallery.length ? (
         <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-          <H kicker="Gallery" title={ind.galleryTitle} />
+          <H kicker={t.gallery} title={ind.galleryTitle} />
           <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3">
             {gallery.slice(0, 5).map((g, i) => (
               <div key={g.src} className={`relative overflow-hidden rounded-[var(--r)] ${i === 0 ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-square"}`}>
@@ -225,9 +262,9 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
       ph("g1") ? (
         <section className="bg-[var(--card)]">
           <div className="mx-auto max-w-5xl px-5 py-16 md:py-24">
-            <H kicker="See the difference" title={ind.beforeAfterTitle ?? "Before & after"} center />
+            <H kicker={t.seeDiff} title={ind.beforeAfterTitle ?? t.beforeAfter} center />
             <div className="mt-10"><BeforeAfter src={ph("g1")!.src} alt={ph("g1")!.alt} /></div>
-            <p className="mt-4 text-center text-sm text-[var(--muted)]">Drag the slider. Example shown — your own job photos go here.</p>
+            <p className="mt-4 text-center text-sm text-[var(--muted)]">{t.drag}</p>
           </div>
         </section>
       ) : null,
@@ -235,7 +272,7 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
       ind.process ? (
         <section className="bg-[var(--dark)] text-[var(--darkFg)]">
           <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-            <H kicker="How it works" title="Simple from first call to done." dark />
+            <H kicker={t.how} title={t.howTitle} dark />
             <ol className="mt-12 grid gap-8 md:grid-cols-3">
               {ind.process.map((s, i) => (
                 <li key={s.t}>
@@ -257,7 +294,7 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
             </div>
           )}
           <div>
-            <H kicker="Why choose us" title={`Why ${demo.city} picks ${demo.name}`} />
+            <H kicker={t.why} title={t.whyTitle(demo.city, demo.name)} />
             <ul className="mt-8 space-y-6">
               {ind.whyUs.map((w) => (
                 <li key={w.t} className="flex gap-4">
@@ -273,7 +310,7 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
       <section id="about" className="bg-[var(--card)]">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-[1fr_1.1fr] md:py-24">
           <div className="order-2 md:order-1">
-            <H kicker="About us" title={fill(ind.aboutTitle, demo, ratingLine)} />
+            <H kicker={t.about} title={fill(ind.aboutTitle, demo, ratingLine)} />
             <p className="mt-5 text-lg leading-relaxed text-[var(--muted)]">{demo.aboutOverride ?? fill(ind.about, demo, ratingLine)}</p>
             <div className="mt-8 rounded-[min(var(--r),20px)] border border-[var(--line)] bg-[var(--bg)] p-6">
               <p className="flex items-start gap-3 font-semibold"><Icon name="pin" className="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" /> {demo.address}</p>
@@ -285,7 +322,7 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
                   ))}
                 </dl>
               )}
-              <a href={maps} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex font-bold text-[var(--accent)]">Get directions →</a>
+              <a href={maps} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex font-bold text-[var(--accent)]">{t.directions} →</a>
             </div>
           </div>
           {ph("about") && (
@@ -298,7 +335,7 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
     ),
     serviceArea: () => (
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-20">
-        <H kicker="Service area" title={`Proudly serving ${demo.city} and nearby`} />
+        <H kicker={t.area} title={t.areaTitle(demo.city)} />
         <ul className="mt-8 flex flex-wrap gap-2.5">
           {[demo.city, ...NEARBY.filter((c) => c !== demo.city)].slice(0, 10).map((c) => (
             <li key={c} className="rounded-full border border-[var(--line)] bg-[var(--card)] px-4 py-2 text-[15px] font-semibold">{c}</li>
@@ -310,18 +347,18 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
       <section id="reviews" className="bg-[var(--accent)] text-[var(--accentFg)]">
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-[13px] font-bold uppercase tracking-[0.18em] opacity-80">Reviews</p>
-            <p className="display mt-2 text-4xl sm:text-5xl">{demo.rating ? `${demo.rating} stars on Google` : "Loved by locals"}</p>
-            {demo.rating && <p className="mt-2 text-lg opacity-85">From {demo.reviewCount} real customer {reviewsWord}.</p>}
+            <p className="text-[13px] font-bold uppercase tracking-[0.18em] opacity-80">{t.reviewsK}</p>
+            <p className="display mt-2 text-4xl sm:text-5xl">{demo.rating ? t.starsOn(demo.rating) : t.loved}</p>
+            {demo.rating && <p className="mt-2 text-lg opacity-85">{t.from(demo.reviewCount, reviewsWord)}</p>}
           </div>
           <a href={maps} target="_blank" rel="noopener noreferrer"
-            className={`${btn} bg-[var(--accentFg)] text-[var(--accent)]`}><Stars /> Read our reviews</a>
+            className={`${btn} bg-[var(--accentFg)] text-[var(--accent)]`}><Stars /> {t.read}</a>
         </div>
       </section>
     ),
     faq: () => (
       <section className="mx-auto max-w-3xl px-5 py-16 md:py-24">
-        <H kicker="FAQ" title="Questions? We've got answers." center />
+        <H kicker={t.faq} title={t.faqTitle} center />
         <div className="mt-10 divide-y divide-[var(--line)] rounded-[min(var(--r),24px)] border border-[var(--line)] bg-[var(--card)] px-6">
           {ind.faq.map((f) => (
             <details key={f.q} className="group py-1">
@@ -342,7 +379,7 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
           <div className="mx-auto max-w-4xl px-5 py-20 text-center text-white md:py-28">
             <h2 className="display text-[2.3rem] leading-[1.02] sm:text-6xl">{ind.finalTitle}</h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">{fill(ind.finalSub, demo, ratingLine)}</p>
-            <a href={tel} className={`${btnMain} mt-8`}><Icon name={demo.phone ? "phone" : "pin"} className="h-[18px] w-[18px]" /> {demo.phone ? `${ind.cta} · ${demo.phone}` : "Get directions"}</a>
+            <a href={tel} className={`${btnMain} mt-8`}><Icon name={demo.phone ? "phone" : "pin"} className="h-[18px] w-[18px]" /> {demo.phone ? `${ind.cta} · ${demo.phone}` : t.directions}</a>
           </div>
         </section>
       );
@@ -361,13 +398,19 @@ export function IndustrySite({ demo: raw, ind, banner }: { demo: Demo; ind: Indu
         <div className="mx-auto flex h-[68px] max-w-6xl items-center justify-between gap-4 px-5">
           <span className="display min-w-0 truncate text-xl sm:text-2xl">{demo.name}</span>
           <nav className="hidden items-center gap-7 text-sm font-semibold md:flex" aria-label="Site">
-            <a href="#services" className="opacity-80 hover:opacity-100">{ind.menu ? "Menu" : "Services"}</a>
-            <a href="#about" className="opacity-80 hover:opacity-100">About</a>
-            <a href="#reviews" className="opacity-80 hover:opacity-100">Reviews</a>
+            <a href="#services" className="opacity-80 hover:opacity-100">{ind.menu ? t.menu : t.services}</a>
+            <a href="#about" className="opacity-80 hover:opacity-100">{t.about}</a>
+            <a href="#reviews" className="opacity-80 hover:opacity-100">{t.reviewsK}</a>
           </nav>
+          {langLinks && (
+            <a href={lang === "es" ? langLinks.en : langLinks.es} lang={lang === "es" ? "en" : "es"}
+              className="ml-auto shrink-0 rounded-full border border-current/30 px-3 py-1.5 text-xs font-bold opacity-90 hover:opacity-100 md:ml-0">
+              {lang === "es" ? "English" : "Español"}
+            </a>
+          )}
           <a href={tel} className={`${btnMain} !min-h-11 shrink-0 !px-4 !text-sm`}>
             <Icon name={demo.phone ? "phone" : "pin"} className="h-4 w-4" />
-            <span className="hidden sm:inline">{demo.phone || "Directions"}</span><span className="sm:hidden">{demo.phone ? "Call" : "Map"}</span>
+            <span className="hidden sm:inline">{demo.phone || t.dirShort}</span><span className="sm:hidden">{demo.phone ? t.call : t.map}</span>
           </a>
         </div>
       </header>

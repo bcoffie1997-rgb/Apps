@@ -36,6 +36,14 @@ export type Demo = {
   industry?: import("@/components/industry/types").IndustryKey;
   /** Custom About text (otherwise the industry template writes one). */
   aboutOverride?: string;
+  /** Bilingual preview: "es" = Spanish by default with an English version at /preview/<slug>/en. */
+  lang?: "es";
+  /** Per-business overrides of the industry template (cuisine menus, specialty services). */
+  eyebrow?: string;
+  eyebrowEs?: string;
+  menu?: { section: string; items: { name: string; desc: string }[] }[];
+  menuEs?: { section: string; items: { name: string; desc: string }[] }[];
+  servicesEs?: { name: string; price: string; desc: string }[];
   /** Optional hero photo, e.g. "/photos/fade-factory.jpg" (put the file in /public/photos). */
   photo?: string;
 };
@@ -258,6 +266,7 @@ export const samples: Demo[] = [
  * The link to show them: https://www.missedcallpros.com/preview/<slug>
  */
 import { generatedPreviews } from "./previews.generated";
+import { hispanicPreviews } from "./previews.hispanic";
 
 export const previews: Demo[] = [
   {
@@ -298,6 +307,7 @@ export const previews: Demo[] = [
     chip: { label: "Find us", value: "SW Davie Blvd" },
   },
   ...generatedPreviews,
+  ...hispanicPreviews,
 ];
 
 export const findSample = (slug: string) => samples.find((d) => d.slug === slug);

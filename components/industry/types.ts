@@ -6,7 +6,8 @@ export type SectionKey =
 
 export type IndustryKey =
   | "barber" | "salon" | "braids" | "nails" | "tailor" | "auto" | "tires" | "detail"
-  | "ac" | "handy" | "lawn" | "pressure" | "carib" | "cafe" | "pet";
+  | "ac" | "handy" | "lawn" | "pressure" | "carib" | "cafe" | "pet"
+  | "botanica" | "market" | "bakery" | "latin" | "jewelry" | "craft" | "shipping";
 
 export type Industry = {
   key: IndustryKey;
@@ -45,4 +46,4 @@ export type Industry = {
 
 export type IconName =
   | "star" | "pin" | "clock" | "phone" | "shield" | "check" | "calendar" | "spark" | "wrench" | "snow"
-  | "car" | "leaf" | "drop" | "scissors" | "heart" | "paw" | "home" | "chat" | "fork" | "cup" | "tag" | "truck" | "bolt";
+  | "car" | "leaf" | "drop" | "scissors" | "heart" | "paw" | "home" | "chat" | "fork" | "cup" | "tag" | "truck" | "bolt" | "gem" | "box" | "cake" | "candle" | "basket";
