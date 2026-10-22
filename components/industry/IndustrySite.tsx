@@ -7,6 +7,7 @@ import { REVIEWS } from "@/content/reviews";
 import { fontFamily, FONT_VARS } from "./fonts";
 import { Icon } from "./icons";
 import { BeforeAfter } from "./BeforeAfter";
+import { Motion } from "./Motion";
 import type { Industry, SectionKey } from "./types";
 
 type Photo = { src: string; alt: string };
@@ -85,7 +86,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
   } as CSSProperties;
 
   const H = ({ kicker, title, dark = false, center = false }: { kicker: string; title: string; dark?: boolean; center?: boolean }) => (
-    <div className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+    <div data-reveal className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
       <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--accent)]">{kicker}</p>
       <h2 className={`display mt-3 text-[2.1rem] leading-[1.05] sm:text-5xl ${dark ? "text-[var(--darkFg)]" : ""}`}>{title}</h2>
     </div>
@@ -101,7 +102,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
     <>
       {demo.rating ? (
         <p className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-semibold ${dark ? "bg-white/10 text-white backdrop-blur" : "bg-[var(--card)] shadow-sm"}`}>
-          <Stars /> {demo.rating} · {demo.reviewCount} {reviewsWord} {t.onGoogle}
+          <Stars /> <span data-count={demo.rating}>{demo.rating}</span> · <span data-count={demo.reviewCount.replace(/\D/g, "") || undefined}>{demo.reviewCount}</span> {reviewsWord} {t.onGoogle}
         </p>
       ) : (
         <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--accent)]">{ind.eyebrow}</p>
@@ -119,9 +120,9 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
     if (ind.hero === "overlay" || !h) {
       return (
         <section className="relative isolate flex min-h-[640px] items-end overflow-hidden bg-[var(--dark)] sm:min-h-[720px]">
-          {h && <Image src={h.src} alt={h.alt} fill priority sizes="100vw" className="-z-10 object-cover" />}
+          {h && <Image src={h.src} alt={h.alt} fill priority sizes="100vw" className="kenburns -z-10 object-cover" />}
           <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
-          <div className="mx-auto w-full max-w-6xl px-5 pb-14 pt-32 sm:pb-20">{heroText(true)}</div>
+          <div className="hero-in mx-auto w-full max-w-6xl px-5 pb-14 pt-32 sm:pb-20">{heroText(true)}</div>
         </section>
       );
     }
@@ -129,10 +130,10 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
       return (
         <section className="bg-[var(--bg)]">
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 md:grid-cols-[1.05fr_1fr] md:py-20">
-            <div>{heroText(false)}</div>
+            <div className="hero-in">{heroText(false)}</div>
             <div className="relative">
               <div className="relative aspect-[4/4.6] overflow-hidden rounded-[var(--r)] shadow-2xl">
-                <Image src={h.src} alt={h.alt} fill priority sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+                <Image src={h.src} alt={h.alt} fill priority sizes="(min-width: 768px) 50vw, 100vw" className="kenburns object-cover" />
               </div>
               <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-[min(var(--r),20px)] bg-[var(--card)] px-4 py-3 shadow-xl">
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-[var(--accent)] text-[var(--accentFg)]"><Icon name="pin" /></span>
@@ -147,10 +148,10 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
     return (
       <section className="bg-[var(--bg)]">
         <div className="mx-auto max-w-6xl px-5 pb-10 pt-12 md:pt-20">
-          <div className="max-w-3xl">{heroText(false)}</div>
+          <div className="hero-in max-w-3xl">{heroText(false)}</div>
           <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-[2fr_1fr] md:grid-rows-2">
             <div className="relative col-span-2 aspect-[16/10] overflow-hidden rounded-[var(--r)] md:col-span-1 md:row-span-2 md:aspect-auto">
-              <Image src={h.src} alt={h.alt} fill priority sizes="(min-width: 768px) 66vw, 100vw" className="object-cover" />
+              <Image src={h.src} alt={h.alt} fill priority sizes="(min-width: 768px) 66vw, 100vw" className="kenburns object-cover" />
             </div>
             {[c1, c2].filter(Boolean).map((c) => (
               <div key={c!.src} className="relative aspect-square overflow-hidden rounded-[var(--r)] md:aspect-[4/3]">
@@ -186,8 +187,8 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
         <H kicker={ind.servicesKicker} title={ind.servicesTitle} />
         {ind.servicesStyle === "list" ? (
           <ul className="mt-10 grid gap-x-12 md:grid-cols-2">
-            {services.map((s) => (
-              <li key={s.name} className="border-b border-[var(--line)] py-5">
+            {services.map((s, i) => (
+              <li key={s.name} data-reveal style={{ "--d": `${(i % 2) * 90}ms` } as CSSProperties} className="border-b border-[var(--line)] py-5">
                 <div className="flex items-baseline gap-3">
                   <h3 className="display text-2xl">{s.name}</h3>
                   <span className="flex-1 border-b border-dotted border-[var(--muted)]/40" />
@@ -200,7 +201,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
         ) : ind.servicesStyle === "photoCards" && gallery.length >= 3 ? (
           <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
-              <li key={s.name} className="overflow-hidden rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)]">
+              <li key={s.name} data-reveal style={{ "--d": `${(i % 3) * 90}ms` } as CSSProperties} className="lift overflow-hidden rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)]">
                 <div className="relative aspect-[16/10]">
                   <Image src={gallery[i % gallery.length].src} alt={gallery[i % gallery.length].alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
                 </div>
@@ -213,8 +214,8 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
           </ul>
         ) : (
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <li key={s.name} className="rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)] p-6 transition hover:-translate-y-0.5 hover:shadow-lg">
+            {services.map((s, i) => (
+              <li key={s.name} data-reveal style={{ "--d": `${(i % 3) * 90}ms` } as CSSProperties} className="lift rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)] p-6">
                 <span className="grid h-12 w-12 place-items-center rounded-[min(var(--r),14px)] bg-[var(--accent)] text-[var(--accentFg)]"><Icon name={s.icon ?? "check"} className="h-6 w-6" /></span>
                 <h3 className="display mt-5 text-2xl">{s.name}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-[var(--muted)]">{s.desc}</p>
@@ -230,8 +231,8 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
           <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
             <H kicker={ind.servicesKicker} title={ind.servicesTitle} dark center />
             <div className="mt-12 grid gap-10 md:grid-cols-2">
-              {ind.menu.map((m) => (
-                <div key={m.section}>
+              {ind.menu.map((m, i) => (
+                <div key={m.section} data-reveal style={{ "--d": `${i * 120}ms` } as CSSProperties}>
                   <h3 className="display border-b border-[var(--darkFg)]/20 pb-3 text-2xl text-[var(--accent)]">{m.section}</h3>
                   <ul className="mt-4 space-y-4">
                     {m.items.map((it) => (
@@ -254,7 +255,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
           <H kicker={t.gallery} title={ind.galleryTitle} />
           <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3">
             {gallery.slice(0, 5).map((g, i) => (
-              <div key={g.src} className={`relative overflow-hidden rounded-[var(--r)] ${i === 0 ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-square"}`}>
+              <div key={g.src} data-reveal style={{ "--d": `${(i % 3) * 80}ms` } as CSSProperties} className={`relative overflow-hidden rounded-[var(--r)] ${i === 0 ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-square"}`}>
                 <Image src={g.src} alt={g.alt} fill sizes="(min-width: 768px) 33vw, 50vw" className="object-cover transition duration-500 hover:scale-105" />
               </div>
             ))}
@@ -278,7 +279,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
             <H kicker={t.how} title={t.howTitle} dark />
             <ol className="mt-12 grid gap-8 md:grid-cols-3">
               {ind.process.map((s, i) => (
-                <li key={s.t}>
+                <li key={s.t} data-reveal style={{ "--d": `${i * 120}ms` } as CSSProperties}>
                   <span className="display block text-6xl text-[var(--accent)]">0{i + 1}</span>
                   <h3 className="display mt-3 text-2xl">{s.t}</h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-[var(--darkFg)]/70">{s.d}</p>
@@ -299,8 +300,8 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
           <div>
             <H kicker={t.why} title={t.whyTitle(demo.city, demo.name)} />
             <ul className="mt-8 space-y-6">
-              {ind.whyUs.map((w) => (
-                <li key={w.t} className="flex gap-4">
+              {ind.whyUs.map((w, i) => (
+                <li key={w.t} data-reveal style={{ "--d": `${i * 90}ms` } as CSSProperties} className="flex gap-4">
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[var(--accent)] text-[var(--accentFg)]"><Icon name={w.icon ?? "check"} /></span>
                   <span><b className="block text-lg">{w.t}</b><span className="text-[15px] text-[var(--muted)]">{w.d}</span></span>
                 </li>
@@ -312,7 +313,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
     about: () => (
       <section id="about" className="bg-[var(--card)]">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-[1fr_1.1fr] md:py-24">
-          <div className="order-2 md:order-1">
+          <div data-reveal className="order-2 md:order-1">
             <H kicker={t.about} title={fill(ind.aboutTitle, demo, ratingLine)} />
             <p className="mt-5 text-lg leading-relaxed text-[var(--muted)]">{demo.aboutOverride ?? fill(ind.about, demo, ratingLine)}</p>
             <div className="mt-8 rounded-[min(var(--r),20px)] border border-[var(--line)] bg-[var(--bg)] p-6">
@@ -329,7 +330,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
             </div>
           </div>
           {ph("about") && (
-            <div className="relative order-1 aspect-[4/4.4] overflow-hidden rounded-[var(--r)] md:order-2">
+            <div data-reveal className="relative order-1 aspect-[4/4.4] overflow-hidden rounded-[var(--r)] md:order-2">
               <Image src={ph("about")!.src} alt={ph("about")!.alt} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
             </div>
           )}
@@ -351,7 +352,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-5 py-14 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-[13px] font-bold uppercase tracking-[0.18em] opacity-80">{t.reviewsK}</p>
-            <p className="display mt-2 text-4xl sm:text-5xl">{demo.rating ? t.starsOn(demo.rating) : t.loved}</p>
+            <p className="display mt-2 text-4xl sm:text-5xl">{demo.rating ? (() => { const [a, b] = t.starsOn("§").split("§"); return <>{a}<span data-count={demo.rating}>{demo.rating}</span>{b}</>; })() : t.loved}</p>
             {demo.rating && <p className="mt-2 text-lg opacity-85">{t.from(demo.reviewCount, reviewsWord)}</p>}
           </div>
           <a href={maps} target="_blank" rel="noopener noreferrer"
@@ -362,8 +363,8 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
             <div className="mx-auto max-w-6xl px-5 py-14 md:py-20">
               <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--accent)]">{t.saying}</p>
               <ul className={`mt-8 grid gap-5 ${quotes.length > 1 ? "md:grid-cols-2" : ""} ${quotes.length > 2 ? "lg:grid-cols-3" : ""}`}>
-                {quotes.map((q) => (
-                  <li key={q.quote} className="flex flex-col rounded-[min(var(--r),24px)] border border-[var(--line)] bg-[var(--card)] p-6 shadow-sm">
+                {quotes.map((q, i) => (
+                  <li key={q.quote} data-reveal style={{ "--d": `${i * 110}ms` } as CSSProperties} className="lift flex flex-col rounded-[min(var(--r),24px)] border border-[var(--line)] bg-[var(--card)] p-6 shadow-sm">
                     <Stars />
                     <blockquote className="mt-4 flex-1 text-[17px] leading-relaxed">&ldquo;{q.quote}&rdquo;</blockquote>
                     <p className="mt-5 text-sm text-[var(--muted)]">
@@ -381,7 +382,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
     faq: () => (
       <section className="mx-auto max-w-3xl px-5 py-16 md:py-24">
         <H kicker={t.faq} title={t.faqTitle} center />
-        <div className="mt-10 divide-y divide-[var(--line)] rounded-[min(var(--r),24px)] border border-[var(--line)] bg-[var(--card)] px-6">
+        <div data-reveal className="mt-10 divide-y divide-[var(--line)] rounded-[min(var(--r),24px)] border border-[var(--line)] bg-[var(--card)] px-6">
           {ind.faq.map((f) => (
             <details key={f.q} className="group py-1">
               <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 py-4 text-[17px] font-bold [&::-webkit-details-marker]:hidden">
@@ -398,7 +399,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
       return (
         <section className="relative isolate overflow-hidden bg-[var(--dark)]">
           {bg && <Image src={bg.src} alt="" fill sizes="100vw" className="-z-10 object-cover opacity-35" />}
-          <div className="mx-auto max-w-4xl px-5 py-20 text-center text-white md:py-28">
+          <div data-reveal className="mx-auto max-w-4xl px-5 py-20 text-center text-white md:py-28">
             <h2 className="display text-[2.3rem] leading-[1.02] sm:text-6xl">{ind.finalTitle}</h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">{fill(ind.finalSub, demo, ratingLine)}</p>
             <a href={tel} className={`${btnMain} mt-8`}><Icon name={demo.phone ? "phone" : "pin"} className="h-[18px] w-[18px]" /> {demo.phone ? `${ind.cta} · ${demo.phone}` : t.directions}</a>
@@ -410,6 +411,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
 
   return (
     <div style={vars} className={`${FONT_VARS} min-h-screen bg-[var(--bg)] pb-20 text-[var(--fg)] md:pb-0 [&_.display]:[font-family:var(--display)] ${ind.upper ? "[&_.display]:uppercase [&_.display]:tracking-[-0.01em]" : "[&_.display]:tracking-[-0.02em]"} [&_.display]:font-bold`}>
+      <Motion />
       {banner}
       {ind.urgency && (
         <div className="bg-[var(--accent)] px-4 py-2 text-center text-[13px] font-bold text-[var(--accentFg)]">

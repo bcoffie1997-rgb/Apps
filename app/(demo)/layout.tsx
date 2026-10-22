@@ -9,7 +9,10 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, view
 
 export default function DemoLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={GeistSans.variable}>
+    <html lang="en" className={GeistSans.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
       <body className="font-sans">
         {children}
         <Analytics />
