@@ -487,5 +487,211 @@ export const REVIEWS: Record<string, Review[]> = {
       "source": "Yelp",
       "url": "https://www.yelp.com/biz/sos-alterations-and-designs-margate"
     }
+  ],
+  "maggy-may-beauty-salon": [
+    {
+      "quote": "The best 🇩🇴 beauty salon in broward.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "I’ve been coming to Maggy may since I was 12 y/o, and she never disappoints!! She amazing!!! Got me in and out on time. Great customer service. I absolutely love it!",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "I love Maggy. She's the only one that k ows how to work with my natural hair. Her energy is great and she's so down to earth. She makes everyone feel comfortable. I love you Ms. Maggy thank you for ALWAYS slaying my hair.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "stay-clean-auto-detailing": [
+    {
+      "quote": "I recently had my Ford Edge detailed by Greg at Stay Clean Auto Detailing, he did a fantastic job and is very knowledgeable about the various services offered. I highly recommend them for your auto detailing needs.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Amazing experience. Excellent customer service. My interior looks like it did when I first bought my benz. Greg and his team are the best. They were even flexible when I had to change my schedule last minute. If you want the best, look no further!",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "I got my vehicle detailed here and it came out flawless. Greg is an expert car consultant and can help guide you on how to keep it looking perfect. He is also super communicative, friendly, and professional. Thanks!",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "ultimate-auto-care": [
+    {
+      "quote": "Had a tire pressure scare on the highway. Decided to take the exit and head over to Ultimate Auto Care. Technicians were fast, friendly, and helped fix the tire pressure immediately. Excellent experience!",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Ask for Richie Williams! Richie, thank you for the 13 years of quality and affordable service for all of my business and personal vehicles. Ultimate Auto is lucky to have you.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "divas-dominican-hair-salon": [
+    {
+      "quote": "Greatest service I ever received in a beautiful salon. Mari was great",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Amazing Job !!! Love it they treat you like family!!! And my hair always looks beautiful!!! Marisol and her daughter Emma are amazing!",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "I love my hair every time I go there. Marisol is amazing! She did my highlights and cut my ends.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "evolution-salon-latino": [
+    {
+      "quote": "Excellent Dominican salon, they have a children's area with games and very good service",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "ocello-s-automotive-center": [
+    {
+      "quote": "I have been using Ocell's for 25 years. They are efficient, trustworthy and have great mechanics. Their service is wonderful.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Easy in and out, great experience with technicians and easy conversation about costs. Much better than the dealer!",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "latino-food-store": [
+    {
+      "quote": "They have a little deli where you can get freshly made Mexican food. I highly recommend them for their variety and taste.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "la-huasteca-mexican-supermarket": [
+    {
+      "quote": "Food is amazing and the people are even better! A little piece of home away from home! Carne Asada tacos are a must! 🇲🇽",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Very cool mexican store and restaurant. They have great tacos friday and saturdays outside.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "I love the fried quesadillas from the restaurant. Delicious",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "botanica-shop": [
+    {
+      "quote": "Great store, great deals. Pleasant experience. 11/10 recommend this store for your basic botanica needs. ?",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Well stocked shop and Mrs Carolina was warm, welcoming and knowledgeable! Had everything I needed and was impressed with her gift! Def will be back.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "roro-tires": [
+    {
+      "quote": "Best service I got in the area of lauderhill, highly recommend coming here for used and new tires",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Extremely helpful and fast. Great honest work. Took care of me while I was in the middle of fishing great to see quality fast work.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "jojos-hair-care": [
+    {
+      "quote": "Amazing work. Jojo is exceptional! I have never been given so many compliments as when she did my Boho Twists. She is extremely fast in comparison to others who have done the same styles in my hair.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Jojo is amazing and I love getting my hair done by her 🤍 an angel :)",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Amazing 10/10 very talented Best braider in Florida",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "goda-nail-spa": [
+    {
+      "quote": "My tech was great she made me feel like I was the most valuable person in the salon, also she is very funny too she had me laughing the entire time, GREAT JOB TAMARA",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Clean staff very polite front desk person very professional offers water which is amazing he is always very professional fast and friendly 100% recommend",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "Paul and his team are top notch. This was not a nail salon service, this was an experience! Very professional, clean and relaxing environment.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
+  ],
+  "dominican-majestic-beauty-salon": [
+    {
+      "quote": "Love this place, all the ladies are SO nice!!! I've been going to Julie consistently for a wash and blow. They're prices are affordable and consistent!!",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    },
+    {
+      "quote": "They are so loving, and accommodating. They take care of you here like you’re family, and the way they take care of your hair as well is unmatched.",
+      "name": "",
+      "source": "Google",
+      "url": ""
+    }
   ]
 };
