@@ -693,5 +693,687 @@ export const REVIEWS: Record<string, Review[]> = {
       "source": "Google",
       "url": ""
     }
+  ],
+  "snip-and-stitch": [
+    {
+      "quote": "So sweet and helpful! The studio is adorable. She stopped what she was doing and gave me great advice and even helped me with a stitch.",
+      "name": "Saige H.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/snip-and-stitch-776661351"
+    },
+    {
+      "quote": "Perfect! From recommended alterations to final touches, my experience was \"seamless.\" Beautiful work! Would highly recommend!",
+      "name": "Debi D.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/snip-and-stitch-776661351"
+    },
+    {
+      "quote": "This is a really great local tailor. She works on high-end clothing and does really great work.",
+      "name": "Harrison L.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/snip-and-stitch-776661351"
+    }
+  ],
+  "a1-the-barber": [
+    {
+      "quote": "Very good detailed work. Patient barber and takes his time, will be back soon for a cut",
+      "name": "Jeremy S.",
+      "source": "Booksy",
+      "url": "https://booksy.com/en-us/693568_a1-the-barber_home-services_15643_fort-lauderdale"
+    },
+    {
+      "quote": "Always provides best services. Best in the game",
+      "name": "Gerard B.",
+      "source": "Booksy",
+      "url": "https://booksy.com/en-us/693568_a1-the-barber_home-services_15643_fort-lauderdale"
+    }
+  ],
+  "hanah-tailor-and-alterations": [
+    {
+      "quote": "My wife and I have been going to Hanah for alterations since 2017 and are more than pleased - we're delighted to have found her.",
+      "name": "Alan B.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/hanah-tailor-alterations-22235958"
+    },
+    {
+      "quote": "They are very responsible! Love them! They do their work very well. I 'm so pleased. Will keep coming back",
+      "name": "Mayra D.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/hanah-tailor-alterations-22235958"
+    },
+    {
+      "quote": "Terrific lady. Really knows her profession. Expert care.",
+      "name": "",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/hanah-tailor-alterations-22235958"
+    }
+  ],
+  "the-little-seamstress": [
+    {
+      "quote": "Did a great job with my bridesmaid dress and my friends wedding dress. My friends dress had a lot of alterations needed and it ended up more gorgeous than it was when she bought it",
+      "name": "Sara F.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/the-little-seamstress-276479935"
+    },
+    {
+      "quote": "Altered my dress for a wedding, they were attentive, quick and easy :) very nice and cute spot!!",
+      "name": "Carolina M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/the-little-seamstress-276479935"
+    },
+    {
+      "quote": "Loyal customer since 1986 - when they were located on NE 26th. Quality work performed every time!",
+      "name": "Rick K.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/the-little-seamstress-276479935"
+    }
+  ],
+  "caprichitos-bakery": [
+    {
+      "quote": "My #1 spot for Mexican baked goods. Always good and they have a nice little selection of drinks and cakes. Some days they also cook food which has never disappointed. Definitely give it a try!",
+      "name": "B L.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/caprichitos-bakery-752741776"
+    }
+  ],
+  "volcancito-salvadoreno": [
+    {
+      "quote": "Papusas are off the charts couldn't be happier to have Salvadoran food in my area. owner is super nice and let me try some of the drinks. The passion fruit was delicious !!",
+      "name": "Brian X.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/volcancito-salvadoreno-776252598"
+    },
+    {
+      "quote": "The food here is soooo good. Finally found a spot in Deerfield/Boca that I would come back for the steak.",
+      "name": "D S.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/volcancito-salvadoreno-776252598"
+    }
+  ],
+  "tradicion-hondurena-pollos-yihre-3": [
+    {
+      "quote": "My favorite Honduran Restaurant in town! There is nothing like the Honduran cuisine! This food has lots of flavor! I had the house breakfast and it was incredible! Delicious!",
+      "name": "Mileydy G.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/tradicion-hondurena-778760079"
+    },
+    {
+      "quote": "Great pupusas so delicious and the staff is very friendly and helpful.",
+      "name": "Samantha M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/tradicion-hondurena-778760079"
+    }
+  ],
+  "cuscatlan-restaurant": [
+    {
+      "quote": "I love this restaurant, it's one of my go-to's for lunch! It's nearby my job, I usually order the Baleada Sencilla, and a mixed pupusa!",
+      "name": "Chelsie M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/cuscatlan-restaurant-4447287"
+    },
+    {
+      "quote": "Stopped in for some coffee and got a popusa as well. It was very good and very authentic.",
+      "name": "Liz F.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/cuscatlan-restaurant-4447287"
+    },
+    {
+      "quote": "Mis amigos cercanos saben que me encantan las pupusas! Descubrí este lugar por casualidad mientras iba en coche a casa de un amigo. Paré para cenar antes de reunirme con él y no me decepcionó!",
+      "name": "Spencer M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/cuscatlan-restaurant-4447287"
+    }
+  ],
+  "el-portal-maya": [
+    {
+      "quote": "Manejamos desde Palm beach para probar las baleadas del Portal Maya. QUE RICO CHICOS!!! Lo recomiendo 100%. Están súper grandes y sabrosos",
+      "name": "Melan",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-portal-maya-pompano-beach-427731266"
+    }
+  ],
+  "sabor-autentico-hondureno": [
+    {
+      "quote": "Food is made fresh so order in advance if taking to go like I do for my short lunch breaks. It's absolutely delicious.",
+      "name": "Nancy F.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/sabor-autentico-hondureno-495759274"
+    },
+    {
+      "quote": "Service was friendly and fast. Food was great. The fried fish (tilapia) was delicious and I licked every single fish bone. The kids enjoyed the beef soup and Desayuno Tipico.",
+      "name": "Mareike S.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/sabor-autentico-hondureno-495759274"
+    },
+    {
+      "quote": "Coming from New Orleans, I've been having trouble finding a good Honduran spot out here in Florida. The baleadas were exactly what I wanted, good size and good flavor.",
+      "name": "Marcela P.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/sabor-autentico-hondureno-495759274"
+    }
+  ],
+  "el-rinconcito-salvadoreno-2": [
+    {
+      "quote": "Exactly what I want from a restaurant. Absolutely incredible quality of ingredients, from their limes to their meat/seadfood. Everything was flavorful, filling, and made perfectly.",
+      "name": "Viv L.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-rinconcito-salvadoreno-2-387747565"
+    },
+    {
+      "quote": "Rincincito #2 is one of our favorite local spots. The food is always super fresh and tastes homemade.",
+      "name": "Gian B.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-rinconcito-salvadoreno-2-387747565"
+    },
+    {
+      "quote": "Met a friend for lunch who is staying at a nearby timeshare. Service, food, and prices were excellent!",
+      "name": "Stefan H.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-rinconcito-salvadoreno-2-387747565"
+    }
+  ],
+  "el-bochinche": [
+    {
+      "quote": "We had the chuleta valluna and the fried tilapia. Both were very fresh and delicious. The portions are huge!",
+      "name": "Tatianna V.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-bochinche-669066644"
+    },
+    {
+      "quote": "The place is nice. I loved the decor of the restaurant, where you can see multiple examples of food dishes and choose the one you like best. The food is delicious.",
+      "name": "Nelc A.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-bochinche-669066644"
+    }
+  ],
+  "citywide-lawn-service-llc": [
+    {
+      "quote": "CityWide installed the landscaping around our pool area. They added a Clusia hedge for privacy and beautiful, healthy Phoenix Silvestri Palms giving the area a multi-million dollar look.",
+      "name": "Frank S.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/citywide-lawn-service-377932500"
+    },
+    {
+      "quote": "Great services and will go above a beyond to make the clients happy. Love the from patio he did for my parents.",
+      "name": "Josh S.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/citywide-lawn-service-377932500"
+    },
+    {
+      "quote": "Lorenzo, the owner, is a great person to work with at CityWide.",
+      "name": "Phil G.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/citywide-lawn-service-377932500"
+    }
+  ],
+  "rubens-auto-service": [
+    {
+      "quote": "Reliable, outstanding service, extremely responsible, I have a BMW and couldn't put my car in the hands of anybody else.",
+      "name": "Wilma R.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/rubens-auto-521319871"
+    },
+    {
+      "quote": "Great experience with Ruben, great communicator, efficient and fast worker did not take long at all with affordable prices.",
+      "name": "Ed S.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/rubens-auto-521319871"
+    }
+  ],
+  "tailor-shop-by-torrez": [
+    {
+      "quote": "Service is Excellent at this tailor shop . Ingrid's Expertise and Attention to detail is far superior than many competitors in the area .",
+      "name": "Michael A.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/tailor-shop-by-torrez-453666001"
+    },
+    {
+      "quote": "Very knowledgeable and trustworthy. Reasonable prices. Pleasant to work with. Also a Cleaners, no extra trip to make.",
+      "name": "Jennifer B.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/tailor-shop-by-torrez-453666001"
+    },
+    {
+      "quote": "Really great work. I will totally be sending more of my alterations here in the future.",
+      "name": "Andrea R.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/tailor-shop-by-torrez-453666001"
+    }
+  ],
+  "invicta-barber-shop": [
+    {
+      "quote": "Alberto and his father are the best! I've been getting my haircut here for almost 2 years now and always leave with a perfect cut!",
+      "name": "Jared",
+      "source": "Booksy",
+      "url": "https://booksy.com/en-us/1083561_invictabarbershop_barber-shop_15643_fort-lauderdale"
+    },
+    {
+      "quote": "Going to the barbershop feels like hanging out with friends!! Recommend this shop to everyone!!",
+      "name": "Justin L.",
+      "source": "Booksy",
+      "url": "https://booksy.com/en-us/1083561_invictabarbershop_barber-shop_15643_fort-lauderdale"
+    }
+  ],
+  "antojitos-salvadorenos": [
+    {
+      "quote": "Antojitos Salvadoreños deserves a five-star rating for its warm welcome and incredible flavor.",
+      "name": "Kareem M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/antojitos-salvadorenos-restaurant-431068756"
+    },
+    {
+      "quote": "I legit felt like I was eating my moms home cooked meals. Or even my own aunties back in El Salvador.",
+      "name": "Natalie E.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/antojitos-salvadorenos-restaurant-431068756"
+    },
+    {
+      "quote": "Food was delicious and a huge portion at a great value.",
+      "name": "Jarid P.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/antojitos-salvadorenos-restaurant-431068756"
+    }
+  ],
+  "tortilleria-mexicana": [
+    {
+      "quote": "The other reviewers are right - you're not going to find better Mexican food anywhere near here.",
+      "name": "Splatcat E.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/tortilleria-mexicana-ii-436889894"
+    },
+    {
+      "quote": "This place has a true Mexican vibe.",
+      "name": "Zee A.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/tortilleria-mexicana-ii-436889894"
+    },
+    {
+      "quote": "I was looking for the next favorite taco spot. It found me.",
+      "name": "Tim S.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/tortilleria-mexicana-ii-436889894"
+    }
+  ],
+  "el-rinconcito-salvadoreno-1": [
+    {
+      "quote": "Great food, great service ! Nice calm environment ! Very Latino ! Enjoyed and would definitely come back for the pupusas !",
+      "name": "Josh C.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-rinconcito-4332897"
+    },
+    {
+      "quote": "This is a hidden gem in south Florida the service is excellent the food is delicious will definitely be coming back soon",
+      "name": "Joey S.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-rinconcito-4332897"
+    },
+    {
+      "quote": "waitress very polite, food was excellent, hot fresh and fast . Clean restaurant!!! Nice atmosphere",
+      "name": "",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-rinconcito-4332897"
+    }
+  ],
+  "sunflo-detailing": [
+    {
+      "quote": "I've been using Jason and his team at Sunflo Car Detailing for over 7 years, and they never disappoint. Their work is professional, meticulous, and they always make our cars look brand new.",
+      "name": "Niki H.",
+      "source": "Business website",
+      "url": "https://www.sunflodetailing.com/"
+    },
+    {
+      "quote": "Super impressed with the work from SunFlo Detailing! Jason did an amazing job on both my truck and my wife's car.",
+      "name": "Ben P.",
+      "source": "Business website",
+      "url": "https://www.sunflodetailing.com/"
+    },
+    {
+      "quote": "He treats my car as if it was his own. He and his team are very conscientious, take their time, and are thorough.",
+      "name": "Marlies K.",
+      "source": "Business website",
+      "url": "https://www.sunflodetailing.com/"
+    }
+  ],
+  "walker-s-exclusive-barbershop": [
+    {
+      "quote": "Sheldon did a great job on my haircut. I definitely will be returning. There was nothing but good vibes in the shop itself, and everyone greeted each other like family.",
+      "name": "Bennie A.",
+      "source": "Booksy",
+      "url": "https://booksy.com/en-us/1401967_walkersexclusivebarbershop_barber-shop_15643_fort-lauderdale"
+    },
+    {
+      "quote": "Maurice is excellent! He was so patient and detailed while cutting/trimming my son's hair. Highly recommended him!",
+      "name": "Estela O.",
+      "source": "Booksy",
+      "url": "https://booksy.com/en-us/1401967_walkersexclusivebarbershop_barber-shop_15643_fort-lauderdale"
+    },
+    {
+      "quote": "First time using this service, and it was incredible. The barbers are great and friendly. Definitely would visit again.",
+      "name": "Jerrell W.",
+      "source": "Booksy",
+      "url": "https://booksy.com/en-us/1401967_walkersexclusivebarbershop_barber-shop_15643_fort-lauderdale"
+    }
+  ],
+  "l-and-l-home-and-office-cleaning": [
+    {
+      "quote": "They arrived on time, brought everything they needed, and methodically cleaned each room until it was spotless.",
+      "name": "Siniša S.",
+      "source": "Business website",
+      "url": "https://llhomecleaningservices.com/"
+    },
+    {
+      "quote": "The team was thorough, organized and professional, arriving on time and working efficiently. Their deep cleaning left every room spotless and the price was very affordable.",
+      "name": "Yolene S.",
+      "source": "Business website",
+      "url": "https://llhomecleaningservices.com/"
+    },
+    {
+      "quote": "The price was great and they earned every penny. We would use them again for sure and highly recommend them. Cheers to Mario and the team!",
+      "name": "Angelique M.",
+      "source": "Business website",
+      "url": "https://llhomecleaningservices.com/"
+    }
+  ],
+  "cleaning-by-lorena": [
+    {
+      "quote": "Their quality of service exceeded my expectations!",
+      "name": "",
+      "source": "Business website",
+      "url": "https://cleaningbylorena.com/reviews/"
+    },
+    {
+      "quote": "Highly recommend anyone looking for a cleaning service to check them out!",
+      "name": "",
+      "source": "Business website",
+      "url": "https://cleaningbylorena.com/reviews/"
+    }
+  ],
+  "el-recreo-bakery": [
+    {
+      "quote": "If you're looking for an authentic Cuban bakery, this is the spot right here.",
+      "name": "Vanessa M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-recreo-bakery-4332298"
+    },
+    {
+      "quote": "I moved away but whenever i'm in the area still come here for Cuban Sandwiches. The staff is always friendly too.",
+      "name": "Elise A.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-recreo-bakery-4332298"
+    },
+    {
+      "quote": "I had a Cuban sandwich with my favorite Cuban soda, Marerva.",
+      "name": "Pablo D.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-recreo-bakery-4332298"
+    }
+  ],
+  "el-mundo-del-pelo-dominican-salon": [
+    {
+      "quote": "Great service, very professional, great product and long lasting results! I have been there twice and both times I did not have to stay long, they took me right away and were very professional!",
+      "name": "J T.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-mundo-del-pelo-dominican-salon-714352899"
+    },
+    {
+      "quote": "I went in for a wash, blow dry, and flat iron, and the quality was amazing.",
+      "name": "JoNell N.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-mundo-del-pelo-dominican-salon-714352899"
+    },
+    {
+      "quote": "Amazing service! Great! If you are from NY and looking for a NY style experience, come here!",
+      "name": "Jasmine D.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/el-mundo-del-pelo-dominican-salon-714352899"
+    }
+  ],
+  "freddy-s-kitchen": [
+    {
+      "quote": "Small and cozy ambiance and great cachapas. They are huge and full of great tasting cheese. Great customer service and prices are decent.",
+      "name": "Violeta G.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/freddys-kitchen-809258368"
+    },
+    {
+      "quote": "Place is kind of small 5 to 6 tables but the food is pretty good, every thing tasted fresh and delicious.",
+      "name": "Jon B.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/freddys-kitchen-809258368"
+    },
+    {
+      "quote": "Vinimos hoy a desayunar por una reseña de Instagram de fue una maravillosa sorpresa",
+      "name": "Maria Del Carmen B.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/freddys-kitchen-809258368"
+    }
+  ],
+  "la-casita-salvadorena": [
+    {
+      "quote": "Excellent Salvadoran food in a neighborhood place with excellent friendly service.",
+      "name": "Joe D.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/la-casita-salvadorena-369340002"
+    },
+    {
+      "quote": "Mondays and Tuesdays they have unlimited pupusas and tacos!! Service was friendly and prompt. Horchata was very tasty.",
+      "name": "Ricardo B.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/la-casita-salvadorena-369340002"
+    },
+    {
+      "quote": "We visited this location yesterday Saturday, we arrived got seated super fast and the waiter was super cool.",
+      "name": "Manuel E.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/la-casita-salvadorena-369340002"
+    }
+  ],
+  "cabaret-barbershop": [
+    {
+      "quote": "Been twice now. Great shop, fun theme, good music, nice staff, and Reasonable prices! Henry is funny and does a great job!! Highly recommend.",
+      "name": "J E.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/cabaret-barbershop-385178121"
+    },
+    {
+      "quote": "Great team, great cuts and great prices. It's super easy to book appointments online and they're always on time!",
+      "name": "Jacob P.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/cabaret-barbershop-385178121"
+    },
+    {
+      "quote": "This was my first time here and I was really impressed. The staff is amazing and really friendly.",
+      "name": "Sterling M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/cabaret-barbershop-385178121"
+    }
+  ],
+  "snowflakes-air-conditioning": [
+    {
+      "quote": "Snowflakes Air Conditioning did an absolute 5 star job repairing our AC unit. Technician arrived right on time.",
+      "name": "Leo",
+      "source": "Business website",
+      "url": "https://snowflakesac.com/reviews"
+    },
+    {
+      "quote": "I called to have my thermostat changed. The technician was prompt, friendly, and worked quickly.",
+      "name": "Tahaji S.",
+      "source": "Business website",
+      "url": "https://snowflakesac.com/reviews"
+    },
+    {
+      "quote": "Have had a few ACs replaced over the years in homes, and this company ranks in the top. Very professional, punctual and very clean.",
+      "name": "Walt L.",
+      "source": "Business website",
+      "url": "https://snowflakesac.com/reviews"
+    }
+  ],
+  "aaron-s-ceramic-coating-and-paint-protection": [
+    {
+      "quote": "Awesome place. I got my 2026 Ram Rebel ceramic coated with Aaron and it came out beautiful.",
+      "name": "Joseph G.",
+      "source": "Business website",
+      "url": "https://aaronsqualityautospa.com/"
+    },
+    {
+      "quote": "Excellent work by Aaron on my Chevy Tahoe. Great communication and very knowledgeable, thanks Aaron! I will definitely be back when the time comes.",
+      "name": "Rich D.",
+      "source": "Business website",
+      "url": "https://aaronsqualityautospa.com/"
+    },
+    {
+      "quote": "Highly recommend Aaron's Ceramic Coating. Aaron does exceptional work and a pleasure to deal with.",
+      "name": "Mary Ann",
+      "source": "Business website",
+      "url": "https://aaronsqualityautospa.com/"
+    }
+  ],
+  "nails-rock-coconut-creek": [
+    {
+      "quote": "Kim did an excellent job and she was so friendly. I liked how meticulous she was.",
+      "name": "Andrea Z.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/nails-rock-345982312"
+    },
+    {
+      "quote": "I've been going here forever. Quality nails and sanitary! Plenty of options to choose from and ample parking.",
+      "name": "Kerri M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/nails-rock-345982312"
+    },
+    {
+      "quote": "I have been coming to Nails Rock for years and they are absolutely wonderful. They always do an incredible job, they are so friendly & everything is always so clean.",
+      "name": "Jordan L.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/nails-rock-345982312"
+    }
+  ],
+  "k-and-k-nails-and-spa": [
+    {
+      "quote": "Great service-have been getting pedi's here for 3 years. There are different levels of add-ons and I've had both \"deluxe\" and regular. Very happy with either.",
+      "name": "Diana C.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/kk-nails-and-spa-421382403"
+    },
+    {
+      "quote": "Great business. Staff was professional and did a great job. Highly recommend.",
+      "name": "Phillip H.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/kk-nails-and-spa-421382403"
+    },
+    {
+      "quote": "4 years later and still happy with their service. Had my nails done for the holidays and then for the new year. Their work is always clean and neat.",
+      "name": "Anu P.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/kk-nails-and-spa-421382403"
+    }
+  ],
+  "university-barber-shop": [
+    {
+      "quote": "Excellent barber shop, Chris has been cutting my hair for about 4 years. Usually busy, so I would suggest an appointment.",
+      "name": "Joe R.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/university-barber-shop-376234584"
+    },
+    {
+      "quote": "I was in the neighborhood and came across this barbershop. Chris was awesome and attentive. The atmosphere was great and made me feel welcome. Will definitely be back.",
+      "name": "Joseph A.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/university-barber-shop-376234584"
+    },
+    {
+      "quote": "We were looking for a spot near our home and found this nice barbershop place Fernando amazing barber he cut my husbands hair did an amazing job thanks",
+      "name": "M R.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/university-barber-shop-376234584"
+    }
+  ],
+  "look-latino": [
+    {
+      "quote": "For all my high maintenance blondes, I am very picky about my highlights and Rafael knows exactly what to do! Come to Look Latino and ask for Rafael!",
+      "name": "Stephanie B.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/look-latino-404379520"
+    }
+  ],
+  "lola-s-venezuelan-fast-food": [
+    {
+      "quote": "This food truck makes delicious arepas. They have a sitting area inside if you want to eat in. The staff was friendly!",
+      "name": "Gia A.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/lolas-venezuelan-fast-food-504269454"
+    },
+    {
+      "quote": "Wow! I am very picky when it comes to Arepas or any food if you check my other reviews, but this place did not disappoint. Food was A-M-A-Z-I-N-G!!",
+      "name": "Violetta L.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/lolas-venezuelan-fast-food-504269454"
+    },
+    {
+      "quote": "The chicken empanada had nice flavors and a creamy sauce to dip in to give more zest.",
+      "name": "Vijay R.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/lolas-venezuelan-fast-food-504269454"
+    }
+  ],
+  "broward-auto-repair": [
+    {
+      "quote": "i love this place they are super professional they have the best prices in whole Broward County",
+      "name": "Danilo C.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/broward-auto-repair-793613269"
+    },
+    {
+      "quote": "This place Broward Auto is phenomenal. Does great work.",
+      "name": "Steve D.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/broward-auto-repair-793613269"
+    },
+    {
+      "quote": "Arian and the new shop foreman is great. I had some issues and they corrected it instantly.",
+      "name": "Cee M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/broward-auto-repair-793613269"
+    }
+  ],
+  "happy-tails-mobile-and-salon-grooming": [
+    {
+      "quote": "Liz is a wonderful groomer! I'm so glad to find an alternative to dropping our dog off for hours. She is gentle, patient and does outstanding work.",
+      "name": "Ann K.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/happy-tails-mobile-salon-grooming-420713615"
+    },
+    {
+      "quote": "Courtesy and gentle handling of my pup. Great grooming, highly recommend. Nice clean salon, beautiful work .",
+      "name": "Martha P.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/happy-tails-mobile-salon-grooming-420713615"
+    },
+    {
+      "quote": "Love this place. Very accommodating, super nice, and do great work. I trust them with my two doggies.",
+      "name": "Christian M.",
+      "source": "Yelp",
+      "url": "https://www.mapquest.com/us/florida/happy-tails-mobile-salon-grooming-420713615"
+    }
+  ],
+  "clever-cleaners": [
+    {
+      "quote": "Cleaner showed up on time and worked diligently to clean my place. I’m very pleased and would certainly recommend them to anyone. I will use Clever Cleaners again.",
+      "name": "James F.",
+      "source": "Business website",
+      "url": "https://clevercleaners.co"
+    },
+    {
+      "quote": "Clever Cleaners did an amazing job on my home. LOVE THEM! The communication was easy, they showed up on time, and everything was cleaned so thoroughly.",
+      "name": "Hannah D.",
+      "source": "Business website",
+      "url": "https://clevercleaners.co"
+    },
+    {
+      "quote": "Great service. The team was professional, friendly, and did an excellent job cleaning my home. Highly recommend.",
+      "name": "Dan H.",
+      "source": "Business website",
+      "url": "https://clevercleaners.co"
+    }
   ]
 };
