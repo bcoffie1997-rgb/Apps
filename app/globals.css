@@ -131,3 +131,6 @@ details > summary::-webkit-details-marker { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .kenburns, .hero-in > * { animation: none !important; }
 }
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
+}

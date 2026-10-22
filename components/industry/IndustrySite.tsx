@@ -71,6 +71,12 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
   const reviewsWord = demo.reviewCount === "1" ? t.review : t.reviews;
   const quotes = (REVIEWS[raw.slug] ?? []).slice(0, 3);
   const photos = loadPhotos(ind.key);
+  const videoSrc = fs.existsSync(path.join(process.cwd(), "public", "video", `${ind.key}.mp4`)) ? `/video/${ind.key}.mp4` : null;
+  const HeroVideo = ({ poster }: { poster?: string }) =>
+    videoSrc ? (
+      <video className="hero-video absolute inset-0 h-full w-full object-cover" src={videoSrc} poster={poster}
+        autoPlay muted loop playsInline preload="auto" aria-hidden />
+    ) : null;
   const ph = (k: string) => photos[k];
   const gallery = ["g1", "g2", "g3", "g4", "g5"].map(ph).filter(Boolean) as Photo[];
   const ratingLine = demo.rating ? t.ratingLine(demo.rating, demo.reviewCount, reviewsWord) : "";
@@ -121,6 +127,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
       return (
         <section className="relative isolate flex min-h-[640px] items-end overflow-hidden bg-[var(--dark)] sm:min-h-[720px]">
           {h && <Image src={h.src} alt={h.alt} fill priority sizes="100vw" className="kenburns -z-10 object-cover" />}
+          {videoSrc && <div className="absolute inset-0 -z-10"><HeroVideo poster={h?.src} /></div>}
           <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
           <div className="hero-in mx-auto w-full max-w-6xl px-5 pb-14 pt-32 sm:pb-20">{heroText(true)}</div>
         </section>
@@ -134,6 +141,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
             <div className="relative">
               <div className="relative aspect-[4/4.6] overflow-hidden rounded-[var(--r)] shadow-2xl">
                 <Image src={h.src} alt={h.alt} fill priority sizes="(min-width: 768px) 50vw, 100vw" className="kenburns object-cover" />
+                <HeroVideo poster={h.src} />
               </div>
               <div className="absolute -bottom-5 left-4 flex items-center gap-3 rounded-[min(var(--r),20px)] bg-[var(--card)] px-4 py-3 shadow-xl">
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-[var(--accent)] text-[var(--accentFg)]"><Icon name="pin" /></span>
@@ -152,6 +160,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
           <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-[2fr_1fr] md:grid-rows-2">
             <div className="relative col-span-2 aspect-[16/10] overflow-hidden rounded-[var(--r)] md:col-span-1 md:row-span-2 md:aspect-auto">
               <Image src={h.src} alt={h.alt} fill priority sizes="(min-width: 768px) 66vw, 100vw" className="kenburns object-cover" />
+              <HeroVideo poster={h.src} />
             </div>
             {[c1, c2].filter(Boolean).map((c) => (
               <div key={c!.src} className="relative aspect-square overflow-hidden rounded-[var(--r)] md:aspect-[4/3]">
