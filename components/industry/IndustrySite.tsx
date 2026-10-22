@@ -40,7 +40,7 @@ const UI = {
     about: "About us", area: "Service area", areaTitle: (c: string) => `Proudly serving ${c} and nearby`, reviewsK: "Reviews",
     starsOn: (r: string) => `${r} stars on Google`, loved: "Loved by locals", from: (n: string, w: string) => `From ${n} real customer ${w}.`,
     read: "Read our reviews", via: "on", saying: "What customers say", faq: "FAQ", faqTitle: "Questions? We've got answers.", menu: "Menu", services: "Services",
-    call: "Call", map: "Map", dirShort: "Directions",
+    call: "Call", map: "Map", dirShort: "Directions", text: "Text us",
   },
   es: {
     review: "reseña", reviews: "reseñas", ratingLine: (r: string, n: string, w: string) => `Nuestros clientes nos dan ${r} estrellas en Google en ${n} ${w}.`,
@@ -51,7 +51,7 @@ const UI = {
     about: "Quiénes somos", area: "Dónde trabajamos", areaTitle: (c: string) => `Con orgullo en ${c} y alrededores`, reviewsK: "Reseñas",
     starsOn: (r: string) => `${r} estrellas en Google`, loved: "Querido por la comunidad", from: (n: string, w: string) => `De ${n} ${w} de clientes reales.`,
     read: "Lea nuestras reseñas", via: "en", saying: "Lo que dicen nuestros clientes", faq: "Preguntas", faqTitle: "¿Preguntas? Aquí las respuestas.", menu: "Menú", services: "Servicios",
-    call: "Llamar", map: "Mapa", dirShort: "Cómo llegar",
+    call: "Llamar", map: "Mapa", dirShort: "Cómo llegar", text: "Envíenos un texto",
   },
 } as const;
 
@@ -97,6 +97,8 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
       <h2 className={`display mt-3 text-[2.1rem] leading-[1.05] sm:text-5xl ${dark ? "text-[var(--darkFg)]" : ""}`}>{title}</h2>
     </div>
   );
+  const rail = "-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-5 px-5 pb-3 no-scrollbar md:mx-0 md:grid md:overflow-visible md:px-0 md:pb-0";
+  const railItem = "w-[84%] shrink-0 snap-start md:w-auto";
   const btn = "inline-flex min-h-[52px] items-center justify-center gap-2 rounded-[min(var(--r),999px)] px-7 text-[15px] font-bold transition active:scale-[0.98]";
   const btnMain = `${btn} bg-[var(--accent)] text-[var(--accentFg)] shadow-lg hover:brightness-110`;
   const Stars = () => (
@@ -125,7 +127,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
     const h = ph("hero");
     if (ind.hero === "overlay" || !h) {
       return (
-        <section className="relative isolate flex min-h-[640px] items-end overflow-hidden bg-[var(--dark)] sm:min-h-[720px]">
+        <section className="relative isolate flex min-h-[max(600px,92svh)] items-end overflow-hidden bg-[var(--dark)] sm:min-h-[720px]">
           {h && <Image src={h.src} alt={h.alt} fill priority sizes="100vw" className="kenburns -z-10 object-cover" />}
           {videoSrc && <div className="absolute inset-0 -z-10"><HeroVideo poster={h?.src} /></div>}
           <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
@@ -208,10 +210,10 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
             ))}
           </ul>
         ) : ind.servicesStyle === "photoCards" && gallery.length >= 3 ? (
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className={`mt-10 ${rail} md:grid-cols-2 md:gap-5 lg:grid-cols-3`}>
             {services.map((s, i) => (
-              <li key={s.name} data-reveal style={{ "--d": `${(i % 3) * 90}ms` } as CSSProperties} className="lift overflow-hidden rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)]">
-                <div className="relative aspect-[16/10]">
+              <li key={s.name} data-reveal style={{ "--d": `${(i % 3) * 90}ms` } as CSSProperties} className={`${railItem} lift overflow-hidden rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)]`}>
+                <div className="relative aspect-[4/3] md:aspect-[16/10]">
                   <Image src={gallery[i % gallery.length].src} alt={gallery[i % gallery.length].alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
                 </div>
                 <div className="p-6">
@@ -222,9 +224,9 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
             ))}
           </ul>
         ) : (
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className={`mt-10 ${rail} md:grid-cols-2 lg:grid-cols-3`}>
             {services.map((s, i) => (
-              <li key={s.name} data-reveal style={{ "--d": `${(i % 3) * 90}ms` } as CSSProperties} className="lift rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)] p-6">
+              <li key={s.name} data-reveal style={{ "--d": `${(i % 3) * 90}ms` } as CSSProperties} className={`${railItem} !w-[72%] md:!w-auto lift rounded-[var(--r)] border border-[var(--line)] bg-[var(--card)] p-6`}>
                 <span className="grid h-12 w-12 place-items-center rounded-[min(var(--r),14px)] bg-[var(--accent)] text-[var(--accentFg)]"><Icon name={s.icon ?? "check"} className="h-6 w-6" /></span>
                 <h3 className="display mt-5 text-2xl">{s.name}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-[var(--muted)]">{s.desc}</p>
@@ -262,7 +264,14 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
       gallery.length ? (
         <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
           <H kicker={t.gallery} title={ind.galleryTitle} />
-          <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3">
+          <div className="no-scrollbar -mx-5 mt-10 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-5 px-5 md:hidden">
+            {gallery.slice(0, 5).map((g) => (
+              <div key={g.src} className="relative aspect-[4/5] w-[78%] shrink-0 snap-start overflow-hidden rounded-[var(--r)]">
+                <Image src={g.src} alt={g.alt} fill sizes="80vw" className="object-cover" />
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 hidden grid-cols-3 gap-3 md:grid">
             {gallery.slice(0, 5).map((g, i) => (
               <div key={g.src} data-reveal style={{ "--d": `${(i % 3) * 80}ms` } as CSSProperties} className={`relative overflow-hidden rounded-[var(--r)] ${i === 0 ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-square"}`}>
                 <Image src={g.src} alt={g.alt} fill sizes="(min-width: 768px) 33vw, 50vw" className="object-cover transition duration-500 hover:scale-105" />
@@ -371,9 +380,9 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
           <div className="bg-[var(--bg)] text-[var(--fg)]">
             <div className="mx-auto max-w-6xl px-5 py-14 md:py-20">
               <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--accent)]">{t.saying}</p>
-              <ul className={`mt-8 grid gap-5 ${quotes.length > 1 ? "md:grid-cols-2" : ""} ${quotes.length > 2 ? "lg:grid-cols-3" : ""}`}>
+              <ul className={`mt-8 ${quotes.length > 1 ? rail : "grid"} md:gap-5 ${quotes.length > 1 ? "md:grid-cols-2" : ""} ${quotes.length > 2 ? "lg:grid-cols-3" : ""}`}>
                 {quotes.map((q, i) => (
-                  <li key={q.quote} data-reveal style={{ "--d": `${i * 110}ms` } as CSSProperties} className="lift flex flex-col rounded-[min(var(--r),24px)] border border-[var(--line)] bg-[var(--card)] p-6 shadow-sm">
+                  <li key={q.quote} data-reveal style={{ "--d": `${i * 110}ms` } as CSSProperties} className={`${quotes.length > 1 ? railItem : ""} lift flex flex-col rounded-[min(var(--r),24px)] border border-[var(--line)] bg-[var(--card)] p-6 shadow-sm`}>
                     <Stars />
                     <blockquote className="mt-4 flex-1 text-[17px] leading-relaxed">&ldquo;{q.quote}&rdquo;</blockquote>
                     <p className="mt-5 text-sm text-[var(--muted)]">
@@ -447,7 +456,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
           </a>
         </div>
       </header>
-      <div className={ind.hero === "overlay" ? "relative" : ""}>{hero()}</div>
+      <div data-hero className={ind.hero === "overlay" ? "relative" : ""}>{hero()}</div>
       {ind.sections.map((k) => <div key={k}>{S[k]()}</div>)}
       <footer className="bg-[var(--dark)] text-[var(--darkFg)]/70">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-10 text-sm sm:flex-row sm:justify-between">
@@ -455,9 +464,21 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
           <p>{demo.address}{demo.phone ? ` · ${demo.phone}` : ""}</p>
         </div>
       </footer>
-      {/* sticky call bar on phones */}
-      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-black/10 bg-[var(--card)]/95 p-3 backdrop-blur md:hidden">
-        <a href={tel} className={`${btnMain} w-full`}><Icon name={demo.phone ? "phone" : "pin"} className="h-[18px] w-[18px]" /> {primaryLabel}</a>
+      {/* app-style dock on phones — slides up once you scroll past the hero */}
+      <div className="dock fixed inset-x-3 z-30 md:hidden" style={{ bottom: "max(12px, env(safe-area-inset-bottom))" }}>
+        <div className="flex items-center gap-2 rounded-full border border-white/15 bg-[var(--dark)]/85 p-1.5 shadow-[0_18px_50px_-12px_rgb(0_0_0/0.55)] backdrop-blur-xl">
+          <a href={tel} className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-4 text-[15px] font-bold text-[var(--accentFg)] transition active:scale-[0.97]">
+            <Icon name={demo.phone ? "phone" : "pin"} className="h-[18px] w-[18px]" /> {primaryLabel}
+          </a>
+          {demo.phone && (
+            <a href={`sms:${demo.phone.replace(/[^\d]/g, "")}`} aria-label={t.text} className="grid h-12 w-12 place-items-center rounded-full bg-white/10 text-[var(--darkFg)] transition active:scale-95">
+              <Icon name="chat" className="h-5 w-5" />
+            </a>
+          )}
+          <a href={maps} target="_blank" rel="noopener noreferrer" aria-label={t.directions} className="grid h-12 w-12 place-items-center rounded-full bg-white/10 text-[var(--darkFg)] transition active:scale-95">
+            <Icon name="pin" className="h-5 w-5" />
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/site.config";
 
 export const metadata: Metadata = { metadataBase: new URL(site.url) };
-export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#0B0D12" };
 
 export default function DemoLayout({ children }: { children: React.ReactNode }) {
   return (

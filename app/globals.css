@@ -134,3 +134,7 @@ details > summary::-webkit-details-marker { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
 }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.dock { transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease; }
+.js:not(.past-hero) .dock { transform: translateY(160%); opacity: 0; pointer-events: none; }

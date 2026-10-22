@@ -9,6 +9,7 @@ export function Motion() {
     const counts = document.querySelectorAll<HTMLElement>("[data-count]");
     if (!("IntersectionObserver" in window) || reduce) {
       reveal.forEach((el) => el.classList.add("is-in"));
+      document.documentElement.classList.add("past-hero");
       return;
     }
     const countUp = (el: HTMLElement) => {
@@ -36,9 +37,13 @@ export function Motion() {
       },
       { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
     );
+    const hero = document.querySelector("[data-hero]");
+    const root = document.documentElement;
+    const heroIo = new IntersectionObserver(([e]) => root.classList.toggle("past-hero", !e.isIntersecting), { rootMargin: "-35% 0px 0px 0px" });
+    if (hero) heroIo.observe(hero); else root.classList.add("past-hero");
     reveal.forEach((el) => io.observe(el));
     counts.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    return () => { io.disconnect(); heroIo.disconnect(); };
   }, []);
   return null;
 }

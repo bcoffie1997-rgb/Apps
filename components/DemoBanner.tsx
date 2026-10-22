@@ -9,7 +9,7 @@ export function DemoBanner({ previewFor, lang = "en" }: { previewFor?: string; l
   const bEs = lang === "es" ? en.demoBanner : es.demoBanner;
   return (
     <div className="sticky top-0 z-40 bg-[#0B0D12] text-white" style={{ paddingTop: "env(safe-area-inset-top)" }}>
-      <div className="mx-auto flex min-h-12 max-w-6xl items-center justify-between gap-3 px-4 py-2">
+      <div className="mx-auto flex min-h-11 max-w-6xl items-center justify-between gap-3 px-4 py-1.5">
         <a href="/" className="flex min-w-0 items-center gap-2.5">
           <LogoMark className="h-7 w-7 shrink-0" />
           <span className="min-w-0 text-[11.5px] leading-tight sm:text-[13px]">
