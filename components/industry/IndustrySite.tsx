@@ -62,6 +62,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
     ...ind,
     eyebrow: (es ? raw.eyebrowEs : raw.eyebrow) ?? ind.eyebrow,
     menu: (es ? raw.menuEs : raw.menu) ?? ind.menu,
+    ...(es ? {} : raw.overrides),
   };
   const p = ind.palette;
   const demo = { ...raw, rating: raw.rating && /^\d$/.test(raw.rating) ? `${raw.rating}.0` : raw.rating };

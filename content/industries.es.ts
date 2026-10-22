@@ -275,6 +275,33 @@ const ES: Partial<Record<IndustryKey, Words>> = {
     ],
     finalTitle: "¿Listo para mandar una caja a casa?", finalSub: "Envíos desde {city}.",
   },
+  cleaning: {
+    label: "Limpieza",
+    eyebrow: "Limpieza de Casas y Oficinas", headline: "Llegue a una casa limpia.", sub: "Limpieza de casas y oficinas en {city}. Llame para un presupuesto de su espacio.",
+    cta: "Pida su presupuesto", cta2: "Servicios",
+    trust: [{ icon: "spark", text: "Casas y oficinas" }, { icon: "calendar", text: "Semanal o una vez" }],
+    servicesKicker: "Servicios", servicesTitle: "Impecable en cada visita", servicesStyle: "photoCards",
+    services: [
+      { name: "Limpieza Regular", desc: "Cada semana o cada dos semanas." },
+      { name: "Limpieza Profunda", desc: "De arriba abajo, por dentro y por fuera." },
+      { name: "Mudanzas", desc: "Lista para la próxima etapa." },
+      { name: "Oficinas", desc: "Un espacio limpio para su equipo." },
+      { name: "Después de Obra", desc: "Sin polvo ni escombros." },
+      { name: "Airbnb", desc: "Lista para su próximo huésped." },
+    ],
+    process: [
+      { t: "Llámenos", d: "Cuéntenos de su espacio y lo que necesita." },
+      { t: "Reciba su presupuesto", d: "Un precio claro y un horario que le funcione." },
+      { t: "Disfrute la limpieza", d: "Nosotros nos encargamos — usted recupera su tiempo." },
+    ],
+    galleryTitle: "Limpio y fresco", aboutTitle: "Una limpieza de confianza.", about: "{name} limpia casas y oficinas en {city} y alrededores. {ratingLine}",
+    faq: [
+      { q: "¿Tengo que estar en casa?", a: "No — muchos clientes nos dan acceso. Lo coordinamos como usted se sienta cómodo." },
+      { q: "¿Traen los productos?", a: "Pregúntenos — le decimos qué traemos y qué usamos." },
+      { q: "¿Cómo sé el precio?", a: "Llámenos con el tamaño de su espacio y cada cuánto quiere la limpieza." },
+    ],
+    finalTitle: "Recupere su tiempo.", finalSub: "Limpieza de casas y oficinas en {city}.",
+  },
 };
 
 /** The industry template in the requested language (falls back to English). */

@@ -7,7 +7,7 @@ export type SectionKey =
 export type IndustryKey =
   | "barber" | "salon" | "braids" | "nails" | "tailor" | "auto" | "tires" | "detail"
   | "ac" | "handy" | "lawn" | "pressure" | "carib" | "cafe" | "pet"
-  | "botanica" | "market" | "bakery" | "latin" | "jewelry" | "craft" | "shipping";
+  | "botanica" | "market" | "bakery" | "latin" | "jewelry" | "craft" | "shipping" | "cleaning" | "pizza";
 
 export type Industry = {
   key: IndustryKey;

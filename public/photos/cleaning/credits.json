@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 5591851,
+    "pageUrl": "https://www.pexels.com/photo/a-woman-wiping-a-kitchen-counter-5591851/",
+    "desc": "Smiling woman wiping a granite kitchen counter with a cloth and spray bottle"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 4440541,
+    "pageUrl": "https://www.pexels.com/photo/a-woman-mopping-the-floor-4440541/",
+    "desc": "Woman mopping the floor of a tidy living room with a flat mop"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 6195273,
+    "pageUrl": "https://www.pexels.com/photo/person-using-a-vacuum-6195273/",
+    "desc": "Cleaner in orange coveralls vacuuming a modern living room"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 4099467,
+    "pageUrl": "https://www.pexels.com/photo/close-up-photo-of-person-cleaning-the-table-4099467/",
+    "desc": "Gloved hand wiping down a table surface with a microfiber cloth"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 28576636,
+    "pageUrl": "https://www.pexels.com/photo/close-up-of-cleaning-supplies-with-gloves-28576636/",
+    "desc": "Hands in yellow rubber gloves holding a sponge and spray bottle"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 4440568,
+    "pageUrl": "https://www.pexels.com/photo/a-person-cleaning-the-floor-with-a-mop-4440568/",
+    "desc": "Close-up of a flat mop cleaning a wood-look tile floor"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 6195121,
+    "pageUrl": "https://www.pexels.com/photo/people-looking-at-the-camera-6195121/",
+    "desc": "Three-person cleaning crew in matching orange overalls holding vacuum and mop"
+  }
+]

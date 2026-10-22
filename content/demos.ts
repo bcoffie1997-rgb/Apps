@@ -44,6 +44,8 @@ export type Demo = {
   menu?: { section: string; items: { name: string; desc: string }[] }[];
   menuEs?: { section: string; items: { name: string; desc: string }[] }[];
   servicesEs?: { name: string; price: string; desc: string }[];
+  /** Any other template wording to change for this one business (English). */
+  overrides?: Partial<import("@/components/industry/types").Industry>;
   /** Optional hero photo, e.g. "/photos/fade-factory.jpg" (put the file in /public/photos). */
   photo?: string;
 };
@@ -267,6 +269,7 @@ export const samples: Demo[] = [
  */
 import { generatedPreviews } from "./previews.generated";
 import { hispanicPreviews } from "./previews.hispanic";
+import { morePreviews } from "./previews.more";
 
 export const previews: Demo[] = [
   {
@@ -308,6 +311,7 @@ export const previews: Demo[] = [
   },
   ...generatedPreviews,
   ...hispanicPreviews,
+  ...morePreviews,
 ];
 
 export const findSample = (slug: string) => samples.find((d) => d.slug === slug);

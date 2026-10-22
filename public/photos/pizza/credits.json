@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "pexelsId": 6605184,
+    "pageUrl": "https://www.pexels.com/photo/chef-making-pizza-6605184/",
+    "desc": "Pizza maker tossing dough in the air in front of the pizza oven"
+  },
+  {
+    "file": "g1.jpg",
+    "pexelsId": 13946695,
+    "pageUrl": "https://www.pexels.com/photo/a-pizza-taken-from-an-oven-13946695/",
+    "desc": "Blistered pizza pulled from a glowing brick oven on a peel"
+  },
+  {
+    "file": "g2.jpg",
+    "pexelsId": 365459,
+    "pageUrl": "https://www.pexels.com/photo/seafood-pizza-melting-cheese-365459/",
+    "desc": "Hand lifting a slice of pizza with a long melted-cheese pull"
+  },
+  {
+    "file": "g3.jpg",
+    "pexelsId": 9617397,
+    "pageUrl": "https://www.pexels.com/photo/spaghetti-with-meatballs-on-ceramic-plate-9617397/",
+    "desc": "Bowl of spaghetti and meatballs in tomato sauce with a pesto pasta dish beside it"
+  },
+  {
+    "file": "g4.jpg",
+    "pexelsId": 14965997,
+    "pageUrl": "https://www.pexels.com/photo/pizza-served-in-a-restaurant-14965997/",
+    "desc": "Two pizzas, pepperoni-olive and tomato-arugula, on a wooden restaurant table"
+  },
+  {
+    "file": "g5.jpg",
+    "pexelsId": 13698106,
+    "pageUrl": "https://www.pexels.com/photo/a-plate-of-slices-of-garlic-bread-13698106/",
+    "desc": "Plate of toasted garlic bread slices with herbs"
+  },
+  {
+    "file": "about.jpg",
+    "pexelsId": 6605254,
+    "pageUrl": "https://www.pexels.com/photo/people-in-professional-restaurant-kitchen-6605254/",
+    "desc": "Smiling pizza chef in a striped apron greeting customers at the counter by the oven"
+  }
+]

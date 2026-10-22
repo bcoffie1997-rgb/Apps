@@ -103,6 +103,8 @@ export const recommend: Record<string, { plan: PitchPlanId; why: string; alt?: s
   jewelry: { plan: "growth", why: "Big-ticket gifts start with a Google search and a phone call. Reviews build the trust that sells gold.", alt: "Busy + Local SEO if they want to grow fast." },
   craft: { plan: "growth", why: "One job can be thousands of dollars. You're in the shop with your hands busy — the text-back saves the job, and a photo gallery of your work closes it." },
   shipping: { plan: "growth", why: "Families call to ask rates and pickup times. Every missed call is a box that goes with a competitor. Text-back answers when you can't." },
+  cleaning: { plan: "growth", why: "People call two or three cleaners and book whoever answers first. You're on a job with gloves on — the text-back answers for you, and reviews win the trust to let you in their home." },
+  pizza: { plan: "basic", why: "Customers want your menu, hours and number to call the order in. Basic plus a strong Google profile puts you in front of hungry people nearby.", alt: "Growth if they want more reviews." },
   pet: { plan: "growth", why: "Pet owners only trust businesses with reviews. You can't answer with a dog on the table — the text-back can.", alt: "Go Busy if grooming is by appointment." },
 };
 

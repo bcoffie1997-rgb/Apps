@@ -5,7 +5,7 @@
  */
 import type { Industry } from "@/components/industry/types";
 
-type K = "botanica" | "market" | "bakery" | "latin" | "jewelry" | "craft" | "shipping";
+type K = "botanica" | "market" | "bakery" | "latin" | "jewelry" | "craft" | "shipping" | "cleaning" | "pizza";
 
 export const LATIN_EN: Record<K, Industry> = {
   botanica: {
@@ -193,5 +193,65 @@ export const LATIN_EN: Record<K, Industry> = {
       { q: "Do you speak Spanish?", a: "Sí. We're happy to help in English or Spanish." },
     ],
     finalTitle: "Ready to send a box home?", finalSub: "Envíos from {city}.",
+  },
+  cleaning: {
+    key: "cleaning", label: "Cleaning Service", font: "nunito", radius: "20px", hero: "split",
+    palette: { bg: "#f2f9fb", fg: "#0f2a33", muted: "#557079", card: "#ffffff", line: "#d8ebf0", accent: "#0e9f9a", accentFg: "#ffffff", dark: "#0f2a33", darkFg: "#f2f9fb" },
+    sections: ["trustBar", "services", "process", "gallery", "serviceArea", "about", "reviews", "faq", "cta"],
+    eyebrow: "Home & Office Cleaning", headline: "Come home to clean.", sub: "Home and office cleaning in {city}. Call for a quote on your space.",
+    cta: "Call for a quote", cta2: "Our services",
+    trust: [{ icon: "spark", text: "Homes & offices" }, { icon: "calendar", text: "Weekly or one-time" }],
+    servicesKicker: "Services", servicesTitle: "Spotless, every visit", servicesStyle: "photoCards",
+    services: [
+      { name: "Regular Cleaning", desc: "Weekly or every other week." },
+      { name: "Deep Cleaning", desc: "Top to bottom, inside and out." },
+      { name: "Move-In / Move-Out", desc: "Ready for the next chapter." },
+      { name: "Office Cleaning", desc: "A clean workspace for your team." },
+      { name: "Post-Construction", desc: "Dust and debris cleared away." },
+      { name: "Airbnb Turnovers", desc: "Ready for your next guest." },
+    ],
+    process: [
+      { t: "Call us", d: "Tell us about your space and what you need." },
+      { t: "Get a quote", d: "A clear price and a time that works for you." },
+      { t: "Enjoy the clean", d: "We take care of it — you get your time back." },
+    ],
+    galleryTitle: "Fresh & clean", aboutTitle: "Cleaning you can count on.", about: "{name} cleans homes and offices in {city} and nearby. {ratingLine}",
+    faq: [
+      { q: "Do I need to be home?", a: "No — many clients give us access. We'll set it up however you're comfortable." },
+      { q: "Do you bring supplies?", a: "Ask us — we'll tell you what we bring and what we use." },
+      { q: "How do I get a price?", a: "Call us with the size of your space and how often you'd like cleaning." },
+    ],
+    finalTitle: "Get your time back.", finalSub: "Home and office cleaning in {city}.",
+  },
+  pizza: {
+    key: "pizza", label: "Pizza Restaurant", font: "bebas", upper: true, radius: "16px", hero: "overlay",
+    palette: { bg: "#fffaf3", fg: "#2a160e", muted: "#7a5a48", card: "#ffffff", line: "#f1e2cf", accent: "#c62828", accentFg: "#ffffff", dark: "#1f3a24", darkFg: "#fffaf3" },
+    sections: ["trustBar", "menu", "gallery", "about", "reviews", "faq", "cta"],
+    eyebrow: "Family Pizza", headline: "Hot, fresh pizza.", sub: "Pizza, pasta and family favorites in {city}. Dine in, pick up or call your order in.",
+    cta: "Call to order", cta2: "See the menu",
+    trust: [{ icon: "fork", text: "Dine in & pick up" }, { icon: "heart", text: "Family owned" }],
+    servicesKicker: "Menu", servicesTitle: "Family favorites", servicesStyle: "cards",
+    services: [],
+    menu: [
+      { section: "Pizza", items: [
+        { name: "Cheese Pizza", desc: "The classic, by the slice or the pie." },
+        { name: "Pepperoni", desc: "Crispy cups of pepperoni." },
+        { name: "Specialty Pies", desc: "Loaded with toppings." },
+        { name: "Build Your Own", desc: "Pick your toppings." },
+      ] },
+      { section: "Pasta & More", items: [
+        { name: "Pasta", desc: "Baked ziti, spaghetti and more." },
+        { name: "Wings", desc: "Crispy, with your favorite sauce." },
+        { name: "Garlic Knots", desc: "Warm and buttery." },
+        { name: "Salads & Subs", desc: "Fresh and made to order." },
+      ] },
+    ],
+    galleryTitle: "From our oven", aboutTitle: "A family pizza place.", about: "{name} serves pizza, pasta and family favorites in {city}. {ratingLine}",
+    faq: [
+      { q: "Can I call ahead for pick-up?", a: "Yes — call your order in and we'll have it ready." },
+      { q: "Do you cater parties?", a: "Ask us about pizza and tray orders for your event." },
+      { q: "Do you sell by the slice?", a: "Call or stop in to see today's slices." },
+    ],
+    finalTitle: "Pizza night? Call it in.", finalSub: "Family pizza in {city}.",
   },
 };
