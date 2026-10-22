@@ -3,6 +3,7 @@ import path from "node:path";
 import Image from "next/image";
 import type { CSSProperties, ReactNode } from "react";
 import type { Demo } from "@/content/demos";
+import { REVIEWS } from "@/content/reviews";
 import { fontFamily, FONT_VARS } from "./fonts";
 import { Icon } from "./icons";
 import { BeforeAfter } from "./BeforeAfter";
@@ -37,7 +38,7 @@ const UI = {
     howTitle: "Simple from first call to done.", why: "Why choose us", whyTitle: (c: string, n: string) => `Why ${c} picks ${n}`,
     about: "About us", area: "Service area", areaTitle: (c: string) => `Proudly serving ${c} and nearby`, reviewsK: "Reviews",
     starsOn: (r: string) => `${r} stars on Google`, loved: "Loved by locals", from: (n: string, w: string) => `From ${n} real customer ${w}.`,
-    read: "Read our reviews", faq: "FAQ", faqTitle: "Questions? We've got answers.", menu: "Menu", services: "Services",
+    read: "Read our reviews", via: "on", saying: "What customers say", faq: "FAQ", faqTitle: "Questions? We've got answers.", menu: "Menu", services: "Services",
     call: "Call", map: "Map", dirShort: "Directions",
   },
   es: {
@@ -48,7 +49,7 @@ const UI = {
     howTitle: "Fácil, de la llamada al resultado.", why: "Por qué elegirnos", whyTitle: (c: string, n: string) => `Por qué ${c} elige a ${n}`,
     about: "Quiénes somos", area: "Dónde trabajamos", areaTitle: (c: string) => `Con orgullo en ${c} y alrededores`, reviewsK: "Reseñas",
     starsOn: (r: string) => `${r} estrellas en Google`, loved: "Querido por la comunidad", from: (n: string, w: string) => `De ${n} ${w} de clientes reales.`,
-    read: "Lea nuestras reseñas", faq: "Preguntas", faqTitle: "¿Preguntas? Aquí las respuestas.", menu: "Menú", services: "Servicios",
+    read: "Lea nuestras reseñas", via: "en", saying: "Lo que dicen nuestros clientes", faq: "Preguntas", faqTitle: "¿Preguntas? Aquí las respuestas.", menu: "Menú", services: "Servicios",
     call: "Llamar", map: "Mapa", dirShort: "Cómo llegar",
   },
 } as const;
@@ -67,6 +68,7 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
   const p = ind.palette;
   const demo = { ...raw, rating: raw.rating && /^\d$/.test(raw.rating) ? `${raw.rating}.0` : raw.rating };
   const reviewsWord = demo.reviewCount === "1" ? t.review : t.reviews;
+  const quotes = (REVIEWS[raw.slug] ?? []).slice(0, 3);
   const photos = loadPhotos(ind.key);
   const ph = (k: string) => photos[k];
   const gallery = ["g1", "g2", "g3", "g4", "g5"].map(ph).filter(Boolean) as Photo[];
@@ -355,6 +357,25 @@ export function IndustrySite({ demo: raw, ind, banner, lang = "en", langLinks }:
           <a href={maps} target="_blank" rel="noopener noreferrer"
             className={`${btn} bg-[var(--accentFg)] text-[var(--accent)]`}><Stars /> {t.read}</a>
         </div>
+        {quotes.length > 0 && (
+          <div className="bg-[var(--bg)] text-[var(--fg)]">
+            <div className="mx-auto max-w-6xl px-5 py-14 md:py-20">
+              <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--accent)]">{t.saying}</p>
+              <ul className={`mt-8 grid gap-5 ${quotes.length > 1 ? "md:grid-cols-2" : ""} ${quotes.length > 2 ? "lg:grid-cols-3" : ""}`}>
+                {quotes.map((q) => (
+                  <li key={q.quote} className="flex flex-col rounded-[min(var(--r),24px)] border border-[var(--line)] bg-[var(--card)] p-6 shadow-sm">
+                    <Stars />
+                    <blockquote className="mt-4 flex-1 text-[17px] leading-relaxed">&ldquo;{q.quote}&rdquo;</blockquote>
+                    <p className="mt-5 text-sm text-[var(--muted)]">
+                      {q.name && <b className="font-bold text-[var(--fg)]">{q.name}</b>}{q.name && " · "}
+                      {q.url ? <a href={q.url} target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:underline">{t.via} {q.source}</a> : `${t.via} ${q.source}`}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
       </section>
     ),
     faq: () => (
